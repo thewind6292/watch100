@@ -1,0 +1,105 @@
+/*news-home*/
+.title-cat-nh {
+    font-size: 18px;
+    font-family: "open sans semibold";
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 4px;
+    margin-bottom: 15px;
+}
+.border-nh{
+    background:#c4161c;
+    height:1px;
+    width: 60px;
+    margin-bottom: -5px;
+    margin-top: 4px;
+}
+.list-nh{
+    padding-left:0px;
+    list-style: none;
+}
+.first-item-nh > a.title-first-nh {
+    font-size: 14px;
+    font-family: "open sans semibold";
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    height: 40px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.date-nh {
+    color: #777;
+    font-size: 12px;
+    margin: 11px 0px 6px 0px;
+}
+.summary-nh {
+    font-size: 13px;
+    color: #555;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+}
+.summary-nh > span{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    height: 59px;
+    overflow: hidden;
+}
+.list-nh > li{
+    position:relative;
+    padding-left: 12px;
+    margin-bottom: 8px;
+}
+.list-nh > li:first-child{
+    padding-left: 0px;
+    margin-bottom: 0px;
+}
+.list-nh > li > a{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    height:15px;
+    overflow: hidden;
+}
+.list-nh > li:first-child:after{
+    display:none;
+}
+.list-nh > li:after{
+    content: "";
+    width: 5px;
+    height: 5px;
+    background: #c4161c;
+    position: absolute;
+    left: 0px;
+    top: 6px;
+    border-radius: 50%;
+}
+.wrapper-news-home {
+    margin-bottom: 45px;
+    margin-top: 50px;
+}
+.item-nh:last-child {
+    margin-right: 0px;
+}
+
+@media only screen and (min-width:1100px){
+    .item-nh {
+        width: 24.4%;
+        margin-right: 9px;
+    }
+}
+@media only screen and (max-width:520px){
+    .item-nh {
+        width:100% !important;
+    }
+    .list-nh li img{
+        width:100%;
+    }
+    .summary-nh {
+        border-bottom: none !important; 
+    }
+}

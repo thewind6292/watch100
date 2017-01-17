@@ -1,0 +1,36 @@
+.owl-theme .owl-controls {
+/*	position: absolute;
+	width: 100%;
+	bottom: 10px;;*/
+}
+#owl-demo .item {
+	text-align: center;
+}
+@media only screen and (max-width:500px){
+    #owl-demo .owl-buttons{
+        display:none !important;
+    }
+}
+#owl-demo .owl-buttons{
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    top: 40%;
+}
+
+#owl-demo .owl-buttons > .owl-next{
+    background: url("../images/next-home.png") no-repeat 18px 4px;
+    right: 10px;
+}
+#owl-demo .owl-buttons > .owl-prev{
+    background: url("../images/prev-home.png") no-repeat 18px 4px;
+    left: 10px;
+}
+
+#owl-demo .owl-controls .active span{
+    background: #fff !important;
+}
+#owl-demo .owl-page span{
+    background: #565961 !important;
+    opacity:1 !important;
+}

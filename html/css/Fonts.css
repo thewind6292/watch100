@@ -1,0 +1,37 @@
+@font-face{
+        font-family: 'roboto bold';
+        src: url('../fonts/Roboto-Bold.ttf');
+    }
+@font-face{
+        font-family: 'open sans bold';
+        src: url('../fonts/OpenSans-Bold.ttf');
+    }    
+@font-face{
+    font-family: 'open sans';
+    src: url('../fonts/OpenSans-Regular.ttf');
+}    
+@font-face{
+    font-family: 'arial bold';
+    src: url('../fonts/arialbd.ttf');
+} 
+
+@font-face{
+    font-family: 'minionpro-semibold';
+    src: url('../fonts/Minion Pro Semibold.ttf');
+} 
+
+
+
+@font-face {
+    font-family: 'open sans light';
+    src: url('../fonts/OpenSans-Light.ttf');
+}
+    
+@font-face {
+    font-family: 'open sans semibold';
+    src: url('../fonts/OpenSans-Semibold.ttf');
+}
+ @font-face {
+    font-family: 'open sans italic';
+    src: url('../fonts/OpenSans-Italic.ttf');
+}
