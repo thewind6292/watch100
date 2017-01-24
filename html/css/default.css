@@ -10,7 +10,76 @@
 .main_info .media{
 	padding-left: 30px;
 }
+.product_related_title {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.relate_products  .item {
+    border-bottom: 1px solid #d3d3d3;
+    padding: 10px;
+    width: 100%;
+    float: left;
+}
+@media screen and (max-width:1200px) {
+    .relate_products  .item  {
+        width: 25%;
+    }
+}
+@media screen and (max-width:997px) {
+    .relate_products  .item  {
+        width: 33.3333%;
+    }
+}
 
+@media screen and (max-width:480px) {
+    .relate_products  .item  {
+        width: 50%;
+    }
+}
+.relate_products  .item .frame_img_cat  img{
+    margin: 0 auto;
+}
+.relate_products .frame_manu {
+    color: #333333;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.relate_products .frame_title .name {
+    margin-top: 6px;
+      height: 26px;
+  overflow: hidden;
+}
+.relate_products .frame_title a {
+    color: #666666;
+    font-size: 12px;
+}
+.relate_products .frame_price .price span {
+    color: #164597;
+    font-size: 13px;
+    font-weight: bold;
+}
+.relate_products .frame_price .old_price {
+    color: #808080;
+    font-size: 12px;
+    text-decoration: line-through;
+}
+.relate_products .frame_price .percent {
+    color: #b80405;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+}
+@media screen and (max-width:997px) {
+    .relate_products .frame_price .discount,
+    .relate_products .frame_price  .price    {
+        float: none;
+        width: 100%;
+    }
+}
+.product_related.cf {
+    padding-left: 0px;
+}
 @media screen and (max-width:600px){
 	.main_top #pav-slideShow{
 		width: 100%;
