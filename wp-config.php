@@ -20,7 +20,7 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'watch100');
+define('DB_NAME', '2017tt_watch100');
 
 /** MySQL database username */
 define('DB_USER', 'root');
