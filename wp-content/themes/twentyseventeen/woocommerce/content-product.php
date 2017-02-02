@@ -27,30 +27,44 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	return;
 }
 ?>
-<div class="item ">
-   <div class="inner_item">
-      <div class="frame_img_cat ">
-         <a href="http://gallewatch.com/dong-ho-nam/dong-ho-perrelet-a10611.html" title = "Đồng hồ Perrelet A1061/1" >
-         <img class="" src="http://gallewatch.com/images/products/2016/10/12/resized/a1061_1.png" alt="Đồng hồ Perrelet A1061/1"  />
-         </a>
-      </div>
-      <div class="frame_title">
-         <h2 class="name" >
-            <a href="http://gallewatch.com/dong-ho-nam/dong-ho-perrelet-a10611.html" title = "Đồng hồ Perrelet A1061/1" >
-            Đồng hồ Perrelet A1061/1</a> 
-         </h2>
-      </div>
-      <div class="frame_price">
-         <div class="clearfix">
-            <div class="price pull-left"> 
-               <span>106.470.000 VNĐ</span>
-            </div>
-            <div class="discount pull-right"> 
-               <span class="percent "> 
-               &nbsp;</span>
-            </div>
-         </div>
-      </div>
-      <a datalm="16" datatp="" dataid="9660" data="http://gallewatch.com/dong-ho-nam-pc138/9661" class="button-cart button-cart-fast-cat" href="javascript:void(0)"><span>Xem nhanh</span></a>
-   </div>
-</div>
+<li <?php post_class(); ?>>
+	<?php
+	/**
+	 * woocommerce_before_shop_loop_item hook.
+	 *
+	 * @hooked woocommerce_template_loop_product_link_open - 10
+	 */
+	do_action( 'woocommerce_before_shop_loop_item' );
+
+	/**
+	 * woocommerce_before_shop_loop_item_title hook.
+	 *
+	 * @hooked woocommerce_show_product_loop_sale_flash - 10
+	 * @hooked woocommerce_template_loop_product_thumbnail - 10
+	 */
+	do_action( 'woocommerce_before_shop_loop_item_title' );
+
+	/**
+	 * woocommerce_shop_loop_item_title hook.
+	 *
+	 * @hooked woocommerce_template_loop_product_title - 10
+	 */
+	do_action( 'woocommerce_shop_loop_item_title' );
+
+	/**
+	 * woocommerce_after_shop_loop_item_title hook.
+	 *
+	 * @hooked woocommerce_template_loop_rating - 5
+	 * @hooked woocommerce_template_loop_price - 10
+	 */
+	do_action( 'woocommerce_after_shop_loop_item_title' );
+
+	/**
+	 * woocommerce_after_shop_loop_item hook.
+	 *
+	 * @hooked woocommerce_template_loop_product_link_close - 5
+	 * @hooked woocommerce_template_loop_add_to_cart - 10
+	 */
+	do_action( 'woocommerce_after_shop_loop_item' );
+	?>
+</li>

@@ -82,6 +82,14 @@ function product_filter() {
         'description' => __( 'The widget filter product by filter order for the optional Showcase Template', 'watch100' ),
         'before_widget' => '<div class="widget-filter-product widget-filter-product-by-filter-order">',
         'after_widget' => '</div>',
-    ) );           
+    ) ); 
+
+    register_sidebar( array(
+        'name' => __( 'SPFilter', 'watch100' ),
+        'id' => 'filter-product-by-SPFilter',
+        'description' => __( 'The widget filter product by filter order for the optional Showcase Template', 'watch100' ),
+        'before_widget' => '<div class="widget-filter-product widget-filter-product-by-filter-order">',
+        'after_widget' => '</div>',
+    ) );             
 }
 add_action( 'widgets_init', 'product_filter' );
