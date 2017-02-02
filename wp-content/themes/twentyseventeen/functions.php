@@ -1,4 +1,6 @@
 <?php
+define('OPTIONS_FRAMEWORK_DIRECTORY',  get_template_directory_uri().'/theme-options/');
+require 'theme-options/options-framework.php';
 /**
  * Twenty Seventeen functions and definitions
  *
