@@ -64,6 +64,10 @@ function twentyseventeen_setup() {
 	register_nav_menus( array(
 		'top'    => __( 'Top Menu', 'twentyseventeen' ),
 		'social' => __( 'Social Links Menu', 'twentyseventeen' ),
+		'footer_1' => __( 'Footer 1 Menu', 'twentyseventeen' ),
+		'footer_2' => __( 'Footer 2 Menu ', 'twentyseventeen' ),
+		'footer_3' => __( 'Footer 3 Menu', 'twentyseventeen' ),
+		'footer_4' => __( 'Footer 4 Menu', 'twentyseventeen' ),
 	) );
 
 	/*
@@ -202,6 +206,50 @@ function twentyseventeen_setup() {
 					'link_email',
 				),
 			),
+
+			// Assign a menu to the "footer 1" location.
+			'footer_1' => array(
+				'name' => __( 'Menu footer 1', 'twentyseventeen' ),
+				'items' => array(
+					'link_home', // Note that the core "home" page is actually a link in case a static front page is not used.
+					'page_about',
+					'page_blog',
+					'page_contact',
+				),
+			),
+
+			// Assign a menu to the "footer 2" location.
+			'footer_2' => array(
+				'name' => __( 'Menu footer 2', 'twentyseventeen' ),
+				'items' => array(
+					'link_home', // Note that the core "home" page is actually a link in case a static front page is not used.
+					'page_about',
+					'page_blog',
+					'page_contact',
+				),
+			),
+
+			// Assign a menu to the "footer 3" location.
+			'footer_3' => array(
+				'name' => __( 'Menu footer 3', 'twentyseventeen' ),
+				'items' => array(
+					'link_home', // Note that the core "home" page is actually a link in case a static front page is not used.
+					'page_about',
+					'page_blog',
+					'page_contact',
+				),
+			),
+
+			// Assign a menu to the "footer 4" location.
+			'socfooter_4' => array(
+				'name' => __( 'Menu footer 4', 'twentyseventeen' ),
+				'items' => array(
+					'link_home', // Note that the core "home" page is actually a link in case a static front page is not used.
+					'page_about',
+					'page_blog',
+					'page_contact',
+				),
+			),
 		),
 	);
 
@@ -336,6 +384,26 @@ function twentyseventeen_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Footer 2', 'twentyseventeen' ),
 		'id'            => 'sidebar-3',
+		'description'   => __( 'Add widgets here to appear in your footer.', 'twentyseventeen' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+
+	register_sidebar( array(
+		'name'          => __( 'Footer 3', 'twentyseventeen' ),
+		'id'            => 'sidebar-footer-3',
+		'description'   => __( 'Add widgets here to appear in your footer.', 'twentyseventeen' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+
+	register_sidebar( array(
+		'name'          => __( 'Footer 4', 'twentyseventeen' ),
+		'id'            => 'sidebar-footer-4',
 		'description'   => __( 'Add widgets here to appear in your footer.', 'twentyseventeen' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',

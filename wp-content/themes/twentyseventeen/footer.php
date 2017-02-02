@@ -22,65 +22,28 @@
                             <ul>
 
                                 <li class=' none_ul level0 menu-item' >
-                                    <a href='http://www.gallewatch.com/ct-galle-watch.html'>		Về chúng tôi 	</a>
-                                    <ul class='content-tab'><li class=' none_ul level1 first-sitem ' >
-                                            <a href='http://www.gallewatch.com/ct-galle-watch.html'>		Galle Watch 	</a>
-                                        </li><li class=' none_ul level1 mid-sitem ' >
-                                            <a href='http://www.gallewatch.com/ct-triet-ly-kinh-doanh.html'>		Triết lý kinh doanh 	</a>
-                                        </li><li class=' none_ul level1 mid-sitem ' >
-                                            <a href='http://gallewatch.com/danh-muc-tin/truyen-thong-amp;-su-kien.html'>		Truyền thông &amp; sự kiện 	</a>
-                                        </li><li class=' none_ul level1 mid-sitem ' >
-                                            <a href='http://gallewatch.com/danh-muc-tin/hoat-dong-xa-hoi.html'>		Hoạt động xã hội 	</a>
-                                        </li><li class=' none_ul level1 mid-sitem ' >
-                                            <a href='http://www.gallewatch.com/ct-lien-ket-amp;-hop-tac.html'>		Liên kết &amp; Hợp tác 	</a>
-                                        </li></ul></li><li class=' none_ul level0 menu-item' >
-                                    <a href='http://gallewatch.com/tin-tuc.html'>		Tin tức 	</a>
-                                    <ul class='content-tab'><li class=' none_ul level1 first-sitem ' >
-                                            <a href='http://www.gallewatch.com/danh-muc-tin/review-san-pham.html'>		Review sản phẩm 	</a>
-                                        </li><li class=' none_ul level1 mid-sitem ' >
-                                            <a href='http://gallewatch.com/tin-tuc.html'>		Tin tức đồng hồ 	</a>
-                                        </li><li class=' none_ul level1 mid-sitem ' >
-                                            <a href='http://www.gallewatch.com/danh-muc-tin/chung-nhan-thuong-hieu.html'>		Chứng nhận thương hiệu 	</a>
-                                        </li><li class=' none_ul level1 mid-sitem ' >
-                                            <a href='http://gallewatch.com/khach-hang-noi-ve-chung-toi/review.html'>		Khách hàng nói về chúng tôi 	</a>
-                                        </li><li class=' none_ul level1 mid-sitem ' >
-                                            <a href='http://www.gallewatch.com/danh-muc-tin/lich-su-thuong-hieu.html'>		Lịch sử thương hiệu 	</a>
-                                        </li></ul></li><li class=' none_ul level0 menu-item' >
-                                    <span>		SẢN PHẨM &amp; DỊCH VỤ 	</span>		<ul class='content-tab'><li class=' none_ul level1 first-sitem ' >
-                                            <a href='http://www.gallewatch.com/dong-ho-khac-pc140.html'>		Đồng hồ khác 	</a>
-                                        </li><li class=' none_ul level1 mid-sitem ' >
-                                            <a href='http://gallewatch.com/phu-kien-pc142.html'>		Phụ kiện dây da 	</a>
-                                        </li><li class=' none_ul level1 mid-sitem ' >
-                                            <span>		Đồng hồ quà tặng 	</span></li><li class=' none_ul level1 mid-sitem ' >
-                                            <a href='http://gallewatch.com/ct-chinh-sach-bao-hanh.html'>		Dịch vụ &amp; Sửa chữa 	</a>
-                                        </li><li class=' none_ul level1 mid-sitem ' >
-                                            <a href='http://www.gallewatch.com/ct-tai-sao-nen-lua-chon-galle-watch.html'>		Tại sao nên lựa chọn Galle Watch? 	</a>
-                                        </li></ul></li><li class=' none_ul level0 menu-item' >
-                                    <a href='http://www.gallewatch.com/ct-huong-dan-su-dung.html'>		Hướng dẫn 	</a>
-                                    <ul class='content-tab'><li class=' none_ul level1 first-sitem ' >
-                                            <a href='http://www.gallewatch.com/ct-huong-dan-mua-hang.html'>		Hướng dẫn mua hàng 	</a>
-                                        </li><li class=' none_ul level1 mid-sitem ' >
-                                            <a href='http://www.gallewatch.com/ct-chinh-sach-uu-dai-the-vip.html'>		Chính sách ưu đãi thẻ VIP 	</a>
-                                        </li><li class=' none_ul level1 mid-sitem ' >
-                                            <a href='http://www.gallewatch.com/ct-chinh-sach-bao-hanh.html'>		Chính sách bảo hành 	</a>
-                                        </li><li class=' none_ul level1 mid-sitem ' >
-                                            <a href='http://www.gallewatch.com/ct-huong-dan-su-dung.html'>		Hướng dẫn sử dụng 	</a>
-                                        </li><li class=' none_ul level1 mid-sitem ' >
-                                            <a href='http://www.gallewatch.com/ct-huong-dan-thanh-toan.html'>		Hướng dẫn thanh toán 	</a>
-                                        </li><li class=' none_ul level1 mid-sitem ' >
-                                            <a href='http://www.gallewatch.com/ct-bao-mat-thong-tin.html'>		Bảo mật thông tin 	</a>
-                                        </li></ul></li><li class=' none_ul level0 menu-item' >
-                                    <a href='http://www.gallewatch.com/lien-he.html'>		Liên hệ 	</a>
-                                    <ul class='content-tab'><li class=' none_ul level1 first-sitem ' >
-                                            <a href='https://www.facebook.com/GalleWatch/'>		Facebook 	</a>
-                                        </li><li class=' none_ul level1 mid-sitem ' >
-                                            <a href='https://plus.google.com/u/0/+minhtuangallewatch'>		Google+ 	</a>
-                                        </li><li class=' none_ul level1 mid-sitem ' >
-                                            <a href='https://twitter.com/gallewatch'>		Twitter 	</a>
-                                        </li><li class=' none_ul level1 mid-sitem ' >
-                                            <a href='https://www.youtube.com/channel/UCr7hVndDMxNrbNkfpXEeuBQ'>		Youtube 	</a>
-                                        </li></ul></li>    </ul>
-                        </div>    		</div>
+                                    <?php if ( is_active_sidebar( 'sidebar-2' ) ) { ?>
+                                            <?php dynamic_sidebar( 'sidebar-2' ); ?>
+                                    <?php } ?>
+                                </li>
+                                <li class=' none_ul level0 menu-item' >
+                                    <?php if ( is_active_sidebar( 'sidebar-3' ) ) { ?>
+                                            <?php dynamic_sidebar( 'sidebar-3' ); ?>
+                                    <?php } ?>
+                                </li>
+                                <li class=' none_ul level0 menu-item' >
+                                    <?php if ( is_active_sidebar( 'sidebar-footer-3' ) ) { ?>
+                                            <?php dynamic_sidebar( 'sidebar-footer-3' ); ?>
+                                    <?php } ?>
+                                </li>
+                                <li class=' none_ul level0 menu-item' >
+                                    <?php if ( is_active_sidebar( 'sidebar-footer-4' ) ) { ?>
+                                            <?php dynamic_sidebar( 'sidebar-footer-4' ); ?>
+                                    <?php } ?>
+                                </li>
+                            </ul>
+                        </div>    		
+                    </div>
 
                     <div class="row">
                         <div class="col-sm-6 col-xs-12 col-lg-4 col-md-4">
