@@ -20,6 +20,13 @@
         <link rel="stylesheet" type="text/css" media="screen" href="<?php echo get_theme_file_uri(); ?>/css/bottommenu.css" /> 
         <link rel="stylesheet" type="text/css" media="screen" href="<?php echo get_theme_file_uri(); ?>/css/discount.css" />
         <link rel="stylesheet" type="text/css" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/evil-icons/1.7.8/evil-icons.min.css" />
+
+        <link rel="stylesheet" type="text/css" media="screen" href="<?php echo get_theme_file_uri(); ?>/css/cat.css" /> 
+        <link rel="stylesheet" type="text/css" media="screen" href="<?php echo get_theme_file_uri(); ?>/css/w3.css" /> 
+        <link rel="stylesheet" type="text/css" media="screen" href="<?php echo get_theme_file_uri(); ?>/css/segment.css" /> 
+        <link rel="stylesheet" type="text/css" media="screen" href="<?php echo get_theme_file_uri(); ?>/css/jquery.mCustomScrollbar.css" />
+
+        <link rel="stylesheet" type="text/css" media="screen" href="<?php echo get_theme_file_uri(); ?>/css/dev-styles.css" />
 	<?php wp_head(); ?>
 </head>
 
