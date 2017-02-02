@@ -19,8 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `2017tt_watch100`
 --
-CREATE DATABASE IF NOT EXISTS `2017tt_watch100` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
-USE `2017tt_watch100`;
+-- CREATE DATABASE IF NOT EXISTS `2017tt_watch100` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+-- USE `2017tt_watch100`;
 
 -- --------------------------------------------------------
 

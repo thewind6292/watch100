@@ -1,0 +1,11 @@
+# Add any directories, files, or patterns you don't want to be tracked by version control
+# wp-content/uploads/
+# *.sql
+wp-config.php
+wp-includes/
+wp-admin/
+wp-content/wflogs/
+wp-content/wflogs/config.php
+.DS_Store/
+.idea/
+.htaccess
