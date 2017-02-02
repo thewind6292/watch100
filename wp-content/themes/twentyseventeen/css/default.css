@@ -232,32 +232,35 @@
 /*#childs_of_653{
     display:block !important;
 }*/
-.mainmanu {
+#menu-main-menu {
     width: 100%;
     position: relative;
 }
-.mainmanu li {
+#menu-main-menu li {
     position: initial !important;
 }
-.mainmanu > li:first-child > a {
+#menu-main-menu > li:first-child > a {
     padding-left: 8px;
     padding-right: 8px !important;
 }
-.mainmanu > li:hover > .highlight{
+#menu-main-menu > li:hover > .highlight{
     display:block;
 }
-.mainmanu > li:hover > a {
+#menu-main-menu > li:hover > a {
     background: #fff;
     padding-bottom: 16px;
     z-index: 11111;
     box-shadow: 0px -3px 16px 3px #d5d5d5;
     position: relative;
 }
-.mainmanu > li:hover > a:after{
+#menu-main-menu > li:hover > a:after{
     display: block;
 }
-
-.mainmanu > li > a:after{
+#menu-main-menu li.menu-item-has-children>a svg, #menu-main-menu li.menu-item-has-children .sub-menu {
+    display: none;
+}
+#menu-main-menu li.menu-item-has-children .sub-menu.active {display: block;}
+#menu-main-menu > li > a:after{
     position: absolute;
     width:100%;
     content: " ";
@@ -267,24 +270,24 @@
     display: none;
     left:0px;
 }
-.mainmanu > li:last-child > a {
+#menu-main-menu > li:last-child > a {
     padding-right: 15px;
     padding-left: 15px !important;
 }
-.mainmanu li .name:hover,.mainmanu .menu_col h3 a:hover{
+#menu-main-menu li a:hover,#menu-main-menu .menu_col h3 a:hover{
     color:#c4161c !important;
 }
-.mainmanu li .name {
+#menu-main-menu li  a {
     font-family: "open sans bold";
     padding: 17px 23px 16px 22px;
     text-transform: uppercase;
     white-space: nowrap;
     font-size: 14px;
 }
-.mainmanu li:hover .name {
+#menu-main-menu li:hover a {
 	background: #fff;
 }
-.mainmanu li .highlight {
+#menu-main-menu li .highlight {
     top: 42px;
     position: absolute;
     z-index: 9999;
@@ -297,7 +300,7 @@
     display: none;
     right: 0px;
 }
-.mainmanu li:first-child .highlight {
+#menu-main-menu li:first-child .highlight {
     top: 42px;
     position: absolute;
     z-index: 9999;
@@ -309,33 +312,33 @@
     padding: 0px 0px 0px 20px;
     left:0px !important;
 }
-.mainmanu li .layer_menu_accessories{
+#menu-main-menu li .layer_menu_accessories{
 	min-width: 350px !important;
 }
-.mainmanu li .layer_menu_accessories ul{
+#menu-main-menu li .layer_menu_accessories ul{
 	margin: 0;
 	padding: 0;
 	list-style: none;
 }
-.mainmanu .item:first-child .menu_col {
+#menu-main-menu .item:first-child .menu_col {
     width: 100% !important;
     float: left !important;
     margin-right: 0px !important;
     margin-top: 0px !important;
 }
-.mainmanu .menu_col {
+#menu-main-menu .menu_col {
     width: 16%;
     float: left;
     margin-right: 40px;
     margin-top: 20px;
 }
-.mainmanu li:nth-child(2) .menu_col {
+#menu-main-menu li:nth-child(2) .menu_col {
     width: 100% !important;
     float: left !important;
     margin-right: 0px !important;
     margin-top: 0px !important;
 }
-.mainmanu .field_label {
+#menu-main-menu .field_label {
     color: #414c5c;
     font-size: 14px;
     font-family: "arial bold";
@@ -344,19 +347,19 @@
     padding-bottom: 5px;
     margin-bottom: 20px;
 }
-.mainmanu .menu_col h3 {
+#menu-main-menu .menu_col h3 {
     margin: 0px 0px 15px 0px;
     width: 100%;
     float: left;
     font-weight: normal !important;
 }
-.mainmanu .menu_col h3 a {
+#menu-main-menu .menu_col h3 a {
     text-transform: uppercase;
     font-family: "arial bold";
     font-size: 12px;
     color: #414c5c;
 }
-.mainmanu  .read_more a {
+#menu-main-menu  .read_more a {
 	color: #B80405;
 }
 
