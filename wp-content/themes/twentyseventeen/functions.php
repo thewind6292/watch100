@@ -640,3 +640,8 @@ require get_parent_theme_file_path( '/inc/customizer.php' );
  * SVG icons functions and filters.
  */
 require get_parent_theme_file_path( '/inc/icon-functions.php' );
+
+/**
+ * Watch 100 function.
+ */
+require get_parent_theme_file_path( '/inc/watch100-functions.php' );
