@@ -69,7 +69,7 @@ if($img_thumbnail==""){
                 </div>
             </div>    
         </div>
-        <a href="<?php the_permalink(); ?>" datalm="16" datatp="" dataid="9660" data="<?php the_permalink(); ?>" class="button-cart button-cart-fast-cat" href="javascript:void(0)"><span>Xem nhanh</span></a>
+        <a href="<?php the_permalink(); ?>" datalm="16" datatp="" dataid="9660" data="<?php the_permalink(); ?>" class="button-cart button-cart-fast-cat" href="javascript:void(0)"><span>Xem chi tiết</span></a>
 
     </div>    	
 </div>
