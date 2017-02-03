@@ -530,7 +530,7 @@ function twentyseventeen_scripts() {
 	wp_enqueue_style( 'watch100_evil-icons', 'https://cdnjs.cloudflare.com/ajax/libs/evil-icons/1.7.8/evil-icons.min.css' );
 	
 	//custom js
-	wp_enqueue_script( 'jquery-jquery', get_theme_file_uri( '/js/jquery-1.11.0.min.js' ), array( 'jquery' ), '2.1.2', true );
+	// wp_enqueue_script( 'jquery-jquery', get_theme_file_uri( '/js/jquery-1.11.0.min.js' ), array( 'jquery' ), '2.1.2', true );
 }
 add_action( 'wp_enqueue_scripts', 'twentyseventeen_scripts' );
 

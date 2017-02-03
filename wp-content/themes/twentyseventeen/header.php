@@ -26,8 +26,10 @@
         <link rel="stylesheet" type="text/css" media="screen" href="<?php echo get_theme_file_uri(); ?>/css/w3.css" /> 
         <link rel="stylesheet" type="text/css" media="screen" href="<?php echo get_theme_file_uri(); ?>/css/segment.css" /> 
         <link rel="stylesheet" type="text/css" media="screen" href="<?php echo get_theme_file_uri(); ?>/css/jquery.mCustomScrollbar.css" />
-
+        <link rel="stylesheet" type="text/css" media="screen" href="<?php echo get_theme_file_uri(); ?>/slide/generic.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="<?php echo get_theme_file_uri(); ?>/slide/js-image-slider.css" />
         <link rel="stylesheet" type="text/css" media="screen" href="<?php echo get_theme_file_uri(); ?>/css/dev-styles.css" />
+        <script src="<?php echo get_theme_file_uri(); ?>/slide/js-image-slider.js"></script>
 	<?php wp_head(); ?>
 </head>
 
@@ -41,7 +43,7 @@
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
 	<?php global $woocommerce; ?>
-<div class="full"></div>
+        <div class="full"></div>
         <div class="content-buy-fast cf" id="wrapper-buy-fast"></div>
         <div id="top-header" class="top-header">
             <div class="container container-header"></div>
@@ -88,5 +90,6 @@
             <div class="container">
             	<div class="border-mainmenu"></div>
 				<?php if(function_exists('wp_nav_menu')){wp_nav_menu( 'theme_location=top&menu_class=nav navbar-nav');} ?>
+                <div class="border-mainmenu"></div>
     		 </div>
         </div>
