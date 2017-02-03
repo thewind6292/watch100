@@ -26,45 +26,50 @@ global $product;
 if ( empty( $product ) || ! $product->is_visible() ) {
 	return;
 }
+
+$prod_id = get_the_ID();
+
+$sale  = get_post_meta( get_the_ID(), '_sale_price', true);
+$price = get_post_meta( get_the_ID(), '_regular_price', true);
+if($price!="" && $sale!=""){ $discount_print =  $price - $sale; $discount_print = number_format ($discount_print,0,'',','); }
+if($price!=""){ $price = number_format ($price,0,'',','); }
+if($sale!=""){ $sale   = number_format ($sale,0,'',','); }
+
+if($sale!=""){ $price_print = $sale;  }else{ $price_print = $price; }
+
+$img_thumbnail = get_the_post_thumbnail(get_the_ID(), "img-feature-size", array( 'class' => 'img-responsive' )) ;
+
+if($img_thumbnail==""){
+
+    $img_thumbnail_default = "http://gallewatch.com/images/products/2016/10/12/resized/a1061_1.png";
+}
 ?>
-<li <?php post_class(); ?>>
-	<?php
-	/**
-	 * woocommerce_before_shop_loop_item hook.
-	 *
-	 * @hooked woocommerce_template_loop_product_link_open - 10
-	 */
-	do_action( 'woocommerce_before_shop_loop_item' );
+<div class="item ">
+    <div class="inner_item">
+        <div class="frame_img_cat ">
+            <a href="<?php the_permalink(); ?>" title = "<?php the_title(); ?>" >
+                <?php if($img_thumbnail){ echo $img_thumbnail; }else{ ?><img class="img-responsive" src="<?php echo $img_thumbnail_default; ?>" /><?php }; ?>
+            </a>
+        </div>
+        <div class="frame_title">
+            <h2 class="name" >
+                <a href="<?php the_permalink() ?>" title = "<?php the_title(); ?>" >
+                    <?php the_title(); ?></a> 
+            </h2>	
+        </div>
+        <div class="frame_price">
+            <div class="clearfix">
+                <div class="price pull-left"> 
+                    <span><?php echo $price_print; ?> VNĐ</span>
+                </div>
+                <div class="discount pull-right"> 
+                    <?php if($discount_print!=""){ ?>
+                    	<span class="percent "> Tiết kiệm  <span class="percent_val"> <?php echo $discount_print; ?> VNĐ</span> </span>
+                    <?php } ?>
+                </div>
+            </div>    
+        </div>
+        <a href="<?php the_permalink(); ?>" datalm="16" datatp="" dataid="9660" data="<?php the_permalink(); ?>" class="button-cart button-cart-fast-cat" href="javascript:void(0)"><span>Xem nhanh</span></a>
 
-	/**
-	 * woocommerce_before_shop_loop_item_title hook.
-	 *
-	 * @hooked woocommerce_show_product_loop_sale_flash - 10
-	 * @hooked woocommerce_template_loop_product_thumbnail - 10
-	 */
-	do_action( 'woocommerce_before_shop_loop_item_title' );
-
-	/**
-	 * woocommerce_shop_loop_item_title hook.
-	 *
-	 * @hooked woocommerce_template_loop_product_title - 10
-	 */
-	do_action( 'woocommerce_shop_loop_item_title' );
-
-	/**
-	 * woocommerce_after_shop_loop_item_title hook.
-	 *
-	 * @hooked woocommerce_template_loop_rating - 5
-	 * @hooked woocommerce_template_loop_price - 10
-	 */
-	do_action( 'woocommerce_after_shop_loop_item_title' );
-
-	/**
-	 * woocommerce_after_shop_loop_item hook.
-	 *
-	 * @hooked woocommerce_template_loop_product_link_close - 5
-	 * @hooked woocommerce_template_loop_add_to_cart - 10
-	 */
-	do_action( 'woocommerce_after_shop_loop_item' );
-	?>
-</li>
+    </div>    	
+</div>
