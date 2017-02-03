@@ -63,6 +63,9 @@ a:hover, a:active {text-decoration: none !important; box-shadow: none !important
             margin-bottom: 10px !important;
         }
 }
+#bottom-nav .menu-item {
+    padding-bottom: 0 !important;
+}
 #bottom-nav .widget-title {
     color: #333333;
     font-family: "open sans bold";
