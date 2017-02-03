@@ -93,3 +93,8 @@ function product_filter() {
     ) );             
 }
 add_action( 'widgets_init', 'product_filter' );
+
+/**
+ *  Add Images Size
+ */
+add_image_size( 'img-feature-size', 230, 260, true );
