@@ -107,28 +107,18 @@
                             </h2>
                             <div class="block-content">
                             	<?php
-	                             $atts = array(
-									'orderby' => 'title',
-									'order'   => 'asc');
-	                             $meta_query = WC()->query->get_meta_query();
-									
-								$args = array(
+								$args_best_selling = array(
 									'post_type'           => 'product',
 									'post_status'         => 'publish',
-									'posts_per_page'      => 20,
+									'posts_per_page'      => 16,
 									'meta_key'            => 'total_sales',
-									'orderby'             => 'meta_value_num',
-									'meta_query'          => $meta_query
+									'orderby'             => 'meta_value_num'
 								);		
 
-								$products_best_selling = new WP_Query(apply_filters('woocommerce_shortcode_products_query', $args, $atts));
-								    
+								$products_best_selling = new WP_Query($args_best_selling);
 									if ($products_best_selling->have_posts()) : 
 										while ($products_best_selling->have_posts()) : $products_best_selling->the_post(); 
-										 // wc_get_template_part( 'content', 'product' ); 
-											$_products_best_selling = wc_get_product( get_the_id());
-											var_dump(get_the_id());
-											// $tietkiem = $_product->get_regular_price() - $_product->get_price();
+										 wc_get_template_part( 'content', 'product' );
 									?>
 									 	<?php endwhile;
 									endif;
