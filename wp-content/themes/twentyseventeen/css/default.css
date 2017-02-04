@@ -10,6 +10,19 @@
 .main_info .media{
 	padding-left: 30px;
 }
+.title-page {
+    display: block;
+    text-align: center;
+   padding-bottom: 10px;
+    margin-bottom: 30px;
+    background: url(../images/line.png) center 15px repeat-x;
+}
+.breadcrumbs {
+    background: #e2dfda;
+    padding: 8px 15px;
+    font-size: 14px;
+}
+
 .product_related_title {
     font-size: 14px;
     text-align: center;

@@ -13,12 +13,9 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="container">
-		<?php echo '<h2>'.get_the_title().'</h2>'; ?>
+		<?php echo '<h2 class="title-page">'.get_the_title().'</h2>'; ?>
 		<div class="main-content">
 			<?php
 				the_content();
 			?>
-		</div><!-- .entry-content -->
-	</div>
 </article><!-- #post-## -->
