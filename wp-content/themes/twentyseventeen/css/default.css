@@ -11,11 +11,14 @@
 	padding-left: 30px;
 }
 .title-page {
+    margin-top: 35px;
+    padding-right: 15px;
     display: block;
     text-align: center;
-   padding-bottom: 10px;
+    padding-bottom: 10px;
     margin-bottom: 30px;
     background: url(../images/line.png) center 15px repeat-x;
+    background-position-y: 24px;
 }
 .breadcrumbs {
     background: #e2dfda;

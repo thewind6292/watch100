@@ -20,25 +20,25 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<div class="container">
 			<div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
-				    <?php if(function_exists('bcn_display'))
-				    {
-				        bcn_display();
-				    }?>
-				</div>
+			    <?php if(function_exists('bcn_display'))
+			    {
+			        bcn_display();
+			    }?>
+			</div>
 
-				<?php
-				while ( have_posts() ) : the_post();
+			<?php
+			while ( have_posts() ) : the_post();
 
-					get_template_part( 'template-parts/page/content', 'page' );
+				get_template_part( 'template-parts/page/content', 'page' );
 
-					// If comments are open or we have at least one comment, load up the comment template.
-					if ( comments_open() || get_comments_number() ) :
-						comments_template();
-					endif;
+				// If comments are open or we have at least one comment, load up the comment template.
+				// if ( comments_open() || get_comments_number() ) :
+				// 	comments_template();
+				// endif;
 
-				endwhile; // End of the loop.
-				?>
-			</div><!-- .wrap -->
-		</div>
+			endwhile; // End of the loop.
+			?>
+		</div><!-- .wrap -->
+	</div>
 
 <?php get_footer();

@@ -17,7 +17,12 @@
     padding-left:0px;
     list-style: none;
 }
+.blog-post {
+    margin-bottom: 30px;
+}
+
 .first-item-nh > a.title-first-nh {
+    padding-top: 15px;
     font-size: 14px;
     font-family: "open sans semibold";
     display: -webkit-box;
