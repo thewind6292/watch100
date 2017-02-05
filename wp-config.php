@@ -26,10 +26,10 @@ define('DB_NAME', '2017tt_watch100');
 define('DB_USER', 'root');
 
 /** MySQL database password */
-define('DB_PASSWORD', '123456');
+define('DB_PASSWORD', '');
 // define('DB_PASSWORD', '');
 /** MySQL hostname */
-define('DB_HOST', '192.168.1.24');
+define('DB_HOST', 'localhost');
 // define('DB_HOST', 'localhost');
 
 /** Database Charset to use in creating database tables. */
