@@ -19,8 +19,9 @@ get_header(); ?>
 		    }?>
 		</div>
 		<br>
-		<div class="col-sm-8">
+		<div class="col-sm-9">
 			<div class="row">
+				<?php echo '<h2 class="title-page">'.get_the_category()[0]->name.'</h2>'; ?>
 			<?php
 			while ( have_posts() ) : the_post();?>
 				<div class="col-xs-6 col-sm-6 col-lg-4 col-md-4 blog-post">
@@ -41,36 +42,31 @@ get_header(); ?>
 			?>
 			</div>	
 		</div>
-		<div class="col-sm-4">
-			<?php
-				// $args = array(
-				//   'orderby' => 'name',
-				//   'parent' => 0
-				//   );
-				// $categories = get_categories( $args );
-				// foreach ( $categories as $category ) {
-				// 	echo '<a href="' . get_category_link( $category->term_id ) . '">' . $category->name . '</a><br/>';
-				// }
-				?>
-			<?php
-			$categories = get_categories( array(
-			    'orderby' => 'name',
-			    'order'   => 'ASC',
-			    'hide_empty'   => 0
-			) );
-			echo "<ul>"; 
-			foreach( $categories as $category ) {
-			    $category_link = sprintf( 
-			        '<a href="%1$s" alt="%2$s">%3$s</a>',
-			        esc_url( get_category_link( $category->term_id ) ),
-			        esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ),
-			        esc_html( $category->name )
-			    );
+		<div class="col-sm-3">
+			<div class="news_home_right danh-muc">
+			    <div class="box-news-right">
+			        <div class="title-news-right"><span>Các danh mục</span></div>
+					<?php
+					$categories = get_categories( array(
+					    'orderby' => 'name',
+					    'order'   => 'ASC',
+					    'hide_empty'   => 0
+					) );
+					echo "<ul>"; 
+					foreach( $categories as $category ) {
+					    $category_link = sprintf( 
+					        '<a href="%1$s" alt="%2$s">%3$s</a>',
+					        esc_url( get_category_link( $category->term_id ) ),
+					        esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ),
+					        esc_html( $category->name )
+					    );
 
-			    echo '<li>'.$category_link.'('.$category->count.')</li>';   
-			}
-			echo "</ul>"; 
-			?>
+					    echo '<li>'.$category_link.'('.$category->count.')</li>';   
+					}
+					echo "</ul>"; 
+					?>
+				</div>
+			</div>
 		</div>
 	</div>
 
