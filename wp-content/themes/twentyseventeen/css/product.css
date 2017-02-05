@@ -905,6 +905,53 @@ div#basic-setup-example {
         display: block;
     }
 }
+.dropdown_cart.open {
+    position: relative;
+}
+.dropdown_cart {
+    display: inline;
+}
+.btn_cart {
+    background: transparent;
+    color: #8fd823;
+}
+.dropdown_cart button {
+    border: none;
+}
+.inline-block {
+    display: inline-block;
+}
+i.fa-shopping-cart{
+    font-size: 22px;
+    margin-right: 10px;
+    color: #8c8a8a;
+}
+
+ul.cart_list {list-style: none;}
+.dropdown_cart.open .dropdown-menu {
+    margin-left: -95px;
+    position: absolute;
+    padding: 20px;
+    width: 320px;
+    right: 143px;
+    top: 45px;
+}
+.header-wrap {z-index: 9999999999;}
+.dropdown_cart .cart_list:before {
+    content: " ";
+    background-image: url(https://nuts.com/nutshell/img/sprites@1x-70e4cede.png);
+    background-position: 0 -12px;
+    height: 5px;
+    width: auto;
+    display: block;
+}
+.dropdown_cart .dropdown-menu .total {
+    margin-top: -43px;
+    padding-top: 5px;
+    padding-left: 10px;
+    margin-bottom: 30px;
+    border-top: 2px solid #ccc;
+}
 .product_cat .frame_manu {
     color: #333333;
     font-weight: bold;

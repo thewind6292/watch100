@@ -57,20 +57,9 @@
                             </div>
                         </div>
                         <div class="col-sm-6 col-xs-12 col-lg-4 col-md-4">
-                            <div class="title-col-ft">Đăng kí nhận tin</div>
+                            <div class="title-col-ft">Kết nối với Gallewatch</div>
                             <div class="top-footer">
-                                <div class=" tf-item text-right">
-                                    <div class='block_content discount_content'>
-                                        <form id="discount_form" method="post" name="newletter_form" action="http://www.gallewatch.com/index.php?module=discount&amp;task=save" onsubmit="javascript: return check_discount_form();" >
-                                            <div class="wrapper-discount">    
-                                                <input type="text" name="email" id="dc_email" placeholder="Nhập email..." class="txt-input"  />
-                                                <input type="submit" name="submit" value="Đăng ký" class="button-sub button" />
-                                                <input type="hidden" name='return' value="Lw=="  />
-                                            </div>
-                                        </form>
-                                    </div>                            </div>
                                 <div class="social-ft">
-                                    <div class="title-social">Kết nối với Gallewatch</div>
                                     <a href="<?php if(of_get_option('link_fb')) {
                                         echo of_get_option('link_fb');} ?>" target="_blink">
                                         <img   src="http://www.gallewatch.com/images/face.png"  />
