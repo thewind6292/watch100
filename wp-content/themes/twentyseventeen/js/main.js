@@ -301,62 +301,62 @@ function click_fast(){
        
 
 
-function click_fast2(){
-    $(".button-cart-fast-cat").click(function() { 
-            $("#wrapper-buy-fast").hide();
-            $("#wrapper-buy-fast").fadeIn(2000);
-            $(".full").show();
-            $("#ajax-loader").show();
-            $("#ajax-loader-more").show();
-		var id = $(this).attr("data"); //total record group(s)
-		var idd = $(this).attr("dataid"); //total record group(s)
-		var tp = $(this).attr("datatp"); //total record group(s)
-		var lm = $(this).attr("datalm"); //total record group(s)
-//		if(idd=="0"){
-//                    $(".next-fast").hide();
-//                }else{
+// function click_fast2(){
+//     $(".button-cart-fast-cat").click(function() { 
+//             $("#wrapper-buy-fast").hide();
+//             $("#wrapper-buy-fast").fadeIn(2000);
+//             $(".full").show();
+//             $("#ajax-loader").show();
+//             $("#ajax-loader-more").show();
+// 		var id = $(this).attr("data"); //total record group(s)
+// 		var idd = $(this).attr("dataid"); //total record group(s)
+// 		var tp = $(this).attr("datatp"); //total record group(s)
+// 		var lm = $(this).attr("datalm"); //total record group(s)
+// //		if(idd=="0"){
+// //                    $(".next-fast").hide();
+// //                }else{
                     
-//                }
-				$.post('/index.php?module=products&view=product&task=ajax_view_fast_cat&raw=1&id='+id+"&tp="+tp+"&lm="+lm, function(data){
+// //                }
+// 				$.post('/index.php?module=products&view=product&task=ajax_view_fast_cat&raw=1&id='+id+"&tp="+tp+"&lm="+lm, function(data){
                                         
-                                    $("#wrapper-buy-fast").html(data); 
-                                         $('.star-bf').raty({
-                                            halfShow : true,
-                                                    readOnly: true, 
-                                                    score: function() {
-                                                        return $(this).attr('data-rating');
-                                                      },
-                                                    starOff : '/images/star-empty.png',
-                                                    starOn  : '/images/star-fill.png',
-                                                    starHalf  : '/images/star-half.png',
-                                            }); 
-                                            $(".list-thumb-bf > li").click(function(){
-                                               $v=$(this).attr("data");
-                                               $(this).addClass("active-thumb-bf");
-                                               $(this).siblings().removeClass("active-thumb-bf");
-                                               $(".left-bf > img").attr("src",$v);
-                                           });
-                                           $(".close-bf").click(function(){
-                                                $("#wrapper-buy-fast").hide();
-                                                $(".full").hide();
+//                                     $("#wrapper-buy-fast").html(data); 
+//                                          $('.star-bf').raty({
+//                                             halfShow : true,
+//                                                     readOnly: true, 
+//                                                     score: function() {
+//                                                         return $(this).attr('data-rating');
+//                                                       },
+//                                                     starOff : '/images/star-empty.png',
+//                                                     starOn  : '/images/star-fill.png',
+//                                                     starHalf  : '/images/star-half.png',
+//                                             }); 
+//                                             $(".list-thumb-bf > li").click(function(){
+//                                                $v=$(this).attr("data");
+//                                                $(this).addClass("active-thumb-bf");
+//                                                $(this).siblings().removeClass("active-thumb-bf");
+//                                                $(".left-bf > img").attr("src",$v);
+//                                            });
+//                                            $(".close-bf").click(function(){
+//                                                 $("#wrapper-buy-fast").hide();
+//                                                 $(".full").hide();
                                                 
-                                                $("#ajax-loader").hide();
-                                                $("#ajax-loader-more").hide();
-                                            });
-                                            $(".full").click(function(){
-                                                $("#wrapper-buy-fast").hide();
-                                                $(".full").hide();
-                                                $("#ajax-loader").hide();
-                                                $("#ajax-loader-more").hide();
-                                            }); 
-//                                            $("#next-fast").attr("data",idd);
-                                            $("#next-fast").addClass("button-cart-fast-cat");
-                                            $("#prev-fast").addClass("button-cart-fast-cat");
-                                             click_fast2();
-                                            load_slider_thumb_bf();
-				}).fail(function(xhr, ajaxOptions, thrownError) { //any errors?
-                                    alert(thrownError); //alert with HTTP error
-                                    loading = false;
-				});
-	});
-}
+//                                                 $("#ajax-loader").hide();
+//                                                 $("#ajax-loader-more").hide();
+//                                             });
+//                                             $(".full").click(function(){
+//                                                 $("#wrapper-buy-fast").hide();
+//                                                 $(".full").hide();
+//                                                 $("#ajax-loader").hide();
+//                                                 $("#ajax-loader-more").hide();
+//                                             }); 
+// //                                            $("#next-fast").attr("data",idd);
+//                                             $("#next-fast").addClass("button-cart-fast-cat");
+//                                             $("#prev-fast").addClass("button-cart-fast-cat");
+//                                              click_fast2();
+//                                             load_slider_thumb_bf();
+// 				}).fail(function(xhr, ajaxOptions, thrownError) { //any errors?
+//                                     alert(thrownError); //alert with HTTP error
+//                                     loading = false;
+// 				});
+// 	});
+// }
