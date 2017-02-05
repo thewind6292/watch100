@@ -31,6 +31,9 @@
     background: url(../images/tick.png) 15px 13px no-repeat;
     color: #9FD511;
 }
+a:hover {
+    color: #9FD511;
+}
 .danh-muc ul li:hover a {
     color: #9FD511;
 }
