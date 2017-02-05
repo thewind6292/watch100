@@ -29,6 +29,10 @@
         <link rel="stylesheet" type="text/css" media="screen" href="<?php echo get_theme_file_uri(); ?>/slide/generic.css" />
         <link rel="stylesheet" type="text/css" media="screen" href="<?php echo get_theme_file_uri(); ?>/slide/js-image-slider.css" />
         <link rel="stylesheet" type="text/css" media="screen" href="<?php echo get_theme_file_uri(); ?>/css/dev-styles.css" />
+        
+        <link rel="stylesheet" type="text/css" media="screen" href="<?php echo get_theme_file_uri(); ?>/css/product.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="<?php echo get_theme_file_uri(); ?>/css/magiczoomplus.css" />
+
         <script src="<?php echo get_theme_file_uri(); ?>/slide/js-image-slider.js"></script>
 	<?php wp_head(); ?>
 </head>
