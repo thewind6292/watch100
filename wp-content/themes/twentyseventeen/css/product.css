@@ -366,7 +366,7 @@ background: url(../images/carousel-arrow-down.png) no-repeat 14px 6px !important
 }
 .left-info.fl > ul li {
     list-style: none;
-    margin-top: 15px;
+    margin-top: 10px;
     position:relative;
     padding-left: 13px;
 }
@@ -394,7 +394,7 @@ background: url(../images/carousel-arrow-down.png) no-repeat 14px 6px !important
     margin-bottom: 8px;
 }
 .txt-hotline-dl {
-    font-size: 13;
+    font-size: 13px;
     color: #333;
     display: block;
     margin-top: 8px;

@@ -80,7 +80,7 @@ get_header( 'shop' ); ?>
                                     <div class="star-detail fl" data-rating="0"></div>
                                     <div class="count-rate fl"><span>0</span> / Có 0 đánh giá</div>
                                     <span class="stick-detail fl"></span>
-                                    <a class="txt-review" data-id="prodetails_tab4" href="#prodetails_tab4">Xem đánh giá &amp; review sản phẩm</a>
+                                    <a class="txt-review" data-id="reviews" href="#reviews">Xem đánh giá &amp; review sản phẩm</a>
                                  </div>
                               </div>
                            </div>
@@ -224,15 +224,15 @@ get_header( 'shop' ); ?>
                      	<div class="col-lg-9">
                            <div class="product-tab" id="smartTab">
 		                     	<ul class="product_tabs_ul nav nav-tabs">
-								  <li class="active"><a data-toggle="tab" href="#home">Thông số kĩ thuật</a></li>
-								  <li><a data-toggle="tab" href="#menu1">Hướng dẫn sử dụng</a></li>
-								  <li><a data-toggle="tab" href="#menu2">Bảo hành</a></li>
-								  <li><a data-toggle="tab" href="#menu3">Đánh giá &amp; reviews</a></li>
+								  <li class="active"><a data-toggle="tab" href="#thong-so-ky-thuat">Thông số kĩ thuật</a></li>
+								  <li><a data-toggle="tab" href="#huong-dan-su-dung">Hướng dẫn sử dụng</a></li>
+								  <li><a data-toggle="tab" href="#bao-hanh">Bảo hành</a></li>
+								  <li><a data-toggle="tab" href="#reviews">Đánh giá &amp; reviews</a></li>
 								</ul>
 								
 
 								<div class="tab-content">
-								  <div id="home" class="tab-pane fade in active">
+								  <div id="thong-so-ky-thuat" class="tab-pane fade in active">
 								    <div class="tab_content prodetails_tab">
 	                                    <table class='table table-condensed compare_table' border="0" cellpadding="0" width="100%">
 	                                       <tr class="title-table-dt">
@@ -242,7 +242,7 @@ get_header( 'shop' ); ?>
 	                                    </table>
 	                                    <table class='table table-condensed compare_table' border="0" cellpadding="0" width="100%">
 	                                       <tr class="title-table-dt">
-	                                          <td colspan="2">Vỏ & Dây</td>
+	                                          <td colspan="2">Vỏ &amp; Dây</td>
 	                                          <td></td>
 	                                       </tr>
 	                                    </table>
@@ -260,7 +260,7 @@ get_header( 'shop' ); ?>
 	                                    </table>
 	                                 </div>
 								  </div>
-								  <div id="menu1" class="tab-pane fade">
+								  <div id="huong-dan-su-dung" class="tab-pane fade">
 								    <div class="tab_content prodetails_tab">
 	                                    <p><strong style="text-align: justify;">Thời gian nhận và trả bảo hành</strong></p>
 	                                    <p style="text-align: justify;">Trong giờ hành chính: Từ 08h30 đến 17h00</p>
@@ -294,7 +294,7 @@ get_header( 'shop' ); ?>
 	                                    <p style="text-align: justify;">Galle Watch – 393 Điện Biên Phủ, Phường 4, Quận 3, TP. HCM | Tel: 08 3929 0685</p>
 	                                 </div>
 								  </div>
-								  <div id="menu2" class="tab-pane fade">
+								  <div id="bao-hanh" class="tab-pane fade">
 								  	<div class="tab_content prodetails_tab">
 									    <p style='color:#333;font-weight: 700;'>Bảo hành quốc tế</p>
 		                                 2 năm
@@ -446,7 +446,7 @@ get_header( 'shop' ); ?>
 		                                 </p>
 		                            </div>     
 								  </div>
-								  <div id="menu3" class="tab-pane fade">
+								  <div id="reviews" class="tab-pane fade">
 
 									    <div class="tab_content prodetails_tab wrapper-name-raty cf">
 		                                    <h3 class="tab_name_pro fl">Bài viết review về Đồng hồ nam FESTINA F16653/4</h3>
