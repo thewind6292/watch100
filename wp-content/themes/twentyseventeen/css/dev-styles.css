@@ -5,3 +5,4 @@
 .main-content p{ text-align: justify; }
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover{ background-color: #f5f5f5; }
 #smartTab .nav-tabs>li>a{ border-radius: 0px; }
+.thumb-pro .item img{ width: 80px; }

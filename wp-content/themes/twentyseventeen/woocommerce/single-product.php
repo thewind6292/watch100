@@ -21,7 +21,43 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 get_header( 'shop' ); ?>
+	<?php
+	global $product;
 
+	while ( have_posts() ) : the_post();
+
+	$prod_id = get_the_ID();
+
+	$ma_sp      = get_field("mã_sản_phẩm");
+	$tinh_trang = get_field("tình_trạng");
+	$bao_hanh   = get_field("bảo_hành");
+	$xuat_xu    = get_field("xuất_xứ");
+
+	$thuong_hieu = woocommerce_get_product_terms($prod_id, 'pa_thuong-hieu', 'names');
+	$thuong_hieu = $thuong_hieu[0];
+
+	$loai_dong_ho = woocommerce_get_product_terms($prod_id, 'pa_loai-dong-ho', 'names'); 
+	$loai_dong_ho = $loai_dong_ho[0];
+
+	$loai_day = woocommerce_get_product_terms($prod_id, 'pa_loai-day', 'names'); 
+	$loai_day = $loai_day[0];
+
+	$sale  = get_post_meta( $prod_id, '_sale_price', true);
+	$price = get_post_meta( $prod_id, '_regular_price', true);
+	if($price!="" && $sale!=""){ $discount_print =  $price - $sale; $discount_print = number_format ($discount_print,0,'',','); }
+	if($price!=""){ $price = number_format ($price,0,'',','); }
+	if($sale!=""){ $sale   = number_format ($sale,0,'',','); }
+
+	if($sale!=""){ $price_print = $sale;  }else{ $price_print = $price; }
+
+	$img_thumbnail = get_the_post_thumbnail_url($prod_id, "large", array( 'class' => 'img-responsive' )) ;
+	
+	if($img_thumbnail==""){
+
+	    $img_thumbnail = "http://gallewatch.com/images/products/2016/10/12/resized/a1061_1.png";
+	}
+
+	?>
 	<div class="container container-header">
             <div id="main_container" class="mt20">
                <div class="main-column">
@@ -35,8 +71,8 @@ get_header( 'shop' ); ?>
                            <div class="image-table">
                               <div class="img_styling">
                                  <div class="main-img">
-                                    <a id="Zoomer" href="http://www.gallewatch.com/images/products/2016/10/12/original/f16653_4.png" class="MagicZoomPlus" rel="pan-zoom: false; rightClick: true; hint: false;zoom-position: right;show-loading:false;zoom-distance:0;zoom-width:400px; zoom-height:400px;" data-options="rightClick: true">
-                                    <img src="http://www.gallewatch.com/images/products/2016/10/12/large/f16653_4.png" >
+                                    <a id="Zoomer" href="<?php echo $img_thumbnail; ?>" class="MagicZoomPlus" rel="pan-zoom: false; rightClick: true; hint: false;zoom-position: right;show-loading:false;zoom-distance:0;zoom-width:400px; zoom-height:400px;" data-options="rightClick: true">
+                                    <img src="<?php echo $img_thumbnail; ?>" >
                                     </a>
                                     <div id="clickndrag" style="text-align: left;">
                                        <img border="0" src="http://www.gallewatch.com/images/click-here.png">
@@ -45,41 +81,31 @@ get_header( 'shop' ); ?>
                                  <div class="thumb-pro">
                                     <ul id="thumb-pro">
                                        <li class="item">
-                                          <a href="http://www.gallewatch.com/images/products/2016/10/12/original/f16653_4.png" class="Selector"  rel="zoom-id:Zoomer" rev="http://www.gallewatch.com/images/products/2016/10/12/large/f16653_4.png">
-                                          <img src="http://www.gallewatch.com/images/products/2016/10/12/small/f16653_4.png" >
+                                          <a href="<?php echo $img_thumbnail; ?>" class="Selector"  rel="zoom-id:Zoomer" rev="<?php echo $img_thumbnail; ?>">
+                                          <img src="<?php echo $img_thumbnail; ?>" >
                                           </a>
                                        </li>
                                     </ul>
                                  </div>
-                                 <div id="wrapper-video">
-                                    <img class="close-popup close-pop-video" src="http://www.gallewatch.com/images/close-pop-video.png" />
-                                    <div class="video-player-param">
-                                       <div class="wrapper-video">
-                                          <!--video width="100%" height="531" src="https://www.youtube.com/embed/" frameborder="0" allowfullscreen></video-->
-                                          <iframe  id='iframe-video' width="100%" height="531" src="https://www.youtube.com/embed/" frameborder="0" allowfullscreen></iframe>
-                                       </div>
-                                       <ul class="cf list-thum-video">
-                                       </ul>
-                                    </div>
-                                 </div>
+                                
                               </div>
                            </div>
                         </div>
                         <div class="price-table">
                            <div class="name-table mt20" >
-                              <h1 class="title-name">Đồng hồ nam FESTINA F16653/4</h1>
+                              <h1 class="title-name"><?php echo the_title(); ?></h1>
                               <div class="code-manu mt10 cf">
-                                 <div class="title-code fl"><span>Mã sản phẩm</span>: F16653/4</div>
+                                 <div class="title-code fl"><span>Mã sản phẩm</span>: <?php echo $ma_sp; ?></div>
                                  <span class="stick-detail fl"></span>
-                                 <div class="manu fl"><span>Thương hiệu</span>: FESTINA</div>
+                                 <div class="manu fl"><span>Thương hiệu</span>: <?php echo $thuong_hieu; ?></div>
                               </div>
                               <div class="rating-pro cf">
-                                 <div class="col-raty fl">
+                                 <!-- <div class="col-raty fl">
                                     <div class="star-detail fl" data-rating="0"></div>
                                     <div class="count-rate fl"><span>0</span> / Có 0 đánh giá</div>
                                     <span class="stick-detail fl"></span>
                                     <a class="txt-review" data-id="reviews" href="#reviews">Xem đánh giá &amp; review sản phẩm</a>
-                                 </div>
+                                 </div> -->
                               </div>
                            </div>
                            <div class="wrapper-info-pro cf">
@@ -91,7 +117,7 @@ get_header( 'shop' ); ?>
                                        </div>
                                        <span class="fl">:</span>
                                        <div class="li-right fl">
-                                          Còn hàng                                    
+                                          <?php echo $tinh_trang; ?>                                    
                                        </div>
                                     </li>
                                     <li class="cf">
@@ -100,7 +126,7 @@ get_header( 'shop' ); ?>
                                        </div>
                                        <span class="fl">:</span>
                                        <div class="li-right fl">
-                                          2 năm                                    
+                                          <?php echo $bao_hanh; ?>                                   
                                        </div>
                                     </li>
                                     <li class="cf">
@@ -109,6 +135,7 @@ get_header( 'shop' ); ?>
                                        </div>
                                        <span class="fl">:</span>
                                        <div class="li-right fl">
+                                       	   <?php echo $xuat_xu; ?>  	
                                        </div>
                                     </li>
                                     <li class="cf">
@@ -117,6 +144,7 @@ get_header( 'shop' ); ?>
                                        </div>
                                        <span class="fl">:</span>
                                        <div class="li-right fl">
+                                       		<?php echo $loai_dong_ho; ?>
                                        </div>
                                     </li>
                                     </table>
@@ -126,6 +154,7 @@ get_header( 'shop' ); ?>
                                        </div>
                                        <span class="fl">:</span>
                                        <div class="li-right fl">
+                                       		<?php echo $loai_day; ?>
                                        </div>
                                     </li>
                                     </table>
@@ -143,21 +172,52 @@ get_header( 'shop' ); ?>
                               <div class="right-info fl">
                                  <div class="bor-retails mt20">
                                     <form class="cart420" action="#" method="post">
+                                       <?php if($sale!=""){ ?>
+
                                        <div class="price-row cf">
-                                          <span class="fl">Giá niêm yết </span><span class="price-cell-r old_price fl">5.100.000 VNĐ</span>
+                                          <span class="fl">Giá niêm yết </span><span class="price-cell-r old_price fl"><?php echo $price; ?> VNĐ</span>
                                        </div>
                                        <div class="txt-price">
                                           Giá khuyến mại												
                                        </div>
                                        <div class="price-row">
-                                          <span class="price-cell-r price basic_price">4.335.000 VNĐ</span>
-                                          <input type="hidden" id="basic_price" value="4335000" >
+                                          <span class="price-cell-r price basic_price"><?php echo $sale; ?> VNĐ</span>
+                                          <input type="hidden" id="basic_price" value="" >
                                        </div>
                                        <div class="price-row">
-                                          <span class="price-cell-r">Tiết kiệm <span>765.000 VNĐ</span></span>
+                                          <span class="price-cell-r">Tiết kiệm <span><?php echo $discount_print; ?> VNĐ</span></span>
                                        </div>
+
+                                       <?php }else{ ?>
+
+                                       <div class="txt-price">
+                                          Giá bán												
+                                       </div>
+                                       <div class="price-row">
+                                          <span class="price-cell-r price basic_price"><?php echo $price_print; ?> VNĐ</span>
+                                          <input type="hidden" id="basic_price" value="<?php echo $price; ?>" >
+                                       </div>
+
+                                       <?php } ?>
                                        <div  id="buy-now">
-                                          <input class="submit" onclick="order(9706)" type="button" value="Mua  ngay"/><br />
+                                       	<?php if ( $product->is_in_stock() ) : ?>
+
+                                        <?php do_action( 'woocommerce_before_add_to_cart_form' ); ?>
+
+                                        <form class="cart" method="post" enctype='multipart/form-data'>
+                                            <?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
+
+                                            <input type="hidden" name="add-to-cart" value="<?php echo esc_attr( $product->id ); ?>" />
+
+                                            <button type="submit" class="single_add_to_cart_button button alt submit">Mua Ngay</button>
+
+                                            <?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
+		                                </form>
+
+		                                <?php do_action( 'woocommerce_after_add_to_cart_form' ); ?>
+
+		                                <?php endif; ?>
+                                          <!-- <input class="submit" onclick="order(9706)" type="button" value="Mua  ngay"/><br /> -->
                                        </div>
                                        <span class="txt-hotline-dl">Hoặc mua hàng qua điện thoại</span>
                                        <span class="hotline-dl">096 463 00 55</span>
@@ -171,47 +231,36 @@ get_header( 'shop' ); ?>
                            </div>
                            <div class="favourite mt20 text-center">
                               <div class='product_related_title'>Có thể bạn sẽ thích</div>
+                              
                               <ul class=" product_related cf">
+                              	<?php    
+	                            global $post;
+	                            $args = array(
+	                                'orderby'   => 'date',
+	                                'order'     => 'DESC',
+	                                'post_type' => 'product',
+	                                'showposts' => 8,
+	                                'post__not_in' => array($post->ID)
+	                            );
+	                            ?>
+	                                <?php $my_query = new WP_Query($args); ?>
+	                                <?php if ($my_query->have_posts()) { ?>
+	                                    <?php while ($my_query->have_posts()) : $my_query->the_post(); $i++; ?>
+	                                    <?php 
+	                                           global $product; 
+	                                          
+	                                    ?>
+	                                    <?php
+	                                           $img_thumbnail = get_the_post_thumbnail($post->ID, "small", array( 'class' => 'img-responsive' )) ;
+	                                    ?>
                                  <li class="item">
-                                    <a href="http://www.gallewatch.com/dong-ho-nam/dong-ho-festina-f168252.html" title = "Đồng hồ Festina F16825/2" >
+                                    <!-- <a href="http://www.gallewatch.com/dong-ho-nam/dong-ho-festina-f168252.html" title = "Đồng hồ Festina F16825/2" >
                                     <img class="img-responsive" src="http://www.gallewatch.com/images/products/2016/10/12/small/F16825_2.png" alt="Đồng hồ Festina F16825/2"  />
-                                    </a>   
+                                    </a>    -->
+                                    <?php echo $img_thumbnail; ?>
                                  </li>
-                                 <li class="item">
-                                    <a href="http://www.gallewatch.com/dong-ho-nam/dong-ho-nam-festina-f166742.html" title = "Đồng hồ nam FESTINA F16674/2" >
-                                    <img class="img-responsive" src="http://www.gallewatch.com/images/products/2016/10/12/small/f16674_2.png" alt="Đồng hồ nam FESTINA F16674/2"  />
-                                    </a>   
-                                 </li>
-                                 <li class="item">
-                                    <a href="http://www.gallewatch.com/dong-ho-nam/dong-ho-festina-f160817.html" title = "Đồng hồ Festina F16081/7" >
-                                    <img class="img-responsive" src="http://www.gallewatch.com/images/products/2016/10/12/small/F16081_7_1.png" alt="Đồng hồ Festina F16081/7"  />
-                                    </a>   
-                                 </li>
-                                 <li class="item">
-                                    <a href="http://www.gallewatch.com/dong-ho-nam/dong-ho-festina-f167771.html" title = "Đồng hồ Festina F16777/1" >
-                                    <img class="img-responsive" src="http://www.gallewatch.com/images/products/2016/10/12/small/F16777_1.png" alt="Đồng hồ Festina F16777/1"  />
-                                    </a>   
-                                 </li>
-                                 <li class="item">
-                                    <a href="http://www.gallewatch.com/dong-ho-nam/dong-ho-festina-f165666.html" title = "Đồng hồ FESTINA F16566/6" >
-                                    <img class="img-responsive" src="http://www.gallewatch.com/images/products/2016/10/12/small/f16566_6_copia.png" alt="Đồng hồ FESTINA F16566/6"  />
-                                    </a>   
-                                 </li>
-                                 <li class="item">
-                                    <a href="http://www.gallewatch.com/dong-ho-nam/dong-ho-festina-f167791.html" title = "Đồng hồ Festina F16779/1" >
-                                    <img class="img-responsive" src="http://www.gallewatch.com/images/products/2016/10/12/small/F16779_1.png" alt="Đồng hồ Festina F16779/1"  />
-                                    </a>   
-                                 </li>
-                                 <li class="item">
-                                    <a href="http://www.gallewatch.com/dong-ho-nam/dong-ho-festina-f68353.html" title = "Đồng hồ Festina F6835/3" >
-                                    <img class="img-responsive" src="http://www.gallewatch.com/images/products/2016/10/12/small/F6835_3.png" alt="Đồng hồ Festina F6835/3"  />
-                                    </a>   
-                                 </li>
-                                 <li class="item">
-                                    <a href="http://www.gallewatch.com/dong-ho-nam/dong-ho-festina-f168264.html" title = "Đồng hồ Festina F16826/4" >
-                                    <img class="img-responsive" src="http://www.gallewatch.com/images/products/2016/10/12/small/F16826_4.png" alt="Đồng hồ Festina F16826/4"  />
-                                    </a>   
-                                 </li>
+                                 <?php endwhile; // end of the loop.  ?>
+                                 <?php } wp_reset_postdata(); ?>
                               </ul>
                            </div>
                         </div>
@@ -543,4 +592,5 @@ get_header( 'shop' ); ?>
       </div>
       <!-- end.container -->
 
+      <?php endwhile; // end of the loop. ?>
 <?php get_footer( 'shop' ); ?>
