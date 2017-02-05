@@ -43,15 +43,34 @@ get_header(); ?>
 		</div>
 		<div class="col-sm-4">
 			<?php
-				$args = array(
-				  'orderby' => 'name',
-				  'parent' => 0
-				  );
-				$categories = get_categories( $args );
-				foreach ( $categories as $category ) {
-					echo '<a href="' . get_category_link( $category->term_id ) . '">' . $category->name . '</a><br/>';
-				}
+				// $args = array(
+				//   'orderby' => 'name',
+				//   'parent' => 0
+				//   );
+				// $categories = get_categories( $args );
+				// foreach ( $categories as $category ) {
+				// 	echo '<a href="' . get_category_link( $category->term_id ) . '">' . $category->name . '</a><br/>';
+				// }
 				?>
+			<?php
+			$categories = get_categories( array(
+			    'orderby' => 'name',
+			    'order'   => 'ASC',
+			    'hide_empty'   => 0
+			) );
+			echo "<ul>"; 
+			foreach( $categories as $category ) {
+			    $category_link = sprintf( 
+			        '<a href="%1$s" alt="%2$s">%3$s</a>',
+			        esc_url( get_category_link( $category->term_id ) ),
+			        esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ),
+			        esc_html( $category->name )
+			    );
+
+			    echo '<li>'.$category_link.'('.$category->count.')</li>';   
+			}
+			echo "</ul>"; 
+			?>
 		</div>
 	</div>
 
