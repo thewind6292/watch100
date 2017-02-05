@@ -8,6 +8,7 @@
         <link type='image/x-icon' ref='http://www.gallewatch.com//images/favicon.ico' rel='icon' />
         <link href='http://fonts.googleapis.com/css?family=Roboto&amp;subset=latin,vietnamese' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" media="screen" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" /> 
+        <link rel="stylesheet" type="text/css" media="screen" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" /> 
         <link rel="stylesheet" type="text/css" media="screen" href="<?php echo get_theme_file_uri(); ?>/css/Fonts.css" /> 
         <link rel="stylesheet" type="text/css" media="screen" href="<?php echo get_theme_file_uri(); ?>/css/theme.css" /> 
         <link rel="stylesheet" type="text/css" media="screen" href="<?php echo get_theme_file_uri(); ?>/css/default.css" /> 
@@ -75,15 +76,16 @@
 
                     <div class="sepa"></div>
                     <div id="search" class="search pull-right">
-                        <div  class="search">
-                            <div id="search-form" class="form-search"> <?php get_search_form() ?> </div>
-                        </div>
-                        <div id="shopcart" class="shopcart pull-right">
-                            <div class="shopcart_content block_content">
-                            	<?php if ( sizeof( $woocommerce->cart->cart_contents) == 0 ) :
-									echo '<a class="buy" href="' . $woocommerce->cart->get_checkout_url() . '" title="' . __( 'Giỏ hàng của bạn' ) . '">' . __( 'Giỏ hàng của bạn' ) . '</a>';
-								endif; ?>
-                            </div>
+                        <div class="dropdown dropdown_cart">
+                            <button class=" dropdown-toggle btn_cart size-15" type="button" data-toggle="dropdown">
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>Giỏ hàng (<span id="cart_container" class="inline-block"><a class="cart-contents text-red"><?php echo $woocommerce->cart->get_cart_contents_count; ?></a> </span>)<span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <?php woocommerce_mini_cart( ); ?>
+                                <!-- <li>
+                                    <?php //the_widget('WC_Widget_Cart', 'title='); ?>
+                                </li> -->
+                            </ul>
                         </div>
                     </div>
 

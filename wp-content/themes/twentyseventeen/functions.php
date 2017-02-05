@@ -42,6 +42,15 @@ function custom_override_checkout_fields($fields) {
   
     return $fields;
 }
+function woocommerce_mini_cart( $args = array() ) {
+    $defaults = array(
+      'list_class' => ''
+    );
+
+    $args = wp_parse_args( $args, $defaults );
+    wc_get_template( 'cart/mini-cart.php', $args );
+  }
+ add_filter( 'loop_shop_per_page', create_function( '$cols', 'return -1;' ), 20 );
 
 /**
  * Sets up theme defaults and registers support for various WordPress features.

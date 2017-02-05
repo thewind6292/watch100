@@ -10,6 +10,17 @@
 .main_info .media{
 	padding-left: 30px;
 }
+.search-form .search-submit .icon {
+    color: gray;
+    height: 20px;
+    top: -2px;
+    width: 20px;
+}
+a:hover,
+a:active {
+    color: #9FD511;
+    outline: 0;
+}
 .title-page {
     margin-top: 35px;               
     padding-right: 15px;
@@ -20,6 +31,7 @@
     background: url(../images/line.png) center 15px repeat-x;
     background-position-y: 24px;
 }
+button:hover, button:active, button:focus, .dropdown-toggle:focus {outline: none !important;}
 .danh-muc ul {list-style: none; }
 .danh-muc ul li {
     width: 100%;
@@ -27,10 +39,31 @@
     padding: 10px 0 0 36px;
     background: url(../images/tick_black.png) 15px 13px no-repeat;
 }
+.dropdown_cart .cart_list li {
+    background: #eeece7;
+}
+.dropdown_cart .cart_list li {
+    padding-left: 10px;
+    padding-right: 10px;
+    border-bottom: none;
+}
+.dropdown_cart .dropdown-menu {
+    background: #e0d3c2;
+}
+.dropdown_cart .cart_list:after {
+    content: " ";
+    background-image: url(https://nuts.com/nutshell/img/sprites@1x-70e4cede.png);
+    background-position: 0 -6px;
+    height: 5px;
+    width: auto;
+    display: block;
+}
 .danh-muc ul li:hover {
     background: url(../images/tick.png) 15px 13px no-repeat;
     color: #9FD511;
 }
+.dropdown_cart {display: block !important;}
+.dropdown_cart button {font-weight: normal !important;}
 a:hover {
     color: #9FD511;
 }

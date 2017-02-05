@@ -30,8 +30,6 @@ get_header( 'shop' ); ?>
                      <div id="basic-setup-example"></div>
                   </div>
                   <div class='product'>
-                     
-                    
                      <div class="top-detail mt20 clearfix">
                         <div class="columnleft">
                            <div class="image-table">
