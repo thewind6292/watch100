@@ -20,6 +20,20 @@
     background: url(../images/line.png) center 15px repeat-x;
     background-position-y: 24px;
 }
+.danh-muc ul {list-style: none; }
+.danh-muc ul li {
+    width: 100%;
+    display: block;
+    padding: 10px 0 0 36px;
+    background: url(../images/tick_black.png) 15px 13px no-repeat;
+}
+.danh-muc ul li:hover {
+    background: url(../images/tick.png) 15px 13px no-repeat;
+    color: #9FD511;
+}
+.danh-muc ul li:hover a {
+    color: #9FD511;
+}
 .title-news-right> span {
     font-size: 14px;
     display: block;

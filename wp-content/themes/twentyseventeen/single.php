@@ -41,7 +41,7 @@ get_header(); ?>
 						$cat = get_the_category();
 						$cat_id = $cat[0]->cat_ID;
 					 $args_post = array(
-						'posts_per_page'   => 5,
+						'posts_per_page'   => 3,
 						'offset'           => 0,
 						'category'         => $cat_id,
 						'orderby'          => 'date',
