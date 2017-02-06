@@ -32,12 +32,12 @@ a:active {
     background-position-y: 24px;
 }
 button:hover, button:active, button:focus, .dropdown-toggle:focus {outline: none !important;}
-.danh-muc ul {list-style: none; }
+.danh-muc ul {list-style: none;padding-left: 0; }
 .danh-muc ul li {
     width: 100%;
     display: block;
     padding: 10px 0 0 36px;
-    background: url(../images/tick_black.png) 15px 13px no-repeat;
+    background: url(../images/tick_black.png) 15px 9px no-repeat;
 }
 .dropdown_cart .cart_list li {
     background: #eeece7;
@@ -50,16 +50,16 @@ button:hover, button:active, button:focus, .dropdown-toggle:focus {outline: none
 .dropdown_cart .dropdown-menu {
     background: #e0d3c2;
 }
-.dropdown_cart .cart_list:after {
+/*.dropdown_cart .cart_list:after {
     content: " ";
     background-image: url(https://nuts.com/nutshell/img/sprites@1x-70e4cede.png);
     background-position: 0 -6px;
     height: 5px;
     width: auto;
     display: block;
-}
+}*/
 .danh-muc ul li:hover {
-    background: url(../images/tick.png) 15px 13px no-repeat;
+    background: url(../images/tick.png) 15px 9px no-repeat;
     color: #9FD511;
 }
 .dropdown_cart {display: block !important;}
@@ -81,7 +81,9 @@ a:hover {
     padding-bottom: 3px;
     margin-bottom: 30px;
 }
-.news_list_body img {width: 30%; margin-right: 3%; float: left;}
+.link-more {display: none;}
+.blog-post img {width: 100%; height: auto;}
+.news_list_body img {width: 30%; margin-right: 3%; float: left;height: auto;}
 .news_list_body .post-title {width: 65%;}
 .news_list_body .news-hot {margin-bottom: 20px;}
 .breadcrumbs {

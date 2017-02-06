@@ -840,6 +840,11 @@ div#basic-setup-example {
     padding: 4px 30px 4px 15px;
     white-space: nowrap;
 }
+.product_list_widget {
+    border: dashed 2px;
+    padding: 2px;
+    border-color: #77050f;
+}
 .limit-follow ul {
     display: none;
     padding-bottom: 10px;
@@ -913,7 +918,7 @@ div#basic-setup-example {
 }
 .btn_cart {
     background: transparent;
-    color: #8fd823;
+    color: #8c8a8a;
 }
 .dropdown_cart button {
     border: none;
@@ -929,24 +934,27 @@ i.fa-shopping-cart{
 
 ul.cart_list {list-style: none;}
 .dropdown_cart.open .dropdown-menu {
-    margin-left: -95px;
+    margin-left: -305px;
     position: absolute;
     padding: 20px;
-    width: 320px;
+    width: 520px;
     right: 143px;
     top: 45px;
 }
 .header-wrap {z-index: 9999999999;}
-.dropdown_cart .cart_list:before {
+/*.dropdown_cart .cart_list:before {
     content: " ";
     background-image: url(https://nuts.com/nutshell/img/sprites@1x-70e4cede.png);
     background-position: 0 -12px;
     height: 5px;
     width: auto;
     display: block;
+}*/
+.product_list_widget {
+    padding-left: 0;
 }
 .dropdown_cart .dropdown-menu .total {
-    margin-top: -43px;
+    /*margin-top: -43px;*/
     padding-top: 5px;
     padding-left: 10px;
     margin-bottom: 30px;
