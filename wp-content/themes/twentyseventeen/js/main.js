@@ -264,8 +264,8 @@ function click_fast(){
 	});
 }
  $("document").ready(function(){
-      click_fast();
-      click_fast2();
+      // click_fast();
+      // click_fast2();
 //	var cat_id = $('#cat_id').val(); //total record group(s)
 //        alert(total_groups);
         

@@ -41,7 +41,7 @@ get_header(); ?>
 						$cat = get_the_category();
 						$cat_id = $cat[0]->cat_ID;
 					 $args_post = array(
-						'posts_per_page'   => 3,
+						'posts_per_page'   => 5,
 						'offset'           => 0,
 						'category'         => $cat_id,
 						'orderby'          => 'date',
@@ -58,7 +58,7 @@ get_header(); ?>
 						'post_status'      => 'publish',
 						'suppress_filters' => true 
 					);
-					$posts_array = get_posts( $args );
+					$posts_array = get_posts( $args_post );
 					?>
 
 					<div class="news_home_right">
