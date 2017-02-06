@@ -37,7 +37,10 @@
         <script src="<?php echo get_theme_file_uri(); ?>/slide/js-image-slider.js"></script>
 	<?php wp_head(); ?>
 </head>
-
+<?php
+    global $woocomerce;
+    ob_start();
+?>
 <body <?php body_class(); ?>>
     <div id="fb-root"></div>
     <script>(function(d, s, id) {
@@ -73,12 +76,13 @@
                             </a>
                         </h1>
                     </div>
-
                     <div class="sepa"></div>
                     <div id="search" class="search pull-right">
                         <div class="dropdown dropdown_cart">
                             <button class=" dropdown-toggle btn_cart size-15" type="button" data-toggle="dropdown">
-                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>Giỏ hàng (<span id="cart_container" class="inline-block"><a class="cart-contents text-red"><?php echo $woocommerce->cart->get_cart_contents_count; ?></a> </span>)<span class="caret"></span>
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                Giỏ hàng (<span id="cart_container" class="inline-block"><a class="cart-contents text-red"><?php echo $woocommerce->cart->get_cart_contents_count(); ?></a> </span>)
+                                <span class="caret"></span>
                             </button>
                             <ul class="dropdown-menu">
                                 <?php woocommerce_mini_cart( ); ?>

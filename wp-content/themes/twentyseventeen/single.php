@@ -40,7 +40,6 @@ get_header(); ?>
 					<?php 
 						$cat = get_the_category();
 						$cat_id = $cat[0]->cat_ID;
-						var_dump($cat_id);
 					 $args_post = array(
 						'posts_per_page'   => 5,
 						'offset'           => 0,

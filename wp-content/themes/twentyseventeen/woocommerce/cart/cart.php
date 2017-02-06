@@ -23,7 +23,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 wc_print_notices();
 
 do_action( 'woocommerce_before_cart' ); ?>
-<h2 class="title seze-20 text-orange font-blow text-uppercase margin-bottom-0">Kiểm tra giỏ hàng</h2>
 <form action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post" class="hidden-xs">
 
 <?php do_action( 'woocommerce_before_cart_table' ); ?>

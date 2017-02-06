@@ -64,14 +64,14 @@ if (!defined('ABSPATH')) {
         ?>
 
     <?php else : ?>
-        <li class="empty"><?php _e('No products in the cart.', 'woocommerce'); ?></li>
+        <li class="empty"><?php _e('Bạn chưa mua sản phẩm nào!', 'woocommerce'); ?></li>
     <?php endif; ?>
 
 </ul><!-- end product list -->
 
 <?php if (!WC()->cart->is_empty()) : ?>
 
-    <p class="total"><strong><?php _e('Subtotal', 'woocommerce'); ?>:</strong> <?php echo WC()->cart->get_cart_subtotal(); ?></p>
+    <p class="total"><strong><?php _e('Tổng tiền', 'woocommerce'); ?>:</strong> <?php echo WC()->cart->get_cart_subtotal(); ?></p>
 
     <?php do_action('woocommerce_widget_shopping_cart_before_buttons'); ?>
     <div class="row buttons-tw">

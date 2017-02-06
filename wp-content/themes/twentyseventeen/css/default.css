@@ -39,17 +39,29 @@ button:hover, button:active, button:focus, .dropdown-toggle:focus {outline: none
     padding: 10px 0 0 36px;
     background: url(../images/tick_black.png) 15px 9px no-repeat;
 }
+.woocommerce-message {display: none;}
 .dropdown_cart .cart_list li {
     background: #eeece7;
 }
 .dropdown_cart .cart_list li {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 10px;
     border-bottom: none;
+}
+.dropdown_cart .cart_list li .quantity {
+    float: right;
 }
 .dropdown_cart .dropdown-menu {
     background: #e0d3c2;
 }
+.wpcf7 form{
+    padding-left: 30px;
+}
+iframe{width: 100% !important;}
+.wpcf7 iframe, .wpcf7 input, .wpcf7 label, .wpcf7 textarea {width: 100%; display: block;}
+.wpcf7 input {height: 36px;}
+.wpcf7 .wpcf7-submit {display: block; width: 100px; margin: 0 auto; border-radius: 4px;    background: #77050f;
+    color: #fff;}
+    .wpcf7 .wpcf7-submit:hover {background: #b7414c;}
 /*.dropdown_cart .cart_list:after {
     content: " ";
     background-image: url(https://nuts.com/nutshell/img/sprites@1x-70e4cede.png);

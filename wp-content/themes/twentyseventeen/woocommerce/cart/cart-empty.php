@@ -25,7 +25,7 @@ wc_print_notices();
 ?>
 
 <p class="cart-empty">
-	<?php _e( 'Your cart is currently empty.', 'woocommerce' ) ?>
+	<?php _e( 'Bạn chưa mua sản phẩm nào!.', 'woocommerce' ) ?>
 </p>
 
 <?php do_action( 'woocommerce_cart_is_empty' ); ?>
