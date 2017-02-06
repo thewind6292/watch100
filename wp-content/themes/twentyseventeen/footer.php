@@ -57,20 +57,9 @@
                             </div>
                         </div>
                         <div class="col-sm-6 col-xs-12 col-lg-4 col-md-4">
-                            <div class="title-col-ft">Đăng kí nhận tin</div>
+                            <div class="title-col-ft">Kết nối với Gallewatch</div>
                             <div class="top-footer">
-                                <div class=" tf-item text-right">
-                                    <div class='block_content discount_content'>
-                                        <form id="discount_form" method="post" name="newletter_form" action="http://www.gallewatch.com/index.php?module=discount&amp;task=save" onsubmit="javascript: return check_discount_form();" >
-                                            <div class="wrapper-discount">    
-                                                <input type="text" name="email" id="dc_email" placeholder="Nhập email..." class="txt-input"  />
-                                                <input type="submit" name="submit" value="Đăng ký" class="button-sub button" />
-                                                <input type="hidden" name='return' value="Lw=="  />
-                                            </div>
-                                        </form>
-                                    </div>                            </div>
                                 <div class="social-ft">
-                                    <div class="title-social">Kết nối với Gallewatch</div>
                                     <a href="<?php if(of_get_option('link_fb')) {
                                         echo of_get_option('link_fb');} ?>" target="_blink">
                                         <img   src="http://www.gallewatch.com/images/face.png"  />
@@ -108,7 +97,7 @@
         </div>
         <div id="ajax-loader" style="/* display: none; */"><div class="loader"><svg class="circular" viewBox="25 25 50 50"><circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"></circle></svg></div></div>
         <div id="fb-root"></div>
-
+        <script language="javascript" type="text/javascript" src="http://www.gallewatch.com/templates/default/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
         <script type="text/javascript">stLight.options({publisher: "c6652b23-5a6c-4da6-a3a0-d0cc1ca50cd2", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
         <script language="javascript" type="text/javascript" src="<?php echo get_theme_file_uri(); ?>/owl-carousel/js/owl.carousel.js"></script>
@@ -119,11 +108,15 @@
         <script language="javascript" type="text/javascript" src="<?php echo get_theme_file_uri(); ?>/js/vertical.js"></script>
         <script language="javascript" type="text/javascript" src="<?php echo get_theme_file_uri(); ?>/js/progress_bar.js"></script>
         <script language="javascript" type="text/javascript" src="<?php echo get_theme_file_uri(); ?>/js/progress_bars.js"></script>
-        <script type="text/javascript" src="<?php echo get_theme_file_uri(); ?>/js/custom_js.js">
+        <script type="text/javascript" src="<?php echo get_theme_file_uri(); ?>/js/custom_js.js"></script>
         <script language="javascript" type="text/javascript" src="<?php echo get_theme_file_uri(); ?>/js/jquery.ratingbar.js"></script>
         <script language="javascript" type="text/javascript" src="<?php echo get_theme_file_uri(); ?>/js/jquery.raty.js"></script>
         <script language="javascript" type="text/javascript" src="<?php echo get_theme_file_uri(); ?>/js/search.js"></script>
-        <script language="javascript" type="text/javascript" src="<?php echo get_theme_file_uri(); ?>/js/defaults.js"></script>
+        
+
+    
+        <script language="javascript" type="text/javascript" src="http://www.gallewatch.com/libraries/jquery/magiczoomplus/magiczoomplus.js"></script>
+        <script language="javascript" type="text/javascript" src="http://www.gallewatch.com/libraries/jquery/jquery.ui/jquery-ui.js"></script>
 <?php wp_footer(); ?>
 
 </body>

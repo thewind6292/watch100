@@ -31,23 +31,23 @@
     margin-top: 0;
 }
 @media only screen and (max-width:997px){
-	.product .hotdeal_title{
-		display: none;
-	}
-	.hotdeal_content{
-		display: none;
-	}
+    .product .hotdeal_title{
+        display: none;
+    }
+    .hotdeal_content{
+        display: none;
+    }
 }
 .name-table {
     margin-bottom: 33px;
 }
 .notice img{
-	margin: 0 auto;
+    margin: 0 auto;
 }
 .columnleft{
-	max-width: 666px;
-	width:50%;
-	float: left;
+    max-width: 666px;
+    width:50%;
+    float: left;
 }
 .price-table{
     width: 47%;
@@ -55,14 +55,14 @@
     margin-left: 2.5%;
 }
 @media only screen and (max-width:997px){
-	.columnleft{
-		max-width: 100%;
-		width:100%;
-	}
-	.price-table{
-		max-width: 100%;
-		width:100%;
-	}
+    .columnleft{
+        max-width: 100%;
+        width:100%;
+    }
+    .price-table{
+        max-width: 100%;
+        width:100%;
+    }
 }
 .product .title-name{
     color: #333;
@@ -88,12 +88,12 @@
 }
 
 @media only screen and (max-width:997px){
-	 .jcarousel-wrapper{
-		display: none;
-	}
+     .jcarousel-wrapper{
+        display: none;
+    }
 }
 #ratings{
-	height:30px ;
+    height:30px ;
 }
 .accessories label{
 font-size: 11px;
@@ -102,12 +102,12 @@ font-weight: bold;
        
 }
 .accessories p{
-	margin-bottom: 0;
-	padding-left: 12px;
-	display: flex;
-	background: url(../images/arrow_right.png) no-repeat left 6px;
-	font-size: 11px;
-	color: #666666;
+    margin-bottom: 0;
+    padding-left: 12px;
+    display: flex;
+    background: url(../images/arrow_right.png) no-repeat left 6px;
+    font-size: 11px;
+    color: #666666;
 }
 .product .bor-retails {
     padding: 20px 20px 15px 20px;
@@ -172,24 +172,24 @@ font-weight: bold;
     white-space: pre;
 }
 .product .bor-retails .title_countdown{
-	text-align: center;
-	margin-top: 20px;
+    text-align: center;
+    margin-top: 20px;
 }
 .product .hasCountdown{
-	background:url("../images/icon_contdown.gif") no-repeat scroll 15px center;
-	display: inline-block;
-	width: 100%;
-	padding-left:38px;
-	border: 1px solid #E9E9E9;
-	margin-bottom: 20px;
-	box-shadow:2px 2px 1px #e9e9e9;
-	border-radius:4px;
+    background:url("../images/icon_contdown.gif") no-repeat scroll 15px center;
+    display: inline-block;
+    width: 100%;
+    padding-left:38px;
+    border: 1px solid #E9E9E9;
+    margin-bottom: 20px;
+    box-shadow:2px 2px 1px #e9e9e9;
+    border-radius:4px;
 }
 .product .bor-retails .select-box{
-	background:url("../images/icon_drop_down.gif") no-repeat scroll right 10px center;
-	width: 88px;
-	height: 40px;
-	margin-right: 10px;
+    background:url("../images/icon_drop_down.gif") no-repeat scroll right 10px center;
+    width: 88px;
+    height: 40px;
+    margin-right: 10px;
 }
 
 .product #buy-now{
@@ -230,7 +230,7 @@ font-weight: bold;
 
 
 .product .tab_title_content{
-	color: #144594;
+    color: #144594;
     font-family: arial;
     font-size: 13px;
     font-weight: bold;
@@ -261,13 +261,13 @@ font-weight: bold;
     top: 0;
 }
 .product .compare_table tr table tr{
-	border-bottom:1px solid #ededed;
+    border-bottom:1px solid #ededed;
 }
 @media only screen and (max-width:997px){
-	.product .compare_table tr .level1{
-		width: 100%;
-		display: table;
-	}
+    .product .compare_table tr .level1{
+        width: 100%;
+        display: table;
+    }
 }
 .mz-thumb img{
     box-shadow: none !important;
@@ -366,7 +366,7 @@ background: url(../images/carousel-arrow-down.png) no-repeat 14px 6px !important
 }
 .left-info.fl > ul li {
     list-style: none;
-    margin-top: 15px;
+    margin-top: 10px;
     position:relative;
     padding-left: 13px;
 }
@@ -394,7 +394,7 @@ background: url(../images/carousel-arrow-down.png) no-repeat 14px 6px !important
     margin-bottom: 8px;
 }
 .txt-hotline-dl {
-    font-size: 13;
+    font-size: 13px;
     color: #333;
     display: block;
     margin-top: 8px;
@@ -445,7 +445,7 @@ background: url(../images/carousel-arrow-down.png) no-repeat 14px 6px !important
     padding-left: 0px;
 }
 ul.product_tabs_ul > li > a {
-    padding: 20px 30px 20px 30px;
+    padding: 20px 15px 20px 15px;
     font-size:20px;
 }
 ul.product_tabs_ul > li {
@@ -489,6 +489,7 @@ ul.product_tabs_ul > li {
     font-size: 14px;
     margin-bottom: 20px;
     line-height: 22px;
+    padding-top: 20px;
 }
 
 h3.tab_name_pro.fl {
@@ -572,7 +573,7 @@ a.fb {
     margin-right: 10px;
     font-size:16px;
     color:#777;
-	    margin-top: 5px;
+        margin-top: 5px;
 }
 
 #wrapper-video{
@@ -643,9 +644,9 @@ ul.list-thum-video > li {
     margin-top: 45px;
 }
 @media only screen and (max-width:600px){
-	.mz-expand .mz-image-stage>figure {
-		min-width:100% !important
-	}
+    .mz-expand .mz-image-stage>figure {
+        min-width:100% !important
+    }
 }
 
 .mz-expand .mz-image-stage>figure {
@@ -904,6 +905,53 @@ div#basic-setup-example {
         display: block;
     }
 }
+.dropdown_cart.open {
+    position: relative;
+}
+.dropdown_cart {
+    display: inline;
+}
+.btn_cart {
+    background: transparent;
+    color: #8fd823;
+}
+.dropdown_cart button {
+    border: none;
+}
+.inline-block {
+    display: inline-block;
+}
+i.fa-shopping-cart{
+    font-size: 22px;
+    margin-right: 10px;
+    color: #8c8a8a;
+}
+
+ul.cart_list {list-style: none;}
+.dropdown_cart.open .dropdown-menu {
+    margin-left: -95px;
+    position: absolute;
+    padding: 20px;
+    width: 320px;
+    right: 143px;
+    top: 45px;
+}
+.header-wrap {z-index: 9999999999;}
+.dropdown_cart .cart_list:before {
+    content: " ";
+    background-image: url(https://nuts.com/nutshell/img/sprites@1x-70e4cede.png);
+    background-position: 0 -12px;
+    height: 5px;
+    width: auto;
+    display: block;
+}
+.dropdown_cart .dropdown-menu .total {
+    margin-top: -43px;
+    padding-top: 5px;
+    padding-left: 10px;
+    margin-bottom: 30px;
+    border-top: 2px solid #ccc;
+}
 .product_cat .frame_manu {
     color: #333333;
     font-weight: bold;
@@ -973,7 +1021,7 @@ div#basic-setup-example {
     position: absolute;
     top: 59%;
     display: none;
-    left: 24%;
+    left: 32%;
 }
 .product_cat .button-sold-out{
     background: none repeat scroll 0 0 rgba(225, 225, 225, 0.7);
