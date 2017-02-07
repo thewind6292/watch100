@@ -34,10 +34,10 @@ if ( $order ) : ?>
 		</p>
 
 	<?php else : ?>
+<p class="woocommerce-thankyou-order-receiveds text-center"><i class="fa fa-check" aria-hidden="true"></i> Đặt mua thành công.</p>
+		<p class="woocommerce-thankyou-order-received"><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', __( 'Cảm ơn quý khách đã đặt hàng, chúng tôi sẽ liên hệ lại để xác nhận thông tin giao hàng.', 'woocommerce' ), $order ); ?></p>
 
-		<p class="woocommerce-thankyou-order-received"><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', __( 'Thank you. Your order has been received.', 'woocommerce' ), $order ); ?></p>
-
-		<ul class="woocommerce-thankyou-order-details order_details">
+		<!-- <ul class="woocommerce-thankyou-order-details order_details">
 			<li class="order">
 				<?php _e( 'Order Number:', 'woocommerce' ); ?>
 				<strong><?php echo $order->get_order_number(); ?></strong>
@@ -56,13 +56,13 @@ if ( $order ) : ?>
 				<strong><?php echo $order->payment_method_title; ?></strong>
 			</li>
 			<?php endif; ?>
-		</ul>
+		</ul> -->
 		<div class="clear"></div>
 
 	<?php endif; ?>
 
-	<?php do_action( 'woocommerce_thankyou_' . $order->payment_method, $order->id ); ?>
-	<?php do_action( 'woocommerce_thankyou', $order->id ); ?>
+	<?php //do_action( 'woocommerce_thankyou_' . $order->payment_method, $order->id ); ?>
+	<?php //do_action( 'woocommerce_thankyou', $order->id ); ?>
 
 <?php else : ?>
 

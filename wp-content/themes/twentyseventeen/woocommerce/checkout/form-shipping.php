@@ -51,8 +51,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<?php if ( ! WC()->cart->needs_shipping() || wc_ship_to_billing_address_only() ) : ?>
 
-			<h3><?php _e( 'Additional Information', 'woocommerce' ); ?></h3>
-
 		<?php endif; ?>
 
 		<?php foreach ( $checkout->checkout_fields['order'] as $key => $field ) : ?>
