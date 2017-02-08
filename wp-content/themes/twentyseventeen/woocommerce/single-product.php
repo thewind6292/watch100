@@ -22,26 +22,56 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header( 'shop' ); ?>
 	<?php
-	global $product;
+	global $product; $post;
 
 	while ( have_posts() ) : the_post();
 
 	$prod_id = get_the_ID();
 
-	$ma_sp      = get_field("mã_sản_phẩm");
-	$tinh_trang = get_field("tình_trạng");
-	$bao_hanh   = get_field("bảo_hành");
-	$xuat_xu    = get_field("xuất_xứ");
+	$acf_ma_sp      = get_field("mã_sản_phẩm");
+	$acf_tinh_trang = get_field("tình_trạng");
+	$acf_bao_hanh   = get_field("bảo_hành");
+	$acf_xuat_xu    = get_field("xuất_xứ");
 
-	$thuong_hieu = woocommerce_get_product_terms($prod_id, 'pa_thuong-hieu', 'names');
-	$thuong_hieu = $thuong_hieu[0];
+   $acf_vo            = get_field("vỏ");
+   $acf_loai_day      = get_field("loại_dây");
+   $acf_duong_kinh    = get_field("đường_kinh");
+   $acf_do_day        = get_field("độ_dày");
+   $acf_do_chiu_nuoc  = get_field("độ_chịu_nước");
+   $acf_lich          = get_field("lịch");
+   $acf_chuc_nang     = get_field("chức_năng");
+   $acf_loai_may      = get_field("loại_may");
+   $acf_mau_mat       = get_field("màu_mặt");
+   $acf_mat_kinh      = get_field("mặt_kinh");
+   $acf_hdsd          = get_field("nội_dung_hướng_dẫn_sử_dụng");
+   $acf_nd_bao_hanh   = get_field("nội_dung_bảo_hành");
+   $acf_nd_danhgia    = get_field("nội_dung_đanh_gia_&_reviews");
 
-	$loai_dong_ho = woocommerce_get_product_terms($prod_id, 'pa_loai-dong-ho', 'names'); 
-	$loai_dong_ho = $loai_dong_ho[0];
+	$pa_thuong_hieu = woocommerce_get_product_terms($prod_id, 'pa_thuong-hieu', 'names');
+	$pa_thuong_hieu = $pa_thuong_hieu[0];
 
-	$loai_day = woocommerce_get_product_terms($prod_id, 'pa_loai-day', 'names'); 
-	$loai_day = $loai_day[0];
+	$pa_loai_dong_ho = woocommerce_get_product_terms($prod_id, 'pa_loai-dong-ho', 'names'); 
+	$pa_loai_dong_ho = $pa_loai_dong_ho[0];
 
+	$pa_loai_day = woocommerce_get_product_terms($prod_id, 'pa_loai-day', 'names'); 
+	$pa_loai_day = $pa_loai_day[0];
+
+   $pa_gioi_tinh = woocommerce_get_product_terms($prod_id, 'pa_gioi-tinh', 'names'); 
+   $pa_gioi_tinh = $pa_gioi_tinh[0];
+
+   $pa_khoang_duong_kinh = woocommerce_get_product_terms($prod_id, 'pa_khoang-duong-kinh', 'names'); 
+   $pa_khoang_duong_kinh = $pa_khoang_duong_kinh[0];
+
+   $pa_khuyen_mai = woocommerce_get_product_terms($prod_id, 'pa_khuyen-mai', 'names'); 
+   $pa_khuyen_mai = $pa_khuyen_mai[0];
+
+   $pa_kieu_dong_ho = woocommerce_get_product_terms($prod_id, 'pa_kieu-dong-ho', 'names'); 
+   $pa_kieu_dong_ho = $pa_kieu_dong_ho[0];
+
+   $pa_mau_sac = woocommerce_get_product_terms($prod_id, 'pa_mau-sac', 'names'); 
+   $pa_mau_sac = $pa_mau_sac[0];
+
+   
 	$sale  = get_post_meta( $prod_id, '_sale_price', true);
 	$price = get_post_meta( $prod_id, '_regular_price', true);
 	if($price!="" && $sale!=""){ $discount_print =  $price - $sale; $discount_print = number_format ($discount_print,0,'',','); }
@@ -56,11 +86,11 @@ get_header( 'shop' ); ?>
 
 	    $img_thumbnail = "http://gallewatch.com/images/products/2016/10/12/resized/a1061_1.png";
 	}
-
 	?>
 	<div class="container container-header">
             <div id="main_container" class="mt20">
                <div class="main-column">
+                  
                  
                   <div class="container360">
                      <div id="basic-setup-example"></div>
@@ -72,19 +102,46 @@ get_header( 'shop' ); ?>
                               <div class="img_styling">
                                  <div class="main-img">
                                     <a id="Zoomer" href="<?php echo $img_thumbnail; ?>" class="MagicZoomPlus" rel="pan-zoom: false; rightClick: true; hint: false;zoom-position: right;show-loading:false;zoom-distance:0;zoom-width:400px; zoom-height:400px;" data-options="rightClick: true">
-                                    <img src="<?php echo $img_thumbnail; ?>" >
+                                    <img class="feature_image" src="<?php echo $img_thumbnail; ?>" >
                                     </a>
                                     <div id="clickndrag" style="text-align: left;">
                                        <img border="0" src="http://www.gallewatch.com/images/click-here.png">
                                     </div>
                                  </div>
+                                
                                  <div class="thumb-pro">
-                                    <ul id="thumb-pro">
-                                       <li class="item">
-                                          <a href="<?php echo $img_thumbnail; ?>" class="Selector"  rel="zoom-id:Zoomer" rev="<?php echo $img_thumbnail; ?>">
-                                          <img src="<?php echo $img_thumbnail; ?>" >
-                                          </a>
-                                       </li>
+                                    <ul id="thumb-pro" class="owl-carousel owl-theme" style="opacity: 1; display: block;">
+                                       <div class="owl-wrapper-outer">
+                                          <div class="owl-wrapper" style="width: 840px; left: 0px; display: block;">
+                                             <?php 
+
+                                                global $product;
+                                                  $attachment_ids = $product->get_gallery_attachment_ids();
+
+                                                foreach( $attachment_ids as $attachment_id ) 
+                                                {
+
+                                                   $shop_thumbnail_image_url = wp_get_attachment_image_src( $attachment_id, 'shop_thumbnail' )[0]; 
+                                                   $shop_catalog_image_url = wp_get_attachment_image_src( $attachment_id, 'shop_catalog' )[0];
+
+                                             ?>
+                                             <div class="owl-item" style="width: 105px;">      
+                                                <li class="item">
+                                                   <a href="<?php echo $shop_catalog_image_url; ?>" class="Selector"  rel="zoom-id:Zoomer" rev="<?php echo $shop_catalog_image_url; ?>">
+                                                   <img src="<?php echo $shop_thumbnail_image_url; ?>" >
+                                                   </a>
+                                                </li>
+                                             </div>
+                                             <?php } ?>
+                                             
+                                          </div>
+                                       </div>
+                                       <div class="owl-controls clickable" style="display: none;">
+                                          <div class="owl-buttons">
+                                             <div class="owl-prev"> </div>
+                                             <div class="owl-next"> </div>
+                                          </div>
+                                       </div>
                                     </ul>
                                  </div>
                                 
@@ -95,9 +152,9 @@ get_header( 'shop' ); ?>
                            <div class="name-table mt20" >
                               <h1 class="title-name"><?php echo the_title(); ?></h1>
                               <div class="code-manu mt10 cf">
-                                 <div class="title-code fl"><span>Mã sản phẩm</span>: <?php echo $ma_sp; ?></div>
+                                 <div class="title-code fl"><span>Mã sản phẩm</span>: <?php echo $acf_ma_sp; ?></div>
                                  <span class="stick-detail fl"></span>
-                                 <div class="manu fl"><span>Thương hiệu</span>: <?php echo $thuong_hieu; ?></div>
+                                 <div class="manu fl"><span>Thương hiệu</span>: <?php echo $pa_thuong_hieu; ?></div>
                               </div>
                               <div class="rating-pro cf">
                                  <!-- <div class="col-raty fl">
@@ -117,7 +174,7 @@ get_header( 'shop' ); ?>
                                        </div>
                                        <span class="fl">:</span>
                                        <div class="li-right fl">
-                                          <?php echo $tinh_trang; ?>                                    
+                                          <?php echo $acf_tinh_trang; ?>                                    
                                        </div>
                                     </li>
                                     <li class="cf">
@@ -126,7 +183,7 @@ get_header( 'shop' ); ?>
                                        </div>
                                        <span class="fl">:</span>
                                        <div class="li-right fl">
-                                          <?php echo $bao_hanh; ?>                                   
+                                          <?php echo $acf_bao_hanh; ?>                                   
                                        </div>
                                     </li>
                                     <li class="cf">
@@ -135,7 +192,7 @@ get_header( 'shop' ); ?>
                                        </div>
                                        <span class="fl">:</span>
                                        <div class="li-right fl">
-                                       	   <?php echo $xuat_xu; ?>  	
+                                       	   <?php echo $acf_xuat_xu; ?>  	
                                        </div>
                                     </li>
                                     <li class="cf">
@@ -144,7 +201,7 @@ get_header( 'shop' ); ?>
                                        </div>
                                        <span class="fl">:</span>
                                        <div class="li-right fl">
-                                       		<?php echo $loai_dong_ho; ?>
+                                       		<?php echo $pa_loai_dong_ho; ?>
                                        </div>
                                     </li>
                                     </table>
@@ -154,7 +211,7 @@ get_header( 'shop' ); ?>
                                        </div>
                                        <span class="fl">:</span>
                                        <div class="li-right fl">
-                                       		<?php echo $loai_day; ?>
+                                       		<?php echo $pa_loai_day; ?>
                                        </div>
                                     </li>
                                     </table>
@@ -163,11 +220,10 @@ get_header( 'shop' ); ?>
                                  </ul>
                                  <div class="list-social-detail">
                                     <span class="fl">Chia sẻ:</span>
-                                    <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.gallewatch.com/dong-ho-nam/dong-ho-nam-festina-f166534.html" class="fb fl" title="facebook"><img src="http://www.gallewatch.com/images/face.png" alt="share facebook" /></a>
-                                    <a target="_blank" href="https://twitter.com/home?status=http://www.gallewatch.com/dong-ho-nam/dong-ho-nam-festina-f166534.html" class="fb tw fl" title="twitter"><img src="http://www.gallewatch.com/images/tw.png" alt="share facebook" /></a>
-                                    <a target="_blank" href="https://plus.google.com/share?url=http://www.gallewatch.com/dong-ho-nam/dong-ho-nam-festina-f166534.html" class="fb fl" title="google plus"><img src="http://www.gallewatch.com/images/gg.png" alt="share facebook" /></a>
-<!--                                     <a target="_blank" href=mailto:?gallewatch@gmail.com" class="fb email fl" title="email"><img src="http://www.gallewatch.com/images/mail.png" alt="share facebook" /></a>
- -->                                 </div>
+                                    <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" class="fb fl" title="facebook"><img src="http://www.gallewatch.com/images/face.png" alt="share facebook" /></a>
+                                    <a target="_blank" href="https://twitter.com/home?status=<?php the_permalink(); ?>" class="fb tw fl" title="twitter"><img src="http://www.gallewatch.com/images/tw.png" alt="share facebook" /></a>
+                                    <a target="_blank" href="https://plus.google.com/share?url=<?php the_permalink(); ?>" class="fb fl" title="google plus"><img src="http://www.gallewatch.com/images/gg.png" alt="share facebook" /></a>
+                                 </div>
                               </div>
                               <div class="right-info fl">
                                  <div class="bor-retails mt20">
@@ -229,41 +285,8 @@ get_header( 'shop' ); ?>
                                  </div>
                               </div>
                            </div>
-                           <div class="favourite mt20 text-center">
-                              <div class='product_related_title'>Có thể bạn sẽ thích</div>
-                              
-                              <ul class=" product_related cf">
-                              	<?php    
-	                            global $post;
-	                            $args = array(
-	                                'orderby'   => 'date',
-	                                'order'     => 'DESC',
-	                                'post_type' => 'product',
-	                                'showposts' => 8,
-	                                'post__not_in' => array($post->ID)
-	                            );
-	                            ?>
-	                                <?php $my_query = new WP_Query($args); ?>
-	                                <?php if ($my_query->have_posts()) { ?>
-	                                    <?php while ($my_query->have_posts()) : $my_query->the_post(); $i++; ?>
-	                                    <?php 
-	                                           global $product; 
-	                                          
-	                                    ?>
-	                                    <?php
-	                                           $img_thumbnail = get_the_post_thumbnail($post->ID, "small", array( 'class' => 'img-responsive' )) ;
-	                                    ?>
-                                 <li class="item">
-                                    <!-- <a href="http://www.gallewatch.com/dong-ho-nam/dong-ho-festina-f168252.html" title = "Đồng hồ Festina F16825/2" >
-                                    <img class="img-responsive" src="http://www.gallewatch.com/images/products/2016/10/12/small/F16825_2.png" alt="Đồng hồ Festina F16825/2"  />
-                                    </a>    -->
-                                    <?php echo $img_thumbnail; ?>
-                                 </li>
-                                 <?php endwhile; // end of the loop.  ?>
-                                 <?php } wp_reset_postdata(); ?>
-                              </ul>
-                           </div>
-                        </div>
+                    
+                         </div>
                      </div>
                   </div>
                   <div class="bottom-detail">
@@ -286,276 +309,133 @@ get_header( 'shop' ); ?>
 	                                          <td colspan="2">Thông tin sản phẩm</td>
 	                                          <td></td>
 	                                       </tr>
+                                          <tr class="tr-value">
+                                             <td>Thương hiệu</td>
+                                             <td><?php echo $pa_thuong_hieu; ?></td>        
+                                          </tr>
+                                          <tr class="tr-value">
+                                             <td>Mã sản phẩm</td>
+                                             <td><?php echo $acf_ma_sp; ?></td>        
+                                          </tr>
+                                          <tr class="tr-value">
+                                             <td>Giới tính</td>
+                                             <td><?php echo $pa_gioi_tinh; ?></td>        
+                                          </tr>
+                                          <tr class="tr-value">
+                                             <td>Xuất xứ</td>
+                                             <td><?php echo $acf_xuat_xu; ?></td>        
+                                          </tr>
+                                          <tr class="tr-value">
+                                             <td>Loại đồng hồ</td>
+                                             <td><?php echo $pa_loai_dong_ho; ?></td>        
+                                          </tr>
+                                          <tr class="tr-value">
+                                             <td>Kiểu đồng hồ</td>
+                                             <td><?php echo $pa_kieu_dong_ho; ?></td>        
+                                          </tr>
 	                                    </table>
 	                                    <table class='table table-condensed compare_table' border="0" cellpadding="0" width="100%">
 	                                       <tr class="title-table-dt">
 	                                          <td colspan="2">Vỏ &amp; Dây</td>
 	                                          <td></td>
 	                                       </tr>
+                                          <tr class="tr-value">
+                                             <td>Vỏ</td>
+                                             <td><?php echo $acf_vo; ?></td>        
+                                          </tr>
+                                          <tr class="tr-value">
+                                             <td>Loại dây</td>
+                                             <td><?php echo $pa_loai_day; ?></td>        
+                                          </tr>
+                                          <tr class="tr-value">
+                                             <td>Đường kính</td>
+                                             <td><?php echo $acf_duong_kinh; ?></td>        
+                                          </tr>
+                                          <tr class="tr-value">
+                                             <td>Độ dày</td>
+                                             <td><?php echo $acf_do_day; ?></td>        
+                                          </tr>
 	                                    </table>
 	                                    <table class='table table-condensed compare_table' border="0" cellpadding="0" width="100%">
 	                                       <tr class="title-table-dt">
 	                                          <td colspan="2">Tính năng</td>
 	                                          <td></td>
 	                                       </tr>
+                                          <tr class="tr-value">
+                                             <td>Độ chịu nước</td>
+                                             <td><?php echo $acf_do_chiu_nuoc; ?></td>        
+                                          </tr>
+                                          <tr class="tr-value">
+                                             <td>Lịch</td>
+                                             <td><?php echo $acf_lich; ?></td>        
+                                          </tr>
+                                          <tr class="tr-value">
+                                             <td>Chức năng</td>
+                                             <td><?php echo $acf_chuc_nang; ?></td>        
+                                          </tr>
 	                                    </table>
 	                                    <table class='table table-condensed compare_table' border="0" cellpadding="0" width="100%">
 	                                       <tr class="title-table-dt">
 	                                          <td colspan="2">Thông số bổ sung</td>
 	                                          <td></td>
 	                                       </tr>
+                                          <tr class="tr-value">
+                                             <td>Loại máy</td>
+                                             <td><?php echo $acf_loai_may; ?></td>        
+                                          </tr>
+                                          <tr class="tr-value">
+                                             <td>Màu mặt</td>
+                                             <td><?php echo $pa_mau_sac; ?></td>        
+                                          </tr>
+                                          <tr class="tr-value">
+                                             <td>Mặt kính</td>
+                                             <td><?php echo $acf_mat_kinh; ?></td>        
+                                          </tr>
 	                                    </table>
 	                                 </div>
 								  </div>
 								  <div id="huong-dan-su-dung" class="tab-pane fade">
-								    <div class="tab_content prodetails_tab">
-	                                    <p><strong style="text-align: justify;">Thời gian nhận và trả bảo hành</strong></p>
-	                                    <p style="text-align: justify;">Trong giờ hành chính: Từ 08h30 đến 17h00</p>
-	                                    <p style="text-align: justify;">Các ngày trong tuần trừ Ngày lễ và chủ nhật.</p>
-	                                    <p style="text-align: justify;"><strong>Trường hợp được bảo hành  </strong></p>
-	                                    <p style="text-align: justify;">- Các sản phẩm có thời gian bảo hành từ 1- 2 năm. Tùy theo từng dòng sản phẩm.</p>
-	                                    <p style="text-align: justify;">- Sản phẩm trong thời hạn bảo hành. </p>
-	                                    <p style="text-align: justify;">- Lỗi về máy, pin và độ chịu nước </p>
-	                                    <p style="text-align: justify;">- Sản phẩm được bảo hành theo quy định của nhà cung cấp. </p>
-	                                    <p style="text-align: justify;">- Quý khách xuất trình phiếu bảo hành khi đi bảo hành. </p>
-	                                    <p style="text-align: justify;"><strong>Trường hợp không được bảo hành </strong></p>
-	                                    <p style="text-align: justify;">- Quá thời gian bảo hành ghi trên sổ hoặc thẻ bảo hành. </p>
-	                                    <p style="text-align: justify;">- Sổ bảo hành, thẻ bảo hành bị rách, bị dán đè, bị sửa đổi hoặc không xác định được. </p>
-	                                    <p style="text-align: justify;">- Các sản phẩm tự ý sửa chữa, biến dạng do rơi vỡ, va đập, dùng sai quy định, hư hỏng do thiên tai, động đất,...gây ra. </p>
-	                                    <p style="text-align: justify;">- Hỏng bên ngoài như vỏ, dây, kính, lỗi do người sử dụng,... </p>
-	                                    <p style="text-align: justify;"><strong>Lưu ý: </strong></p>
-	                                    <p style="text-align: justify;">- Khách hàng chịu trách nhiệm cho chi phí vận chuyển đến trung tâm bảo hành. </p>
-	                                    <p style="text-align: justify;">- Hết thời hạn bảo hành, chi phí sửa chữa sẽ được trung tâm bảo hành hỗ trợ với giá ưu đãi nhất.</p>
-	                                    <p style="text-align: justify;"><strong>Chính sách đổi mới sản phẩm:</strong></p>
-	                                    <p style="text-align: justify;">Nhằm đảm bảo quyền lợi người tiêu dùng, nâng cao chất lượng dịch vụ sau bán hàng, cửa hàng đổi sản phẩm mới cùng loại nếu sản phẩm bị lỗi kỹ thuật do nhà sản xuất. Sản phẩm chỉ được đổi khi đáp ứng đầy đủ các điều kiện sau dưới đây:</p>
-	                                    <p style="text-align: justify;">- Sản phẩm mới mua trong vòng 02 ngày kể từ ngày xuất bán. Khách hàng mua trực tuyến, thời gian được tính từ ngày khách nhận được sản phẩm.</p>
-	                                    <p style="text-align: justify;"> - Sản phẩm không bị cũ, xước, biến dạng và thỏa mãn các điều kiện bảo hành.</p>
-	                                    <p style="text-align: justify;">- Sản phẩm nhận lại phải còn nguyên vẹn vỏ thùng, xốp và đầy đủ các phụ kiện kèm theo, quà khuyến mãi (nếu có)…</p>
-	                                    <p style="text-align: justify;"><strong>Trường hợp không chấp nhận đổi hoặc trả sản phẩm:</strong></p>
-	                                    <p style="text-align: justify;">- Quý khách muốn thay đổi chủng loại, mẫu mã sản phẩm.</p>
-	                                    <p style="text-align: justify;">- Lỗi do người sử dụng.</p>
-	                                    <p style="text-align: justify;">- Không chấp nhận các lỗi ngoại quan (xước, móp, méo, vỡ, sứt, ...) khi khách hàng đã mang sản phẩm ra khỏi cửa hàng Công ty.</p>
-	                                    <p style="text-align: justify;"><strong>Chú ý:</strong> Khách hàng xem kỹ sản phẩm trước khi mua, sản phẩm đã bán ra không nhập lại. Không có trường hợp ngoại lệ. Để đảm bảo cho mọi khách hàng luôn mua được sản phẩm mới.</p>
-	                                    <p style="text-align: justify;"><strong>Địa chỉ:</strong></p>
-	                                    <p style="text-align: justify;">Galle Watch – 41 Thi Sách, Hai Bà Trưng, Hà Nội | Tel: 04. 3976 4617</p>
-	                                    <p style="text-align: justify;">Galle Watch – 393 Điện Biên Phủ, Phường 4, Quận 3, TP. HCM | Tel: 08 3929 0685</p>
-	                                 </div>
+								      <div class="tab_content prodetails_tab">
+                                    <?php 
+                                       if($acf_hdsd!=""){
+
+                                          echo $acf_hdsd;
+                                          
+                                       }else{
+
+                                          $post_hdsd = get_post( 130 ); 
+                                          
+                                          echo $post_hdsd->post_content;
+                                       }
+                                    ?>   
+	                           </div>
 								  </div>
 								  <div id="bao-hanh" class="tab-pane fade">
-								  	<div class="tab_content prodetails_tab">
-									    <p style='color:#333;font-weight: 700;'>Bảo hành quốc tế</p>
-		                                 2 năm
-		                                 <p> </p>
-		                                 <p><strong style="font-size: 14px;"><span style="line-height: 150%;">I. Hướng dẫn sử dụng và bảo hành</span></strong></p>
-		                                 <p style="line-height: 150%;">
-		                                    <span style="font-size:14px;"><span style="line-height: 150%;">Trong quá trình sử dụng, nếu phát hiện bất kỳ hiện tượng không bình thường, Quý khách cần liên hệ hoặc mang đồng hồ đến ngay các Trung tâm kỹ thuật và bảo hành của Công ty để được tư vấn và kiểm tra.</span></span>
-		                                    <span style="font-size: 13pt; line-height: 150%;">
-		                                       <o:p></o:p>
-		                                    </span>
-		                                 </p>
-		                                 <p style="line-height: 150%;">
-		                                    <span style="font-size:14px;"><span style="line-height: 150%;">Phạm vi bảo hành đồng hồ bao gồm các lỗi kỹ thuật về máy ( như đồng hồ không chạy, chạy không chính xác), độ chịu nước và pin đồng hồ). Các trường hợp không bảo hành đồng hồ gồm các lỗi về vỏ và dây của đồng hồ; các lỗi rơi vỡ, va đập làm xước kính trong quá trình khách hàng sử dụng gây nên; dây da gặp vấn đề; không bảo hành cho trường hợp điều chỉnh, sử dụng không đúng cách của người dùng; không bảo hành cho đồng hồ đã sửa chữa tại những nơi không phải là trung tâm bảo hành của công ty.<br />
-		                                    <br />
-		                                    <strong>1. Mức độ chịu nước của đồng hồ</strong><br />
-		                                    <br />
-		                                    Đề nghị quý khách xem kỹ ký hiệu về mức độ chịu nước của đồng hồ được in trên mặt số hoặc ở dưới đáy đồng hồ.</span></span>
-		                                    <span style="font-size: 13pt; line-height: 150%;">
-		                                       <o:p></o:p>
-		                                    </span>
-		                                 </p>
-		                                 <p style="line-height: 150%;">
-		                                    <span style="font-size:14px;"><span style="line-height: 150%;">Ký hiệu Water Resistance 30, 30M, 3 ATM: mức độ chịu nước trung bình, quý khách có thể rửa tay với nước ở nhiệt độ thường.</span></span>
-		                                    <span style="font-size: 13pt; line-height: 150%;">
-		                                       <o:p></o:p>
-		                                    </span>
-		                                 </p>
-		                                 <p style="line-height: 150%;">
-		                                    <span style="font-size:14px;"><span style="line-height: 150%;">Ký hiệu Water Resistance 50, 50M, 5 ATM: quý khách có thể rửa tay, đi mưa (tránh đeo đồng hồ khi mưa to)</span></span>
-		                                    <span style="font-size: 13pt; line-height: 150%;">
-		                                       <o:p></o:p>
-		                                    </span>
-		                                 </p>
-		                                 <p style="line-height: 150%;">
-		                                    <span style="font-size:14px;"><span style="line-height: 150%;">Ký hiệu Water Resistance 100, 100M, 10 ATM: quý khách có thể rửa tay, đi mưa, đi tắm (nước thường, ở nhiệt tình thường)</span></span>
-		                                    <span style="font-size: 13pt; line-height: 150%;">
-		                                       <o:p></o:p>
-		                                    </span>
-		                                 </p>
-		                                 <p style="line-height: 150%;">
-		                                    <span style="font-size:14px;"><span style="line-height: 150%;">Ký hiệu Water Resistance 200, 200M, 20 ATM: quý khách có thể rửa tay, đi mưa, đi tắm, đi bơi (không nên đeo đồng hồ khi lặn)<br />
-		                                    <br />
-		                                    Chú ý: khi Quý khách ở dưới nước hay đồng hồ còn ướt thì không được sử dụng các nút ấn hoặc chỉnh giờ. Nếu Quý khách sử dụng đồng hồ đi tắm biển (đối với đồng hồ chịu áp lực từ 20ATM trở lên), sau khi tắm xong, Quý khách vui lòng rửa sạch bằng nước thường và lau khô đồng hồ.<br />
-		                                    <br />
-		                                    Trước khi sử dụng đồng hồ trong môi trường ẩm, phải kiểm tra vỏ, kính có bình thường không, núm đồng hồ đã đóng chặt chưa.<br />
-		                                    <br />
-		                                    Tuyệt đối không đeo đồng hồ khi dùng nước nóng, tắm nóng lạnh, xông hơi vì nhiệt độ thay đổi đột ngột, độ co giãn của vỏ và gioăng khác nhau tạo nên khe hở để nước và hơi ẩm lọt vào làm bẩn máy, giảm khả năng chống nước và dễ hỏng máy.<br />
-		                                    <br />
-		                                    <strong>2. Ảnh hưởng của nhiệt độ:</strong><br />
-		                                    <br />
-		                                    Không để đồng hồ trực tiếp dưới ánh sáng mặt trời hoặc ở nơi có nhiệt độ cao trong thời gian dài vì có thể ảnh hưởng đến bộ máy đồng hồ, rút ngắn thời gian hoạt động của pin và ảnh hưởng đến chi tiết khác.<br />
-		                                    <br />
-		                                    Không nên để luông khí lạnh của các loại máy điều hòa thổi trực tiếp vào đồng hồ một cách thường xuyên, liên tục.<br />
-		                                    <br />
-		                                    <strong>3. Ảnh hưởng của từ trường:</strong><br />
-		                                    <br />
-		                                    Tránh để đồng hồ gần các vật dụng có từ trường mạnh như : tivi, tủ lạnh, lò vi sóng, máy vi tính, dàn âm thanh.<br />
-		                                    <br />
-		                                    <strong>4. Ảnh hưởng của hóa chất và khí gas</strong><br />
-		                                    <br />
-		                                    Đồng hồ nên tránh tiếp xúc với khí gas, hóa chất như xà phòng, axit, dung môi, thủy ngân hay thuốc tẩy…. vì có thể làm vỏ và dây đồng hồ biến màu, mục dây da hoặc làm hỏng bộ gioăng chống nước của đồng hồ.<br />
-		                                    <br />
-		                                    <strong>5. Chú ý khi chỉnh giờ</strong><br />
-		                                    <br />
-		                                    Tuyệt đối không chỉnh giờ ngược chiều kim đồng hồ vì sẽ làm hỏng bộ cơ của đồng hồ.<br />
-		                                    <br />
-		                                    Về cơ bản, tránh chỉnh lịch đồng hồ trong khoảng thời gian từ 9h tối đến 9h sáng hàng ngày, nếu điều chỉnh trong khoảng thời gian này thì sẽ gây hư hại ngoài ý muốn cho hệ thống bánh xe truyền lịch của đồng hồ.<br />
-		                                    <br />
-		                                    Sau khi chỉnh giờ và lịch, Quý khách phải đóng chặt núm đồng hồ để tránh tình trạng nước vào.<br />
-		                                    <br />
-		                                    Đối với đồng hồ automatic nên đeo liên tục tối thiểu trong 8 giờ hàng ngày với mức vận động bình thường thì đồng hồ được lên đủ cót và chạy được khoảng 40 giờ sau khi không đeo. Tuy nhiên, tùy theo từng trường hợp cụ thể thì cần có điều chỉnh cụ thể.<br />
-		                                    <br />
-		                                    <strong>II. Hướng dẫn tự kiểm tra và bảo dưỡng đồng hồ</strong></span></span>
-		                                    <span style="font-size: 13pt; line-height: 150%;">
-		                                       <o:p></o:p>
-		                                    </span>
-		                                 </p>
-		                                 <p style="line-height: 150%;">
-		                                    <br />
-		                                    <span style="font-size:14px;"><span style="line-height: 150%;"><strong> * Nên kiểm tra định kỳ:</strong></span></span>
-		                                    <span style="font-size: 13pt; line-height: 150%;">
-		                                       <o:p></o:p>
-		                                    </span>
-		                                 </p>
-		                                 <p style="line-height: 150%;">
-		                                    <span style="font-size:14px;"><span style="line-height: 150%;">Đối với đồng hồ của bất cứ thương hiệu nào, cứ 2-3 năm, hoặc khi thay pin, bạn nên mang đến các trung tâm chăm sóc khách hàng chính hãng để kiểm tra chiếc đồng hồ xem bộ phận nào bị mòn cần phải được thay thế, kiểm tra xem đồng hồ cần tra dầu hay không, đánh bóng hoặc làm sạch mồ hôi, nước, bụi bẩn, v.v ..<br />
-		                                    <br />
-		                                    <strong>* Đối với dây da</strong></span></span>
-		                                    <span style="font-size: 13pt; line-height: 150%;">
-		                                       <o:p></o:p>
-		                                    </span>
-		                                 </p>
-		                                 <p style="line-height: 150%;">
-		                                    <span style="font-size:14px;"><span style="line-height: 150%;">Dây da nên được nới lỏng hơn trong mùa hè vì dây sẽ hấp thu mồ hôi nhiều hơn. Dây đeo chặt không những ngăn chặn không khí lưu thông qua mặt dưới dây da mà còn gây ra triệu chứng phát ban mồ hôi trên cổ tay. Nếu dây da bị ẩm ướt do mồ hôi, lau khô với vải mềm loại thấm nước. Tránh để đồng hồ trong ánh nắng trực tiếp. Màu sắc dây da có thể bị phai màu.<br />
-		                                    <br />
-		                                    <strong>* Làm sạch vỏ/ mặt kính</strong></span></span>
-		                                    <span style="font-size: 13pt; line-height: 150%;">
-		                                       <o:p></o:p>
-		                                    </span>
-		                                 </p>
-		                                 <p style="line-height: 150%;">
-		                                    <span style="font-size:14px;"><span style="line-height: 150%;">Khi bạn muốn tự làm sạch vỏ đồng hồ của mình, dùng vải mềm và hơi ẩm. Không sử dụng bất kỳ chất dung môi, tẩy rửa, hoặc xà phòng vì sẽ làm hư hại đồng hồ.<br />
-		                                    <br />
-		                                    <strong> * Khi bạn không đeo đồng hồ</strong></span></span>
-		                                    <span style="font-size: 13pt; line-height: 150%;">
-		                                       <o:p></o:p>
-		                                    </span>
-		                                 </p>
-		                                 <p style="line-height: 150%;">
-		                                    <span style="font-size:14px;"><span style="line-height: 150%;">Hãy để đồng hồ ở một nơi thông thoáng. Không được để đồng hồ trong hộp kín khi đồng hồ vẫn còn ẩm ướt mồ hôi.<br />
-		                                    <br />
-		                                    <strong>* Va chạm</strong></span></span>
-		                                    <span style="font-size: 13pt; line-height: 150%;">
-		                                       <o:p></o:p>
-		                                    </span>
-		                                 </p>
-		                                 <p style="line-height: 150%;">
-		                                    <span style="font-size:14px;"><span style="line-height: 150%;">Đồng hồ của bạn là một dụng cụ đo lường chính xác. Đối xử với nó một cách cẩn thận, và nó sẽ phục vụ cho bạn tốt. Tránh những cú va chạm quá mức (chẳng hạn như rơi trên bề mặt cứng)<br />
-		                                    <br />
-		                                    <strong> * Mồ hôi</strong></span></span>
-		                                    <span style="font-size: 13pt; line-height: 150%;">
-		                                       <o:p></o:p>
-		                                    </span>
-		                                 </p>
-		                                 <p style="line-height: 150%;">
-		                                    <span style="font-size:14px;"><span style="line-height: 150%;">Bạn nên cố gắng bảo vệ đồng hồ tránh mồ hôi nặng. Hãy nhớ lau khô đồng hồ cành nhanh càng tốt.<br />
-		                                    <br />
-		                                    <strong>* Nhiệt độ</strong></span></span>
-		                                    <span style="font-size: 13pt; line-height: 150%;">
-		                                       <o:p></o:p>
-		                                    </span>
-		                                 </p>
-		                                 <p style="line-height: 150%;">
-		                                    <span style="font-size:14px;"><span style="line-height: 150%;">Nếu đồng hồ của bạn được cất giữ ở nhiệt độ bên ngoài nhiệt độ bình thường (thấp khoảng 5°C hoặc cao hơn 50°C) các thành phần điện tử có thể ngừng hoạt động.<br />
-		                                    <br />
-		                                    <strong>* Hóa chất</strong></span></span>
-		                                    <span style="font-size: 13pt; line-height: 150%;">
-		                                       <o:p></o:p>
-		                                    </span>
-		                                 </p>
-		                                 <p style="line-height: 150%;">
-		                                    <span style="font-size:14px;"><span style="line-height: 150%;">Các chất hóa học, khí đốt, thủy ngân, v.v.,sẽ làm thay đổi màu vỏ, dây kim loại, dây da. Thủy ngân(ví dụ, từ một nhiệt kế bị hỏng) sẽ làm lớp mạ vàng biến thành màu xám khó coi.</span></span>
-		                                    <span style="font-size: 13pt; line-height: 150%;">
-		                                       <o:p></o:p>
-		                                    </span>
-		                                 </p>
-		                                 <p style="text-align: justify;">
-		                                    <o:p></o:p>
-		                                 </p>
-		                            </div>     
+								  	    <div class="tab_content prodetails_tab">
+									         <?php 
+                                       if($acf_nd_bao_hanh!=""){
+
+                                          echo $acf_nd_bao_hanh;
+                                          
+                                       }else{
+
+                                          $post_ndbh = get_post( 351 ); 
+                                          
+                                          echo $post_ndbh->post_content;
+                                       }
+                                    ?> 
+		                         </div>     
 								  </div>
 								  <div id="reviews" class="tab-pane fade">
 
-									    <div class="tab_content prodetails_tab wrapper-name-raty cf">
-		                                    <h3 class="tab_name_pro fl">Bài viết review về Đồng hồ nam FESTINA F16653/4</h3>
+									      <div class="tab_content prodetails_tab wrapper-name-raty cf">
+		                                    
 		                                    <div class="bt-raty fr">
 		                                       Viết đánh giá
 		                                    </div>
-		                                 </div>
-		                                 <div class="tab_content prodetails_tab">
-		                                    <div class='comments'>
-		                                       <!-- FORM COMMENT	-->
-		                                       <div class='comment_form cf'  id="comment_form">
-		                                          <form action="#" method="post" name="comment_add_form" id='comment_add_form' class='form_comment'>
-		                                             <div class="left-cm">
-		                                                <div class='row-cm'>
-		                                                   <div class='label-form'>Họ và tên của bạn<span class='required'>*</span></div>
-		                                                   <input type="text" id="name" name="name" placeholder="Họ và tên" value=""  class="txt_input"/>
-		                                                </div>
-		                                                <div class='row-cm'>
-		                                                   <div class='label-form'>Bạn nghĩ sao về sản phẩm này<span class='required'>*</span></div>
-		                                                   <div class='row-raty cf'>
-		                                                      <span class='fl'>Giá trị</span> 
-		                                                      <div class="fl rating-value"></div>
-		                                                   </div>
-		                                                   <div class='row-raty cf'>
-		                                                      <span class='fl'>Chất lượng</span> 
-		                                                      <div class="fl rating-quantity"></div>
-		                                                   </div>
-		                                                   <div class='row-raty cf'>
-		                                                      <span class='fl'>Giá bán</span> 
-		                                                      <div class="fl rating-price"></div>
-		                                                   </div>
-		                                                   <div class='wrapper-capcha'>
-		                                                      <img id="imgCaptcha" src="http://www.gallewatch.com/libraries/jquery/ajax_captcha/create_image.php" />
-		                                                      <a href="javascript:changeCaptcha();"  title="Click here to change the captcha" class="code-view" >&nbsp;</a>
-		                                                      <input type="text" id="txtCaptcha" value="" class="txt_input" name="txtCaptcha"  />
-		                                                   </div>
-		                                                </div>
-		                                             </div>
-		                                             <div class="right-cm">
-		                                                <div class='row-cm'>
-		                                                   <div class='label-form'>Nhận xét của bạn<span class='required'>*</span></div>
-		                                                   <input type="text" id="summary" name="summary"  placeholder="Tóm tắt nhận xét của bạn"  class="txt_input"/>
-		                                                </div>
-		                                                <div class='row-cm'>
-		                                                   <div class='label-form'>Hãy cho chúng tôi biết những đánh giá của bạn</div>
-		                                                   <textarea id="full_rate" class="txt_input" placeholder="Viết đánh giá của bạn tại đây..." rows="6" name="full_rate"></textarea>
-		                                                   <input type='button' class="button submitbt" value='Đăng đánh giá' id='submitbt'>
-		                                                   <input type='reset' id='reset' value='Hủy đánh giá' />
-		                                                </div>
-		                                             </div>
-		                                             <input type="hidden" value="products" name='module' />
-		                                             <input type="hidden" value="product" name='view' />
-		                                             <input type="hidden" value="save_comment" name='task' />
-		                                             <input type="hidden" value="" name='user_id' />
-		                                             <input type="hidden" value=""  name="user_name"/>
-		                                             <input type="hidden" value="" name='user_email' />
-		                                             <input type="hidden" value="9706" name='record_id' id='record_id'  />
-		                                             <input type="hidden" value="http://www.gallewatch.com/dong-ho-nam/dong-ho-nam-festina-f166534.html" name='return'  />
-		                                          </form>
-		                                       </div>
-		                                    </div>
-		                                 </div>
+                                           <?php display_comments_evolved();?>
+		                           </div>
+		                                 
 									  </div>
 								</div>
 							</div>
@@ -564,9 +444,7 @@ get_header( 'shop' ); ?>
                         <div class="col-lg-3">
                            <div class='block_banners banners_1 blocks_banner blocks1 block'  id = "block_id_105" >
                               <div class='banners  banners-default block_inner block_banner_banner'  >
-                                 <a target="_blank" href="http://gallewatch.com/ct-tai-sao-nen-lua-chon-galle-watch.html" title='banner right sp 1'  id="banner_item_74">
-                                 <img class="img-old img-responsive" alt="banner right sp 1" src="http://www.gallewatch.com/images/banners/original/banner-why_1482202617.jpg">
-                                 </a>
+                                 <?php if(function_exists('dynamic_sidebar') && dynamic_sidebar('Sidebar Banner')) : else : ?><?php endif; ?>
                                  <div class="clear"></div>
                               </div>
                               <div class="clear"></div>
@@ -575,16 +453,42 @@ get_header( 'shop' ); ?>
                      </div>
                   </div>
                </div>
-               <input type="hidden" value="9706" name='product_id' id='product_id'  />
-               <div class="content-pop">
-                  <div class="wrapper-popup" id="wrapper-popup">
-                     <div class="title-popup">Thêm vào giỏ hàng</div>
-                     <div class="name-pro-pop">Đồng hồ nam FESTINA F16653/4 đã được thêm vào giỏ hàng của bạn</div>
-                     <div class="sub-wrapper-popup cf">
-                        <a href="http://www.gallewatch.com/gio-hang.html" class="fl bt-pop view-cart">Xem giỏ hàng của bạn</a>
-                        <a href="http://www.gallewatch.com/" class="fl bt-pop continue-buy" >Tiếp tục mua hàng</a>
+               
+               <div class="content-pop-related">
+                     <div class="block_products_list  blocks_product_list block blocks_product_list_vertical mt20">
+                            <h2 class="block_title">
+                                <span>Có thể bạn thích</span></a>
+                            </h2>
+                        <div class="block-content">
+                        <?php
+
+                        $term_product_current_id = wp_get_post_terms($post->ID, 'product_cat', array("fields" => "ids"));
+
+                        $args_best_selling = array(
+                           'post_type'           => 'product',
+                           'post_status'         => 'publish',
+                           'posts_per_page'      => 4,
+                           'post__not_in' => array($post->ID),
+                           'tax_query' => array(
+                                array(
+                                    'taxonomy' => 'product_cat',
+                                    'terms' => $term_product_current_id,
+                                    'operator' => 'IN',
+                                    )
+                           )
+                        );    
+
+                        $products_best_selling = new WP_Query($args_best_selling);
+                           if ($products_best_selling->have_posts()) : 
+                              while ($products_best_selling->have_posts()) : $products_best_selling->the_post(); 
+                               wc_get_template_part( 'content', 'product' );
+                           ?>
+                              <?php endwhile;
+                           endif;
+                           wp_reset_query(); 
+                         ?>
+                        </div>
                      </div>
-                  </div>
                </div>
             </div>
          </div>
