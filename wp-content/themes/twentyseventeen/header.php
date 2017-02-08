@@ -78,6 +78,7 @@
                     </div>
                     <div class="sepa"></div>
                     <div id="search" class="search pull-right">
+                        <div class="form-search"> <?php get_search_form() ?> </div>
                         <div class="dropdown dropdown_cart">
                             <button class=" dropdown-toggle btn_cart size-15" type="button" data-toggle="dropdown">
                                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
