@@ -315,7 +315,7 @@ class CodeNegar_wcpf_html{
 				data-key="<?php echo $options['parent']; ?>"
 				value=""
 				<?php	if(!$user_val){    echo 'selected="selected"'; } ?> >
-				<?php _e('Any', $codenegar_wcpf->text_domain) ?> <?php echo $options['sub_title']; ?>
+				<?php _e($options['title'], $codenegar_wcpf->text_domain) ?> <?php echo $options['sub_title']; ?>
 				<?php
                     $key = 'attr' . '_' . $options['parent'];
                     $val = '';

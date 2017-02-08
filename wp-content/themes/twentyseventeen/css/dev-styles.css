@@ -13,3 +13,32 @@
 .content-pop-related .owl-carousel .owl-item{ padding-top: 25px; border-left: 1px solid #ccc; border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; }
 .content-pop-related .owl-carousel .owl-item:nth-child(4){ border-right: 1px solid #ccc; }
 #comments-evolved-tabs #ui-id-1{ width: auto !important; }
+.woocommerce-ordering .orderby{ border: 1px solid #e5e5e5; width: 200px; height: 32px; padding-left: 5px; }
+.widget-filter-product{ float: left; }
+.widget-filter-product .widgettitle{  display: none; color: #333;font-family: "open sans";text-transform: uppercase;position: relative;font-size: 12px;font-weight: normal;margin-bottom: -1px;z-index: 1111; }
+.widget-filter-product{ width: 125px; }
+.widget-filter-product select{     color: #333;
+    font-family: "open sans";
+    text-transform: uppercase;
+    position: relative;
+    font-size: 12px;
+    font-weight: normal;
+    margin-bottom: 0px;
+    z-index: 1111;
+    border: none;
+    background: none; width: auto; float: left; }
+.widget-filter-product-by-color .widgettitle{ display: block; margin-top: 3px; }
+.widget-filter-product-by-color ul li {     float: left;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    margin-top: 5px; }
+.wrap-list-product-after-filter{ position: relative; padding-top: 80px; }
+.block_product_menu_filter{     position: absolute;
+    width: 100%;
+    top: 0px;
+    padding: 0px 15px; }
+.widget-filter-product-by-color ul{ display: none; }
+.widget-filter-product-by-diameter{ width: 187px; }
+.widget-filter-product-by-color{ width: 75px; }
+.block_product_menu_filter .segment{ padding-top: 10px; }
+#vertical .products{ padding-left: 0px; }
