@@ -96,7 +96,16 @@
 
                 </div>
             </div>
-        </header>	
+        </header>
+        <?php 
+            $args = array( 'post_type' => 'product', 'posts_per_page' => -1);
+            $loop = new WP_Query( $args );
+            while ( $loop->have_posts() ) : $loop->the_post(); 
+            echo '<p class="title-pro-pass-js">'.get_the_title().'<p>';
+            global $product;
+            endwhile; 
+            wp_reset_query(); 
+        ?>
         <div id="nav-mainmenu" class=" hidden-md hidden-sm hidden-xs">
             <div class="container">
             	<div class="border-mainmenu"></div>

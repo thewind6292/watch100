@@ -11,6 +11,39 @@
 .price.pull-left {
     margin: 4px 0px 4px 0px;
 }
+.form-search .screen-reader-text {display: none !important;}
+.form-search .search-field {
+    background-color: #eee;
+    border-left: 1px solid #d6d6d6;
+    color: #888;
+    font-size: 12px;
+    height: 28px;
+    line-height: 32px;
+    margin: 0;
+    padding: 0px 30px 0px 10px;
+    /*width: 100%;*/
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+    font-family: "open sans italic";
+}
+.search-form .search-submit .icon {
+    color: gray;
+    height: 16px;
+    top: 0px;
+    width: 16px;
+}
+.form-search  form {
+    margin-bottom: 10px;
+    position: relative;
+}
+.form-search .search-submit {
+    position: absolute;
+    top: 4px;
+    right: 0px;
+    border: none;
+    background: transparent;
+}
 #sub-re-cal {
     margin-left: 30px;
     background: #414c5c;

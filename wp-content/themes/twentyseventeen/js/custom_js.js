@@ -3,9 +3,13 @@ jQuery( document ).ready(function() {
 	  	jQuery(this).find('.sub-menu').toggleClass('active');
 	});
 
-	// jQuery( ".menu-item-has-children .sub-menu" ).mouseout(function() {
-	// 	if( jQuery(this).hasClass('active')) {
-	// 		jQuery(this).removeClass('active');
-	// 	}
-	// });
+    jQuery( function() {
+    	var points = [];
+    	jQuery('.title-pro-pass-js').each(function( index ) {
+		  points.push( jQuery( this ).text() );
+		});
+    jQuery( ".form-search .search-field" ).autocomplete({
+      source: points
+    });
+  } );
 });
