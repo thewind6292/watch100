@@ -18,6 +18,14 @@ if ( version_compare( $GLOBALS['wp_version'], '4.7-alpha', '<' ) ) {
 	require get_template_directory() . '/inc/back-compat.php';
 	return;
 }
+function SearchFilter($query) {
+	if ($query->is_search) {
+	$query->set('post_type', 'product');
+	}
+	return $query;
+}
+
+add_filter('pre_get_posts','SearchFilter');
 //include_once 'include/Facebook/autoload.php';
 add_filter('woocommerce_checkout_fields', 'custom_override_checkout_fields');
 

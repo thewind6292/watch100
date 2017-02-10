@@ -42,7 +42,7 @@ a:focus,a:hover {
 h1>*,h2>*,h3>*,h4>*,h5>*,h6>*,.h1 *,.h2>*,.h3>*,.h4>*,.h5>*,.h6>* {
 	font-family: arial, helvetica, clean, sans-serif;
 	font-weight: 500;
-	font-size: 12px;
+	/*font-size: 12px;*/
 }
 
 .red,.label_error {
@@ -215,13 +215,13 @@ input,button,textarea,select {
   display: none;
 }
 @media only screen and (max-width: 1100px){
-	.push-button {
+	/*.push-button {
 	    display: inline-block;
 	  float: left;
 	  margin: 36px 0 0 3px;
 	  z-index: 999;
 	  position: relative;
-	}
+	}*/
 }
 .push-button a {
   background: url(../images/joma-sprite.png) no-repeat 0px -180px;
@@ -247,11 +247,11 @@ input,button,textarea,select {
   float: left;
 }
 @media only screen and (max-width: 997px){
-	.branding {
+/*	.branding {
 	  position: absolute;
 	  width: 100%;
 	  left:0;
-	}
+	}*/
 }
 @media only screen and (max-width: 767px){
 	.branding img {
@@ -265,7 +265,7 @@ input,button,textarea,select {
 	}
 }
 .search{
-    width: 212px;
+    /*width: 212px;*/
     margin-top: 20px;
 }
 @media only screen and (max-width: 997px){
@@ -1081,16 +1081,16 @@ _:-ms-fullscreen, :root #ajax-loader.dark{background:transparent url(http://cdn1
 }
 @media only screen and (min-width:600px) and (max-width:1100px){
     .support-top {
-        margin-top: 90px !important;
-        margin-left: -43px;
+        margin-top: 10px !important;
+        margin-left: 0px;
     }
 }
 @media only screen and (min-width:600px) and (max-width:1000px){
     
-    #logo {
+   /* #logo {
         position: absolute;
         left: 3% !important;
-    }
+    }*/
 }
 @media only screen and (max-width:600px){
     #header-main {
@@ -1130,9 +1130,9 @@ _:-ms-fullscreen, :root #ajax-loader.dark{background:transparent url(http://cdn1
     }
 }
 @media only screen and (min-width:600px) and (max-width:1000px){
-    .search {
+  /*  .search {
         margin: -63px 0px 0px 0px !important;
-    }
+    }*/
 }
 
 @media only screen and (max-width: 500px){

@@ -23,19 +23,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 wc_print_notices();
 
 do_action( 'woocommerce_before_cart' ); ?>
-<form action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post" class="hidden-xs">
+<form action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post" class="">
 
 <?php do_action( 'woocommerce_before_cart_table' ); ?>
 <br>
 <table class="full-width shop_table shop_table_responsive cart " cellspacing="0">
 	<thead>
-		<!-- <tr>
-			<th class="product-thumbnail">&nbsp;</th>
-			<th class="product-name"><?php _e( 'Product', 'woocommerce' ); ?></th>
-			<th class="product-quantity"><?php _e( 'Quantity', 'woocommerce' ); ?></th>
-			<th class="product-subtotal"><?php _e( 'Total', 'woocommerce' ); ?></th>
-			<th class="product-remove">&nbsp;</th>
-		</tr> -->
+		<tr>
+			<th class="product-name"><?php _e( 'SẢN PHẨM', 'woocommerce' ); ?></th>
+			<th class="product-price"><?php _e( 'GIÁ SẢN PHẨM', 'woocommerce' ); ?></th>
+			<th class="product-quantity"><?php _e( 'SỐ LƯỢNG', 'woocommerce' ); ?></th>
+			<th class="product-subtotal"><?php _e( 'TỔNG TIỀN', 'woocommerce' ); ?></th>
+			<th class="product-remove">XÓA&nbsp;</th>
+		</tr>
 	</thead>
 	<tbody>
 		<?php do_action( 'woocommerce_before_cart_contents' ); ?>
@@ -49,7 +49,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 				?>
 				<tr class="<?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?>">
 
-					<td class="product-thumbnail hidden-xs hidden-sm">
+					<td class="">
 						<?php
 							$thumbnail = apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key );
 							if ( ! $product_permalink ) {
@@ -58,10 +58,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 								printf( '<a href="%s">%s</a>', esc_url( $product_permalink ), $thumbnail );
 							}
 						?>
-					</td>
-
-					<td class="product-name text-left" data-title="<?php _e( 'Product', 'woocommerce' ); ?>">
-						<p class="size-18"><?php
+						<span class="size-18"><?php
 							if ( ! $product_permalink ) {
 								echo apply_filters( 'woocommerce_cart_item_name', $_product->get_title(), $cart_item, $cart_item_key ) . '&nbsp;';
 							} else {
@@ -73,11 +70,11 @@ do_action( 'woocommerce_before_cart' ); ?>
 							if ( $_product->backorders_require_notification() && $_product->is_on_backorder( $cart_item['quantity'] ) ) {
 								echo '<p class="backorder_notification">' . esc_html__( 'Available on backorder', 'woocommerce' ) . '</p>';
 							}
-						?></p>
-						<p><strong><?php
-							echo apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $cart_item, $cart_item_key );
-						?></strong></p>
+						?></span>
 					</td>
+					<TD><p><strong><?php
+							echo apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $cart_item, $cart_item_key );
+						?></strong></p></TD>
 
 					<td class="product-quantity" data-title="<?php _e( 'Quantity', 'woocommerce' ); ?>">
 						<?php
@@ -118,7 +115,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 ?>
 	</tbody>
 </table>
-	<div class="actions text-center">
+	<div class="actions ">
 		<?php if ( wc_coupons_enabled() ) { ?>
 			<div class="coupon">
 
@@ -127,8 +124,8 @@ do_action( 'woocommerce_before_cart' ); ?>
 				<?php do_action( 'woocommerce_cart_coupon' ); ?>
 			</div>
 		<?php } ?>
-
-		<input type="submit" class="button" name="update_cart" value="<?php esc_attr_e( 'Update Cart', 'woocommerce' ); ?>" />
+		<a class="button-cart" id="btn-history" href="<?php echo get_permalink( woocommerce_get_page_id( 'shop' ) );?>">Tiếp tục mua hàng</a>
+		<input id="sub-re-cal" type="submit" class="button" name="update_cart" value="<?php esc_attr_e( 'Cập nhật giỏ hàng', 'woocommerce' ); ?>" />
 
 		<?php do_action( 'woocommerce_cart_actions' ); ?>
 
@@ -218,7 +215,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 	do_action( 'woocommerce_cart_contents' );
 	?>
 	<!-- <?php //do_action( 'woocommerce_after_cart_contents' ); ?> --><br>
-	<div class="actions text-center">
+	<div class="actions">
 		<?php if ( wc_coupons_enabled() ) { ?>
 			<div class="coupon">
 

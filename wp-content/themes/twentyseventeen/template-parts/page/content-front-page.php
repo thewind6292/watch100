@@ -10,19 +10,15 @@
 
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'twentyseventeen-panel ' ); ?> >
-	<div class="">
-		<div id="slider">
+	<div class="container">
+		<div id="slider" class="nivoSlider"> 
 		<?php if( have_rows('add_images') ):
 			    while ( have_rows('add_images') ) : the_row();
 			        echo '<img src="'.get_sub_field('item_image').'"/>';
 			    endwhile;
 		    endif;
 		?>
-        </div>
-        <div class="group1-Wrapper">
-            <a onclick="imageSlider.previous()" class="group1-Prev"></a>
-            <a onclick="imageSlider.next()" class="group1-Next"></a>
-        </div>
+		</div>
 	</div>
 	<br><br><br>
 	<div class="container container-header">
@@ -31,7 +27,7 @@
                 <div class="main_product">
                     <div class="block_manu block ">
                         <h2 class="block_title">
-                            <a href="javascript:void(0)"><span>Thương hiệu nổi bật</span></a>
+                            <span>Thương hiệu nổi bật</span>
                         </h2>
                         <div class="content-partners des-part">
                         	<?php if( have_rows('add_img_trademark') ):
@@ -144,8 +140,7 @@
 
                         <div class="block_products_list  blocks_product_list block blocks_product_list_vertical mt20">
                             <h2 class="block_title">
-                                <a href="http://www.gallewatch.com/san-pham-moi.html"><span>
-                                        Sản phẩm mới				</span></a>
+                                <span> Sản phẩm mới	</span>
                             </h2>
                             <div class="block-content">
                             	<?php 

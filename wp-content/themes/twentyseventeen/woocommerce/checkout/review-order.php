@@ -56,7 +56,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<tfoot>
 
 		<tr class="cart-subtotal">
-			<th><?php _e( 'Subtotal', 'woocommerce' ); ?></th>
+			<th><h3><?php _e( 'Tổng tiền', 'woocommerce' ); ?></h3></th>
 			<td><?php wc_cart_totals_subtotal_html(); ?></td>
 		</tr>
 
