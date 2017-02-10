@@ -21,4 +21,13 @@ jQuery( document ).ready(function() {
 	});
 console.log(jQuery('#slider img').height());
      jQuery('#slider').height(jQuery('#slider>img').height());
+
+     codenegar_format_range = function(template, min, max){
+        var ret = template;
+        min = min.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,")
+        max = max.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,")
+        ret = ret.replace("%s", min);
+        ret = ret.replace("%e", max);
+        return ret;
+    }
 });

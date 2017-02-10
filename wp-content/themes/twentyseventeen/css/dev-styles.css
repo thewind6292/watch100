@@ -27,7 +27,7 @@
     z-index: 1111;
     border: none;
     background: none; width: auto; float: left; }
-.widget-filter-product-by-color .widgettitle{ display: block; margin-top: 3px; }
+.widget-filter-product-by-color .widgettitle, .widget-filter-product-by-price .widgettitle{ display: block; margin-top: 3px; }
 .widget-filter-product-by-color ul li {     float: left;
     margin-right: 5px;
     margin-bottom: 5px;
@@ -37,8 +37,18 @@
     width: 100%;
     top: 0px;
     padding: 0px 15px; }
-.widget-filter-product-by-color ul{ display: none; }
+.widget-filter-product-by-color ul{/* display: none; */float: left;width: 200px;padding-left: 0px;background: #f5f5f5;padding: 5px 15px 15px 15px;}
 .widget-filter-product-by-diameter{ width: 187px; }
-.widget-filter-product-by-color{ width: 75px; }
-.block_product_menu_filter .segment{ padding-top: 10px; }
+.widget-filter-product-by-color{ width: 75px; position:relative;}
+.block_product_menu_filter .segment{padding-top: 10px;padding-bottom: 10px;}
 #vertical .products{ padding-left: 0px; }
+.widget-filter-product-by-color .orderby_widget{ display: none; position: absolute; top: 20px; }
+.widget-filter-product-by-color:hover .orderby_widget{ display: block; }
+.widget-filter-product-by-price{ position: relative; }
+.widget-filter-product-by-price:hover .meta_slider.meta_slider__price{ display: block; }
+.widget-filter-product-by-price .meta_slider.meta_slider__price{     width: 250px;
+    position: absolute;
+    top: 20px;
+    background: #f5f5f5;
+    padding: 10px; display: none; }
+.widget-filter-product-by-price .amount.price_label{ margin-top: 10px; }
