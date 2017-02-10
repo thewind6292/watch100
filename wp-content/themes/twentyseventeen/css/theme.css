@@ -1100,7 +1100,7 @@ _:-ms-fullscreen, :root #ajax-loader.dark{background:transparent url(http://cdn1
 @media only screen and (max-width:600px){
     .support-top {
         margin-top: 75px !important;
-        margin-left: -30px;
+       /* margin-left: -30px;*/
     }
     #logo {
         left: 5%  !important;

@@ -283,7 +283,7 @@
 	text-decoration: line-through;
 }
 
-
+#bottom-nav ul {padding-left: 0;}
 @media screen and (max-width:997px) {
 	.blocks_product_list_vertical .discount,
 	.blocks_product_list_vertical  .price    {
@@ -298,8 +298,8 @@
     padding: 10px 10px;
     position: absolute;
     top: 59%;
-    display: none;
-    left: 31%;
+    /*display: none;*/
+    left: calc(50% - 50px );
 }
 
 .nivoSlider {

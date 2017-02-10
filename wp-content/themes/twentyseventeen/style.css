@@ -51,3 +51,64 @@ Use it to make something cool, have fun, and share what you've learned with othe
 Styles based on Normalize v5.0.0 @link https://github.com/necolas/normalize.css
 --------------------------------------------------------------*/
 body{ background: #fff; padding-bottom: 0px; }
+@media (max-width: 767px) {
+    #bottom-nav .menu-item {
+        width: 100% !important;
+    }
+    .woocommerce table.shop_table_responsive tr td:before, .woocommerce-page table.shop_table_responsive tr td:before {
+	    content: attr(data-title) " ";
+	    font-weight: 700;
+	    float: left;
+	}
+    .woocommerce table.shop_table_responsive tr td, .woocommerce-page table.shop_table_responsive tr td, .shop_table .cart_item td {text-align: left !important;}
+    .shop_table .cart_item td {
+    	line-height: 20px;
+	    padding: 10px 0 10px 10px;
+	}
+	.shop_table .product-subtotal, .shop_table .product-quantity {
+	    width: 100%;
+	}
+	a.remove {
+		background: #c51212;
+		color: #fff;
+        display: inline-block;
+	    width: 90px;
+	    height: auto;
+	    line-height: 16px;
+	    font-size: 16px;
+	    text-align: center;
+	    /* border-radius: 100%; */
+	    box-shadow: none!important;
+	    -webkit-box-shadow: none!important;
+	    border: none;
+	    border-radius: 4px;
+	    padding: 4px;
+	}
+	#sub-re-cal {
+	    margin-left: 0px;
+	    background: #414c5c;
+	    /* background: url(../images/update-bt.png) no-repeat scroll 21px 12px #414c5c; */
+	    padding: 10px 10px 10px 10px;
+	    color: #fff;
+	    border: none;
+	    margin: 0 auto;
+	    margin-top: 20px;
+	}
+	.actions .button-cart {
+	    margin-right: 0px;
+	    background: #414c5c;
+	    /* background: url(../images/continue-bt.png) no-repeat scroll 26px 13px #414c5c; */
+	    color: #fff;
+	    width: 81px;
+	    height: 38px;
+	    font-size: 14px;
+	    padding: 10px 10px 10px 10px;
+	    border-radius: 0px !important;
+	    margin: 0 auto;
+	}
+	.wc-proceed-to-checkout {
+	    margin-left: 0;
+	    display: block;
+	}
+	.checkout-button {width: 100%;}
+}

@@ -35,7 +35,7 @@ a:hover, a:active {text-decoration: none !important; box-shadow: none !important
         /* text-align: center; */
         padding: 0px;
         cursor: pointer;
-        width: 50% !important;
+       /* width: 50% !important;*/
         margin-bottom: 20px;
     }
 }
@@ -51,7 +51,7 @@ a:hover, a:active {text-decoration: none !important; box-shadow: none !important
             /* text-align: center; */
             padding: 0px;
             cursor: pointer;
-            width: 30%;
+            /*width: 30%;*/
             margin-bottom: 20px;
         }
         div#bottom-nav {

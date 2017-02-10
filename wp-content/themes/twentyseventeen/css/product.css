@@ -11,6 +11,9 @@
       margin: 2px  0;
       white-space: nowrap;
 }
+#slider {
+    height: auto !important;
+}
 #ui-id-1 {
     z-index: 999999999999999;
 }

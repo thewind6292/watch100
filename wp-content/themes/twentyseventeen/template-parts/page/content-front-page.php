@@ -25,7 +25,7 @@
         <div id="main_container" class="mt20">
             <div class="main-column">
                 <div class="main_product">
-                    <div class="block_manu block ">
+                    <div class="block_manu block hidden-sm hidden-xs">
                         <h2 class="block_title">
                             <span>Thương hiệu nổi bật</span>
                         </h2>
