@@ -19,6 +19,6 @@ jQuery( document ).ready(function() {
      jQuery(".push-button").click(function() {
 	  	jQuery('#nav-mainmenu').toggleClass('active');
 	});
-console.log(jQuery('#slider img').height());
+console.log(jQuery('#slider div').height());
      jQuery('#slider').height(jQuery('#slider>img').height());
 });

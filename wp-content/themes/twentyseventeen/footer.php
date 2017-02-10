@@ -17,30 +17,28 @@
             <div id="footer">
                 <div class="container">
 
-                    <div class="center-footer">
+                    <div class="center-footer row">
                         <div id="bottom-nav">
-                            <ul>
-                                <li class=' none_ul level0 menu-item' >
-                                    <?php if ( is_active_sidebar( 'sidebar-2' ) ) { ?>
-                                            <?php dynamic_sidebar( 'sidebar-2' ); ?>
-                                    <?php } ?>
-                                </li>
-                                <li class=' none_ul level0 menu-item' >
-                                    <?php if ( is_active_sidebar( 'sidebar-3' ) ) { ?>
-                                            <?php dynamic_sidebar( 'sidebar-3' ); ?>
-                                    <?php } ?>
-                                </li>
-                                <li class=' none_ul level0 menu-item' >
-                                    <?php if ( is_active_sidebar( 'sidebar-footer-3' ) ) { ?>
-                                            <?php dynamic_sidebar( 'sidebar-footer-3' ); ?>
-                                    <?php } ?>
-                                </li>
-                                <li class=' none_ul level0 menu-item' >
-                                    <?php if ( is_active_sidebar( 'sidebar-footer-4' ) ) { ?>
-                                            <?php dynamic_sidebar( 'sidebar-footer-4' ); ?>
-                                    <?php } ?>
-                                </li>
-                            </ul>
+                            <div class='col-sm-3 col-xs-6' >
+                                <?php if ( is_active_sidebar( 'sidebar-2' ) ) { ?>
+                                        <?php dynamic_sidebar( 'sidebar-2' ); ?>
+                                <?php } ?>
+                            </div>
+                            <div class='col-sm-3 col-xs-6' >
+                                <?php if ( is_active_sidebar( 'sidebar-3' ) ) { ?>
+                                        <?php dynamic_sidebar( 'sidebar-3' ); ?>
+                                <?php } ?>
+                            </div>
+                            <div class='col-sm-3  col-xs-6' >
+                                <?php if ( is_active_sidebar( 'sidebar-footer-3' ) ) { ?>
+                                        <?php dynamic_sidebar( 'sidebar-footer-3' ); ?>
+                                <?php } ?>
+                            </div>
+                            <div class='col-sm-3 col-xs-6' >
+                                <?php if ( is_active_sidebar( 'sidebar-footer-4' ) ) { ?>
+                                        <?php dynamic_sidebar( 'sidebar-footer-4' ); ?>
+                                <?php } ?>
+                            </div>
                         </div>    		
                     </div>
                     <div class="row">
@@ -55,8 +53,32 @@
                                 Email: <?php if(of_get_option('email')) {
                                         echo of_get_option('email');} ?><br />
                             </div>
+                            <br>
+                            <div class="visible-sm visible-xs ">
+                                <div class="title-col-ft">Kết nối với Gallewatch</div>
+                                <div class="top-footer">
+                                    <div class="social-ft">
+                                        <a href="<?php if(of_get_option('link_fb')) {
+                                            echo of_get_option('link_fb');} ?>" target="_blink">
+                                            <img   src="http://www.gallewatch.com/images/face.png"  />
+                                        </a>
+                                        <a href="<?php if(of_get_option('link_fb')) {
+                                            echo of_get_option('link_fb');} ?>" target="_blink">
+                                            <img   src="http://www.gallewatch.com/images/tw.png"  />
+                                        </a>
+                                        <a href="<?php if(of_get_option('link_fb')) {
+                                            echo of_get_option('link_fb');} ?>" target="_blink"> 
+                                            <img   src="http://www.gallewatch.com/images/gg.png"  />
+                                        </a>
+                                        <a href="<?php if(of_get_option('link_fb')) {
+                                            echo of_get_option('link_fb');} ?>" target="_blink"> 
+                                            <img   src="http://www.gallewatch.com/images/youtube.png"  />
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-sm-6 col-xs-12 col-lg-4 col-md-4">
+                        <div class="col-sm-6 hidden-sm hidden-xs col-xs-12 col-lg-4 col-md-4">
                             <div class="title-col-ft">Kết nối với Gallewatch</div>
                             <div class="top-footer">
                                 <div class="social-ft">

@@ -58,7 +58,7 @@ button:hover, button:active, button:focus, .dropdown-toggle:focus {outline: none
 }
 iframe{width: 100% !important;}
 .wpcf7 iframe, .wpcf7 input, .wpcf7 label, .wpcf7 textarea {width: 100%; display: block;}
-.wpcf7 input {height: 36px;}
+.wpcf7 input {height: 36px; padding: 0 8px;}
 .wpcf7 .wpcf7-submit {display: block; width: 100px; margin: 0 auto; border-radius: 4px;    background: #77050f;
     color: #fff;}
     .wpcf7 .wpcf7-submit:hover {background: #b7414c;}
@@ -231,7 +231,15 @@ a:hover {
 .nivo-controlNav a.active {
     font-weight:bold;
 }
+.col-banner-1 {
+        width: 47.6%;
+        margin-right: 2% !important;
+    }
 @media screen and (max-width:1200px) {
+    .col-banner-1 {
+        width: 48.6%;
+        margin-right: 25px;
+    }
     .relate_products  .item  {
         width: 25%;
     }
@@ -241,7 +249,12 @@ a:hover {
         width: 33.3333%;
     }
 }
-
+@media (max-width: 767px) {
+    #bottom-nav .menu-item {
+        width: 100% !important;
+    }
+    .woocommerce table.shop_table_responsive tr td, .woocommerce-page table.shop_table_responsive tr td, .shop_table .cart_item td {text-align: left !important;}
+}
 @media screen and (max-width:480px) {
     .relate_products  .item  {
         width: 50%;
@@ -426,8 +439,8 @@ a:hover {
     float:right !important;
 }
 .col-banner-1 {
-    width: 48.6%;
-    margin-right: 30px;
+    width: 47.6%;
+    margin-right: 2% ;
 }
 .col-banner-1 img{
     max-width: 100%;
