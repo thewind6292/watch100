@@ -11,18 +11,14 @@
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'twentyseventeen-panel ' ); ?> >
 	<div class="container">
-		<div id="slider">
+		<div id="slider" class="nivoSlider"> 
 		<?php if( have_rows('add_images') ):
 			    while ( have_rows('add_images') ) : the_row();
 			        echo '<img src="'.get_sub_field('item_image').'"/>';
 			    endwhile;
 		    endif;
 		?>
-        </div>
-        <div class="group1-Wrapper">
-            <a onclick="imageSlider.previous()" class="group1-Prev"></a>
-            <a onclick="imageSlider.next()" class="group1-Next"></a>
-        </div>
+		</div>
 	</div>
 	<br><br><br>
 	<div class="container container-header">

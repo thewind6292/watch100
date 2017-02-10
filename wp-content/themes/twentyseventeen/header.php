@@ -33,8 +33,6 @@
         
         <link rel="stylesheet" type="text/css" media="screen" href="<?php echo get_theme_file_uri(); ?>/css/product.css" />
         <link rel="stylesheet" type="text/css" media="screen" href="<?php echo get_theme_file_uri(); ?>/css/magiczoomplus.css" />
-
-        <script src="<?php echo get_theme_file_uri(); ?>/slide/js-image-slider.js"></script>
 	<?php wp_head(); ?>
 </head>
 <?php
@@ -78,13 +76,18 @@
                     </div>
                     <div class="sepa"></div>
                     <div id="search" class="search pull-right">
-                        <div class="form-search"> <?php get_search_form() ?> </div>
+          `              <div class="form-search"> <?php get_search_form() ?> </div>
                         <div class="dropdown dropdown_cart">
-                            <button class=" dropdown-toggle btn_cart size-15" type="button" data-toggle="dropdown">
+                            <button class="hidden-xs dropdown-toggle btn_cart size-15" type="button" data-toggle="dropdown">
                                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                 Giỏ hàng (<span id="cart_container" class="inline-block"><a class="cart-contents text-red"><?php echo $woocommerce->cart->get_cart_contents_count(); ?></a> </span>)
                                 <span class="caret"></span>
                             </button>
+                            <a class="visible-xs dropdown-toggle btn_cart size-15" href="<?php echo esc_url(wc_get_cart_url()); ?>">
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                Giỏ hàng (<span id="cart_container" class="inline-block"><span class="cart-contents text-red"><?php echo $woocommerce->cart->get_cart_contents_count(); ?></span> </span>)
+                                <span class="caret"></span>
+                            </a>
                             <ul class="dropdown-menu">
                                 <?php woocommerce_mini_cart( ); ?>
                                 <!-- <li>
@@ -106,7 +109,7 @@
             endwhile; 
             wp_reset_query(); 
         ?>
-        <div id="nav-mainmenu" class=" hidden-md hidden-sm hidden-xs">
+        <div id="nav-mainmenu" class="">
             <div class="container">
             	<div class="border-mainmenu"></div>
 				<?php if(function_exists('wp_nav_menu')){wp_nav_menu( 'theme_location=top&menu_class=nav navbar-nav');} ?>

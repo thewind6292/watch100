@@ -12,4 +12,13 @@ jQuery( document ).ready(function() {
       source: points
     });
   } );
+
+    jQuery(window).on('load', function() {
+      jQuery('#slider').nivoSlider(); 
+    }); 
+     jQuery(".push-button").click(function() {
+	  	jQuery('#nav-mainmenu').toggleClass('active');
+	});
+console.log(jQuery('#slider img').height());
+     jQuery('#slider').height(jQuery('#slider>img').height());
 });

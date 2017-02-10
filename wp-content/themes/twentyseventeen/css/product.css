@@ -942,7 +942,8 @@ ul.cart_list {list-style: none;}
     position: absolute;
     padding: 20px;
     width: 520px;
-    right: 143px;
+    right: 0px;
+    left: inherit;
     top: 45px;
 }
 .header-wrap {z-index: 9999999999;}

@@ -99,6 +99,7 @@
         <div id="fb-root"></div>
         <script language="javascript" type="text/javascript" src="http://www.gallewatch.com/templates/default/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+        <script src="<?php echo get_theme_file_uri(); ?>/js/jquery.nivo.slider.js"></script>
         <script type="text/javascript">stLight.options({publisher: "c6652b23-5a6c-4da6-a3a0-d0cc1ca50cd2", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
         <script language="javascript" type="text/javascript" src="<?php echo get_theme_file_uri(); ?>/owl-carousel/js/owl.carousel.js"></script>
         <script language="javascript" type="text/javascript" src="<?php echo get_theme_file_uri(); ?>/js/main.js"></script>
