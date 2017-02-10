@@ -122,15 +122,15 @@ get_header( 'shop' ); ?>
 							</div>
 
 							<div class="">
+							<?php if(function_exists('dynamic_sidebar') && dynamic_sidebar('Lọc SP Theo Mức Giá')) : else : ?><?php endif; ?>
+							</div>
+
+							<div class="">
 							<?php if(function_exists('dynamic_sidebar') && dynamic_sidebar('Lọc SP Theo Kiểu Đồng Hồ')) : else : ?><?php endif; ?>
 							</div>
 
 							<div class="">
 							<?php if(function_exists('dynamic_sidebar') && dynamic_sidebar('Lọc SP Theo Loại Dây')) : else : ?><?php endif; ?>
-							</div>
-
-							<div class="">
-							<?php if(function_exists('dynamic_sidebar') && dynamic_sidebar('Lọc SP Theo Mức Giá')) : else : ?><?php endif; ?>
 							</div>
 
 							<div class="">
