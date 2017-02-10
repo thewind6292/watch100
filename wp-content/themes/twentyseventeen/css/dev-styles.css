@@ -43,9 +43,11 @@
 .block_product_menu_filter .segment{padding-top: 10px;padding-bottom: 10px;}
 #vertical .products{ padding-left: 0px; }
 .widget-filter-product-by-color .orderby_widget{ display: none; position: absolute; top: 20px; }
-.widget-filter-product-by-color:hover .orderby_widget{ display: block; }
+.widget-filter-product-by-color:hover { cursor: pointer; }
+.widget-filter-product-by-color:hover .orderby_widget{ display: block; cursor: pointer; }
 .widget-filter-product-by-price{ position: relative; width: 100px; }
-.widget-filter-product-by-price:hover .meta_slider.meta_slider__price{ display: block; }
+.widget-filter-product-by-price:hover{ cursor: pointer; }
+.widget-filter-product-by-price:hover .meta_slider.meta_slider__price{ display: block; cursor: pointer; }
 .widget-filter-product-by-price .meta_slider.meta_slider__price{     width: 250px;
     position: absolute;
     top: 20px;
