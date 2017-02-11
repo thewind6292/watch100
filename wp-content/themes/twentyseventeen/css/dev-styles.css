@@ -10,8 +10,8 @@
 .main-img .feature_image{ max-width: 320px !important; }
 .content-pop-related .block_products_list{ background: none; }
 .content-pop-related .block_title{ margin-bottom: 30px; }
-.content-pop-related .owl-carousel .owl-item{ padding-top: 25px; border-left: 1px solid #ccc; border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; }
-.content-pop-related .owl-carousel .owl-item:nth-child(4){ border-right: 1px solid #ccc; }
+.content-pop-related .owl-carousel .owl-item{ padding-top: 25px; /*border-left: 1px solid #ccc; border-top: 1px solid #ccc; border-bottom: 1px solid #ccc;*/ }
+/*.content-pop-related .owl-carousel .owl-item:nth-child(4){ border-right: 1px solid #ccc; }*/
 #comments-evolved-tabs #ui-id-1{ width: auto !important; }
 .woocommerce-ordering .orderby{ border: 1px solid #e5e5e5; width: 200px; height: 32px; padding-left: 5px; }
 .widget-filter-product{ float: left; width: auto; }
