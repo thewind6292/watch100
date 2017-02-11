@@ -62,3 +62,70 @@
     top: -3px;
     font-size: 13px; }
 .widget-filter-product-by-color .widgettitle:after{ right: 5px; }
+.help {
+    right: 0;
+    opacity: 1;
+}
+.help {
+    position: fixed;
+    top: 238px;
+    z-index: 9999;
+}
+.help ul{
+    list-style: none;
+}
+.help, .help a, .help ul li {
+    transition: all .3s ease-out;
+}
+.help{position:fixed;top:238px;z-index:9999}.help ul{margin:0;padding:0;background-color:#f4f4f4
+                                    }
+.help ul li {
+    background: #cc3500;
+}
+.help ul li:hover {
+    background: #f68c1f;
+    width: 225px;
+}
+.help ul li ul li,
+.help ul li ul li:hover {
+    background: #f4f4f4;
+}
+.help a {
+    padding: 0 10px;text-align: center;color: #fff;text-decoration: none;line-height: 40px;font-size: 15px;
+}
+.help li ul {
+    visibility: visible;
+    width: 225px;
+    position: absolute;
+    opacity: 0;
+    margin - top: 0;
+    transition: all .2s ease-out;
+}
+.help ul li ul li {
+    text-align: left;
+    font-size: 14px;
+    color: #f68c1f;
+    line-height: 18px;
+    padding-top: 9px;
+    /* padding-bottom: 10px; */
+    margin-left: 12px;
+}
+.help ul li ul li a {
+    text-align: left;
+    font-size: 13px;
+    line-height: 23px;
+    margin: 0;
+    padding-left: 15px;
+    padding-bottom: 5px;
+    color: #000;
+    text-decoration:none;
+    background:url(../images/list-bulet.png) 0 5px no-repeat;
+}
+.help ul li ul li a:hover{
+    color:#f68c1f;
+    padding-left: 20px
+}
+.help li:hover > ul {
+    visibility: visible;
+    opacity: 1;
+}
