@@ -237,6 +237,13 @@
 .blocks_product_list_vertical  .inner_item  .frame_img_cat img{
 	margin:0 auto;
 }
+.single-product .product .columnleft {
+    width: 33%;
+}
+.single-product .product .price-table {
+    width: 60%;
+
+}
 @media screen and (max-width:997px) {
 	.blocks_product_list_vertical  .inner_item  .frame_img_cat img{
 		max-width:100% !important;
