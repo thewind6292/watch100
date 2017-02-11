@@ -98,3 +98,11 @@ add_action( 'widgets_init', 'product_filter' );
  *  Add Images Size
  */
 add_image_size( 'img-feature-size', 230, 260, true );
+
+/**
+ *  Add Menu
+ */
+function register_my_menu() {
+  register_nav_menu('menu-sidebar-support',__('Menu Support Sidebar'));
+}
+add_action( 'init', 'register_my_menu' );
