@@ -211,7 +211,7 @@ get_header( 'shop' ); ?>
                                        </div>
                                        <span class="fl">:</span>
                                        <div class="li-right fl">
-                                       		<?php echo $pa_loai_day; ?>
+                                       		<?php echo $acf_loai_day; ?>
                                        </div>
                                     </li>
                                     </table>
@@ -276,7 +276,8 @@ get_header( 'shop' ); ?>
                                           <!-- <input class="submit" onclick="order(9706)" type="button" value="Mua  ngay"/><br /> -->
                                        </div>
                                        <span class="txt-hotline-dl">Hoặc mua hàng qua điện thoại</span>
-                                       <span class="hotline-dl">096 463 00 55</span>
+                                       <span class="hotline-dl"><?php if(of_get_option('phone_number_2')) {
+                        echo of_get_option('phone_number_2');} ?></span>
                                        <input type="hidden" value="products" name='module' />
                                        <input type="hidden" value="cart" name='view' />
                                        <input type="hidden" value="buy" name='task' />
@@ -345,7 +346,7 @@ get_header( 'shop' ); ?>
                                           </tr>
                                           <tr class="tr-value">
                                              <td>Loại dây</td>
-                                             <td><?php echo $pa_loai_day; ?></td>        
+                                             <td><?php echo $acf_loai_day; ?></td>        
                                           </tr>
                                           <tr class="tr-value">
                                              <td>Đường kính</td>
@@ -441,7 +442,7 @@ get_header( 'shop' ); ?>
 							</div>
 						</div>		
                         
-                        <div class="col-lg-3">
+                        <div class="col-lg-3 hidden-md hidden-sm hidden-xs">
                            <div class='block_banners banners_1 blocks_banner blocks1 block'  id = "block_id_105" >
                               <div class='banners  banners-default block_inner block_banner_banner'  >
                                  <?php if(function_exists('dynamic_sidebar') && dynamic_sidebar('Sidebar Banner')) : else : ?><?php endif; ?>
