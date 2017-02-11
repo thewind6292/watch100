@@ -121,19 +121,7 @@
            <ul>
               <li>
                  <a rel="nofollow" href="#" class="seoquake-nofollow">TRỢ GIÚP</a>
-                 <ul>
-                    <li>
-                       <div><a href="http://donghoduyanh.com/index4.php?act=popcontent&amp;cid=294" rel="nofollow" class="group4 cboxElement" title="Giới thiệu về Duy Anh Watch và quan điểm kinh doanh"> Giới thiệu về Duy Anh Watch và quan điểm kinh doanh</a></div>
-                       <div><a href="http://donghoduyanh.com/index4.php?act=popcontent&amp;cid=275" rel="nofollow" class="group4 cboxElement" title="Hướng dẫn mua hàng online"> Hướng dẫn mua hàng online</a></div>
-                       <div><a href="http://donghoduyanh.com/index4.php?act=popcontent&amp;cid=274" rel="nofollow" class="group4 cboxElement" title="Chính sách đổi trả hàng"> Chính sách đổi trả hàng</a></div>
-                       <div><a href="http://donghoduyanh.com/index4.php?act=popcontent&amp;cid=273" rel="nofollow" class="group4 cboxElement" title="Chính sách bảo hành"> Chính sách bảo hành</a></div>
-                       <div><a href="http://donghoduyanh.com/index4.php?act=popcontent&amp;cid=298" rel="nofollow" class="group4 cboxElement" title="Hướng dẫn sử dụng đồng hồ cơ bản "> Hướng dẫn sử dụng đồng hồ cơ bản </a></div>
-                       <div><a href="http://donghoduyanh.com/index4.php?act=popcontent&amp;cid=277" rel="nofollow" class="group4 cboxElement" title="Dịch vụ sửa chữa"> Dịch vụ sửa chữa</a></div>
-                       <div><a href="http://donghoduyanh.com/index4.php?act=popcontent&amp;cid=278" rel="nofollow" class="group4 cboxElement" title="Chính sách bảo mật thông tin khách hàng"> Chính sách bảo mật thông tin khách hàng</a></div>
-                       <div><a href="http://donghoduyanh.com/index4.php?act=popcontent&amp;cid=276" rel="nofollow" class="group4 cboxElement" title="Gợi ý tìm kiếm nhanh sản phẩm theo sở thích"> Gợi ý tìm kiếm nhanh sản phẩm theo sở thích</a></div>
-                       <div><a href="http://donghoduyanh.com/index4.php?act=popcontent&amp;cid=296" rel="nofollow" class="group4 cboxElement" title="Điều khoản và quy định chung"> Điều khoản và quy định chung</a></div>
-                    </li>
-                 </ul>
+                 <?php if(function_exists('wp_nav_menu')){wp_nav_menu( 'theme_location=menu-sidebar-support&menu_class=menu-support-sidebar&container=""');} ?>
               </li>
            </ul>
         </div>

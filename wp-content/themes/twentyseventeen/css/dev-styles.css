@@ -106,9 +106,9 @@
     font-size: 14px;
     color: #f68c1f;
     line-height: 18px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-left: 12px
+    padding-top: 9px;
+    /* padding-bottom: 10px; */
+    margin-left: 12px;
 }
 .help ul li ul li a {
     text-align: left;
