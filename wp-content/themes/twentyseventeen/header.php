@@ -115,4 +115,45 @@
 				<?php if(function_exists('wp_nav_menu')){wp_nav_menu( 'theme_location=top&menu_class=nav navbar-nav');} ?>
                 <div class="border-mainmenu"></div>
     		 </div>
+             <div id="menu-product">
+
+             </div>
         </div>
+        <?php 
+            $options = array('hide_empty' => false);
+        ?>
+        <div class="menu-sp container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <h3>THEO THƯƠNG HIỆU</h3>
+                    <ul>
+                        <?php 
+                            $terms_thuonghieu = get_terms('pa_thuong-hieu', $options);
+                            foreach ($terms_thuonghieu as $term_th) { ?>
+                                <li><a href="<?php echo get_term_link($term_th->term_id) ?>"><?php echo $term_th->name; ?></a></li>
+                            <?php } ?>
+                    </ul>
+                </div>
+                <div class="col-sm-4">
+                    <h3>THEO PHÂN KHÚC TÀI CHÍNH</h3>
+                    <ul>
+                        <?php 
+                            $terms_thuonghieu = get_terms('pa_thuong-hieu', $options);
+                            foreach ($terms_thuonghieu as $term_th) { ?>
+                                <li><a href="<?php echo get_term_link($term_th->term_id) ?>"><?php echo $term_th->name; ?></a></li>
+                            <?php } ?>
+                    </ul>
+                </div>
+                <div class="col-sm-4">
+                    <h3>THEO GIỚI TÍNH</h3>
+                    <ul>
+                        <?php 
+                            $terms_gts = get_terms('pa_gioi-tinh', $options);
+                            foreach ($terms_gts as $term_gt) { ?>
+                                <li><a href="<?php echo get_term_link($term_gt->term_id) ?>"><?php echo $term_gt->name; ?></a></li>
+                            <?php } ?>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
