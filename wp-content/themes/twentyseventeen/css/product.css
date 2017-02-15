@@ -929,6 +929,9 @@ button.mz-button.mz-button-close:before {
 }
 
 @media screen and (max-width:997px) {
+    .help {
+        display: none;
+    }
     .mz-expand .mz-expand-stage .mz-image-stage {
         left: 75px !important;
         right: 75px !important;
