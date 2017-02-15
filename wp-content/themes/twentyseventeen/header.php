@@ -137,11 +137,13 @@
                 <div class="col-sm-4">
                     <h3>THEO PHÂN KHÚC TÀI CHÍNH</h3>
                     <ul>
-                        <?php 
-                            $terms_thuonghieu = get_terms('pa_thuong-hieu', $options);
-                            foreach ($terms_thuonghieu as $term_th) { ?>
-                                <li><a href="<?php echo get_term_link($term_th->term_id) ?>"><?php echo $term_th->name; ?></a></li>
-                            <?php } ?>
+                        <li><a href="<?php echo home_url(); ?>/?cnpf=1&amp;post_type=product&amp;cnep=0&amp;meta__price=0,2000000" title="Dưới 2 triệu">Dưới 2 triệu</a></li>
+                        <li><a href="<?php echo home_url(); ?>/?cnpf=1&amp;post_type=product&amp;cnep=0&amp;meta__price=2000000,5000000" title="Từ 2 triệu - 5 triệu">Từ 2 triệu - 5 triệu</a></li>
+                        <li><a href="<?php echo home_url(); ?>/?cnpf=1&amp;post_type=product&amp;cnep=0&amp;meta__price=5000000,10000000" title="Từ 5 triệu - 10 triệu">Từ 5 triệu - 10 triệu</a></li>    
+                        <li><a href="<?php echo home_url(); ?>/?cnpf=1&amp;post_type=product&amp;cnep=0&amp;meta__price=10000000,20000000" title="Từ 10 triệu - 20 triệu">Từ 10 triệu - 20 triệu</a></li>
+                        <li><a href="<?php echo home_url(); ?>/?cnpf=1&amp;post_type=product&amp;cnep=0&amp;meta__price=20000000,50000000" title="Từ 20 triệu - 50 triệu">Từ 20 triệu - 50 triệu</a></li>
+                        <li><a href="<?php echo home_url(); ?>/?cnpf=1&amp;post_type=product&amp;cnep=0&amp;meta__price=50000000,100000000" title="Từ 50 triệu - 100 triệu">Từ 50 triệu - 100 triệu</a></li>
+                        <li><a href="<?php echo home_url(); ?>/?cnpf=1&amp;post_type=product&amp;cnep=0&amp;meta__price=100000000,1000000000" title="Trên 100 triệu">Trên 100 triệu</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-4">
