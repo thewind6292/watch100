@@ -116,19 +116,19 @@ get_header( 'shop' ); ?>
 		                    	
 		                    	
 		                    	
-								<?php if(function_exists('dynamic_sidebar') && dynamic_sidebar('Lọc SP Theo Khoảng Đường Kính')) : else : ?><?php endif; ?>
+								<?php //if(function_exists('dynamic_sidebar') && dynamic_sidebar('Lọc SP Theo Khoảng Đường Kính')) : else : ?><?php //endif; ?>
 								
 
 								
-								<?php if(function_exists('dynamic_sidebar') && dynamic_sidebar('Lọc SP Theo Màu Sắc')) : else : ?><?php endif; ?>
+								<?php //if(function_exists('dynamic_sidebar') && dynamic_sidebar('Lọc SP Theo Màu Sắc')) : else : ?><?php //endif; ?>
 								
 
 								
-								<?php if(function_exists('dynamic_sidebar') && dynamic_sidebar('Lọc SP Theo Mức Giá')) : else : ?><?php endif; ?>
+								
 								
 
 							
-								<?php if(function_exists('dynamic_sidebar') && dynamic_sidebar('Lọc SP Theo Kiểu Đồng Hồ')) : else : ?><?php endif; ?>
+								<?php //if(function_exists('dynamic_sidebar') && dynamic_sidebar('Lọc SP Theo Kiểu Đồng Hồ')) : else : ?><?php //endif; ?>
 								
 
 								
@@ -144,7 +144,9 @@ get_header( 'shop' ); ?>
 								
 
 								
-								<?php if(function_exists('dynamic_sidebar') && dynamic_sidebar('Lọc SP Theo Khuyến Mại')) : else : ?><?php endif; ?>
+								<?php //if(function_exists('dynamic_sidebar') && dynamic_sidebar('Lọc SP Theo Khuyến Mại')) : else : ?><?php //endif; ?>
+
+								<?php if(function_exists('dynamic_sidebar') && dynamic_sidebar('Lọc SP Theo Mức Giá')) : else : ?><?php endif; ?>
 								
 		                    </div>
 		                </div> 

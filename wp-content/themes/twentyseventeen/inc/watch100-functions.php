@@ -40,7 +40,7 @@ function product_filter() {
         'name' => __( 'Lọc SP Theo Loại Dây', 'watch100' ),
         'id' => 'filter-product-by-wire',
         'description' => __( 'The widget filter product by wire for the optional Showcase Template', 'watch100' ),
-        'before_widget' => '<div class="widget-filter-product widget-filter-product-by-sex">',
+        'before_widget' => '<div class="widget-filter-product widget-filter-product-by-wire">',
         'after_widget' => '</div>',
     ) ); 
 
@@ -106,3 +106,6 @@ function register_my_menu() {
   register_nav_menu('menu-sidebar-support',__('Menu Support Sidebar'));
 }
 add_action( 'init', 'register_my_menu' );
+
+define(PAGE_BEST_SELLER, 387);
+define(PAGE_PRODUCT_FEATURE, 385);
