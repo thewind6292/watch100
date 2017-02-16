@@ -270,7 +270,7 @@ input,button,textarea,select {
 }
 @media only screen and (max-width: 997px){
 	.search{
-	        margin: -61px 0px 0px 0px;
+	        margin: 15px 0px 0px 0px;
 	}
 }
 @media only screen and (max-width: 997px){
@@ -1094,7 +1094,7 @@ _:-ms-fullscreen, :root #ajax-loader.dark{background:transparent url(http://cdn1
 }
 @media only screen and (max-width:600px){
     #header-main {
-        margin: 30px 0px 10px 0px !important;
+        margin: -10px 0px 10px 0px !important;
     }
 }
 @media only screen and (max-width:600px){

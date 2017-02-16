@@ -55,9 +55,8 @@
             <div class="container container-header"></div>
         </div>
         <header id="header-main" class="main">
-            <div class="container container-header">
-                <div class="header-wrap">
-                    <div class="push-button"><a id="jqCorraMenu" class=" menu-trigger ss-icon" href="javascript:;">Menu</a></div>
+            <div class="header-top">
+                <div class="container">
                     <div class="support-top">
                         <div class="hotline support">Chăm sóc khách hàng: <span><?php if(of_get_option('phone_number_1')) {
                         echo of_get_option('phone_number_1');} ?></span></div>
@@ -66,6 +65,11 @@
                         <div class="hotline complain">Tư vấn - bảo hành: <span><?php if(of_get_option('phone_number_3')) {
                         echo of_get_option('phone_number_3');} ?></span></div>
                     </div>
+                </div>
+            </div>
+            <div class="container container-header">
+                <div class="header-wrap">
+                    <div class="push-button"><a id="jqCorraMenu" class=" menu-trigger ss-icon" href="javascript:;">Menu</a></div>
                     <div id="logo" class="branding">
                         <h1>
                             <a href="<?php echo get_home_url(); ?>" title="Watch100">
@@ -114,48 +118,45 @@
             	<div class="border-mainmenu"></div>
 				<?php if(function_exists('wp_nav_menu')){wp_nav_menu( 'theme_location=top&menu_class=nav navbar-nav');} ?>
                 <div class="border-mainmenu"></div>
+                <div id="menu-product">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <strong>THEO THƯƠNG HIỆU</strong>
+                            <ul>
+                                <?php 
+                                    $terms_thuonghieu = get_terms('pa_thuong-hieu', $options);
+                                    foreach ($terms_thuonghieu as $term_th) { ?>
+                                        <li><a href="<?php echo get_term_link($term_th->term_id) ?>"><?php echo $term_th->name; ?></a></li>
+                                    <?php } ?>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4">
+                            <strong>THEO PHÂN KHÚC TÀI CHÍNH</strong>
+                            <ul>
+                                <li><a href="<?php echo home_url(); ?>/?cnpf=1&amp;post_type=product&amp;cnep=0&amp;meta__price=0,2000000" title="Dưới 2 triệu">Dưới 2 triệu</a></li>
+                                <li><a href="<?php echo home_url(); ?>/?cnpf=1&amp;post_type=product&amp;cnep=0&amp;meta__price=2000000,5000000" title="Từ 2 triệu - 5 triệu">Từ 2 triệu - 5 triệu</a></li>
+                                <li><a href="<?php echo home_url(); ?>/?cnpf=1&amp;post_type=product&amp;cnep=0&amp;meta__price=5000000,10000000" title="Từ 5 triệu - 10 triệu">Từ 5 triệu - 10 triệu</a></li>    
+                                <li><a href="<?php echo home_url(); ?>/?cnpf=1&amp;post_type=product&amp;cnep=0&amp;meta__price=10000000,20000000" title="Từ 10 triệu - 20 triệu">Từ 10 triệu - 20 triệu</a></li>
+                                <li><a href="<?php echo home_url(); ?>/?cnpf=1&amp;post_type=product&amp;cnep=0&amp;meta__price=20000000,50000000" title="Từ 20 triệu - 50 triệu">Từ 20 triệu - 50 triệu</a></li>
+                                <li><a href="<?php echo home_url(); ?>/?cnpf=1&amp;post_type=product&amp;cnep=0&amp;meta__price=50000000,100000000" title="Từ 50 triệu - 100 triệu">Từ 50 triệu - 100 triệu</a></li>
+                                <li><a href="<?php echo home_url(); ?>/?cnpf=1&amp;post_type=product&amp;cnep=0&amp;meta__price=100000000,1000000000" title="Trên 100 triệu">Trên 100 triệu</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4">
+                            <strong>THEO GIỚI TÍNH</strong>
+                            <ul>
+                                <?php 
+                                    $terms_gts = get_terms('pa_gioi-tinh', $options);
+                                    foreach ($terms_gts as $term_gt) { ?>
+                                        <li><a href="<?php echo get_term_link($term_gt->term_id) ?>"><?php echo $term_gt->name; ?></a></li>
+                                    <?php } ?>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
     		 </div>
-             <div id="menu-product">
-
-             </div>
         </div>
         <?php 
             $options = array('hide_empty' => false);
         ?>
-        <div class="menu-sp container">
-            <div class="row">
-                <div class="col-sm-4">
-                    <h3>THEO THƯƠNG HIỆU</h3>
-                    <ul>
-                        <?php 
-                            $terms_thuonghieu = get_terms('pa_thuong-hieu', $options);
-                            foreach ($terms_thuonghieu as $term_th) { ?>
-                                <li><a href="<?php echo get_term_link($term_th->term_id) ?>"><?php echo $term_th->name; ?></a></li>
-                            <?php } ?>
-                    </ul>
-                </div>
-                <div class="col-sm-4">
-                    <h3>THEO PHÂN KHÚC TÀI CHÍNH</h3>
-                    <ul>
-                        <li><a href="<?php echo home_url(); ?>/?cnpf=1&amp;post_type=product&amp;cnep=0&amp;meta__price=0,2000000" title="Dưới 2 triệu">Dưới 2 triệu</a></li>
-                        <li><a href="<?php echo home_url(); ?>/?cnpf=1&amp;post_type=product&amp;cnep=0&amp;meta__price=2000000,5000000" title="Từ 2 triệu - 5 triệu">Từ 2 triệu - 5 triệu</a></li>
-                        <li><a href="<?php echo home_url(); ?>/?cnpf=1&amp;post_type=product&amp;cnep=0&amp;meta__price=5000000,10000000" title="Từ 5 triệu - 10 triệu">Từ 5 triệu - 10 triệu</a></li>    
-                        <li><a href="<?php echo home_url(); ?>/?cnpf=1&amp;post_type=product&amp;cnep=0&amp;meta__price=10000000,20000000" title="Từ 10 triệu - 20 triệu">Từ 10 triệu - 20 triệu</a></li>
-                        <li><a href="<?php echo home_url(); ?>/?cnpf=1&amp;post_type=product&amp;cnep=0&amp;meta__price=20000000,50000000" title="Từ 20 triệu - 50 triệu">Từ 20 triệu - 50 triệu</a></li>
-                        <li><a href="<?php echo home_url(); ?>/?cnpf=1&amp;post_type=product&amp;cnep=0&amp;meta__price=50000000,100000000" title="Từ 50 triệu - 100 triệu">Từ 50 triệu - 100 triệu</a></li>
-                        <li><a href="<?php echo home_url(); ?>/?cnpf=1&amp;post_type=product&amp;cnep=0&amp;meta__price=100000000,1000000000" title="Trên 100 triệu">Trên 100 triệu</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-4">
-                    <h3>THEO GIỚI TÍNH</h3>
-                    <ul>
-                        <?php 
-                            $terms_gts = get_terms('pa_gioi-tinh', $options);
-                            foreach ($terms_gts as $term_gt) { ?>
-                                <li><a href="<?php echo get_term_link($term_gt->term_id) ?>"><?php echo $term_gt->name; ?></a></li>
-                            <?php } ?>
-                    </ul>
-                </div>
-            </div>
-        </div>
 
