@@ -60,19 +60,23 @@
                                     <div class="social-ft">
                                         <a href="<?php if(of_get_option('link_fb')) {
                                             echo of_get_option('link_fb');} ?>" target="_blink">
-                                            <img   src="http://www.gallewatch.com/images/face.png"  />
+                                            <i class="fa fa-facebook" aria-hidden="true"></i>
                                         </a>
-                                        <a href="<?php if(of_get_option('link_fb')) {
-                                            echo of_get_option('link_fb');} ?>" target="_blink">
-                                            <img   src="http://www.gallewatch.com/images/tw.png"  />
+                                        <a href="<?php if(of_get_option('link_tw')) {
+                                            echo of_get_option('link_tw');} ?>" target="_blink">
+                                            <i class="fa fa-twitter" aria-hidden="true"></i>
                                         </a>
-                                        <a href="<?php if(of_get_option('link_fb')) {
-                                            echo of_get_option('link_fb');} ?>" target="_blink"> 
-                                            <img   src="http://www.gallewatch.com/images/gg.png"  />
+                                        <a href="<?php if(of_get_option('link_youtube')) {
+                                            echo of_get_option('link_youtube');} ?>" target="_blink"> 
+                                            <i class="fa fa-youtube" aria-hidden="true"></i>
                                         </a>
-                                        <a href="<?php if(of_get_option('link_fb')) {
-                                            echo of_get_option('link_fb');} ?>" target="_blink"> 
-                                            <img   src="http://www.gallewatch.com/images/youtube.png"  />
+                                        <a href="<?php if(of_get_option('link_gg')) {
+                                            echo of_get_option('link_gg');} ?>" target="_blink"> 
+                                            <i class="fa fa-google-plus" aria-hidden="true"></i>
+                                        </a>
+                                        <a href="<?php if(of_get_option('link_linked')) {
+                                            echo of_get_option('link_linked');} ?>" target="_blink"> 
+                                            <i class="fa fa-linkedin" aria-hidden="true"></i>
                                         </a>
                                     </div>
                                 </div>
@@ -84,19 +88,23 @@
                                 <div class="social-ft">
                                     <a href="<?php if(of_get_option('link_fb')) {
                                         echo of_get_option('link_fb');} ?>" target="_blink">
-                                        <img   src="http://www.gallewatch.com/images/face.png"  />
+                                        <?php if(of_get_option('link_fb')) { echo '<i class="fa fa-facebook" aria-hidden="true"></i>';} ?>
                                     </a>
-                                    <a href="<?php if(of_get_option('link_fb')) {
-                                        echo of_get_option('link_fb');} ?>" target="_blink">
-                                        <img   src="http://www.gallewatch.com/images/tw.png"  />
+                                    <a href="<?php if(of_get_option('link_tw')) {
+                                        echo of_get_option('link_tw');} ?>" target="_blink">
+                                        <?php if(of_get_option('link_tw')) { echo '<i class="fa fa-twitter" aria-hidden="true"></i>';} ?>
                                     </a>
-                                    <a href="<?php if(of_get_option('link_fb')) {
-                                        echo of_get_option('link_fb');} ?>" target="_blink"> 
-                                        <img   src="http://www.gallewatch.com/images/gg.png"  />
+                                    <a href="<?php if(of_get_option('link_youtube')) {
+                                        echo of_get_option('link_youtube');} ?>" target="_blink"> 
+                                        <?php if(of_get_option('link_youtube')) { echo '<i class="fa fa-youtube" aria-hidden="true"></i>';} ?>
                                     </a>
-                                    <a href="<?php if(of_get_option('link_fb')) {
-                                        echo of_get_option('link_fb');} ?>" target="_blink"> 
-                                        <img   src="http://www.gallewatch.com/images/youtube.png"  />
+                                    <a href="<?php if(of_get_option('link_gg')) {
+                                        echo of_get_option('link_gg');} ?>" target="_blink"> 
+                                        <?php if(of_get_option('link_gg')) { echo '<i class="fa fa-google-plus" aria-hidden="true"></i>';} ?>
+                                    </a>
+                                    <a href="<?php if(of_get_option('link_linked')) {
+                                        echo of_get_option('link_linked');} ?>" target="_blink"> 
+                                        <?php if(of_get_option('link_linked')) { echo '<i class="fa fa-linkedin" aria-hidden="true"></i>';} ?>
                                     </a>
                                 </div>
                             </div>

@@ -1,7 +1,17 @@
 jQuery( document ).ready(function() {
     jQuery(".menu-item-has-children").hover(function() {
 	  	jQuery(this).find('.sub-menu').toggleClass('active');
-	});
+	 });
+
+    jQuery("#menu-item-216").hover(function() {
+      jQuery('#menu-product').mouseenter(function() {
+        jQuery('#menu-product').addClass('active');  
+      });
+      jQuery('#menu-product').mouseleave(function() {
+        jQuery('#menu-product').removeClass('active');  
+      });
+      jQuery('#menu-product').toggleClass('active');
+   });
 
     jQuery( function() {
     	var points = [];

@@ -11,6 +11,66 @@
 .price.pull-left {
     margin: 4px 0px 4px 0px;
 }
+.top-footer i {
+    opacity: 0.5;
+    font-size: 22px;
+    color: #fff;
+    font-size: 22px;
+    color: #fff;
+    background: #ccc;
+    width: 36px;
+    height: 36px;
+    text-align: center;
+    padding-top: 7px;
+    border-radius: 50%;
+}
+#menu-product {
+    padding: 20px !important;
+    top: 50px;
+    display: none;
+    position: absolute;
+    z-index: 99999999;
+    min-width: 300px;
+    background: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 1px 1px 23px 1px #ccc;
+    margin: 10px 0 0px -1px;
+    padding: 0px 0px 0px 20px;
+}
+.headhesive--clone #logo img {
+    max-height: 60px !important;
+    width: auto;
+    margin-top: 10px;
+}
+#menu-product.active {
+    display: block;
+}
+#menu-product ul {
+    list-style: none;
+    text-align: left;
+    padding-left: 0;
+    margin-top: 10px;
+}
+#menu-product ul li a {
+    padding: 3px 0;
+    width: 100%;
+    display: block;
+}
+#menu-product ul li a:hover {
+    color: #c4161c !important;
+}
+@media (min-width: 1200px){
+    #menu-product {
+        width: 900px;
+    }
+}
+#nav-mainmenu {position: relative;}
+.top-footer i:hover {opacity: 1;}
+.top-footer i.fa-facebook {background: #3d5a99;}
+.top-footer i.fa-twitter {background: #25a9e2;}
+.top-footer i.fa-youtube {background: #cd211f;}
+.top-footer i.fa-google-plus {background: #cc3832;}
+.top-footer i.fa-linkedin {background: #0078b6;}
 .form-search .screen-reader-text {display: none !important;}
 .form-search .search-field {
     background-color: #eee;
@@ -534,6 +594,9 @@
     }
 }
 @media (max-width: 991px){
+    #menu-product {
+        display: none !important;
+    }
     .support-top {
         margin-top: 30px !important;
     }
@@ -545,7 +608,7 @@
         position: absolute;
         left: 0;
         display: block;
-        top: -15px;
+        top: 30px;
     }
     #nav-mainmenu {
         position: relative;
@@ -553,7 +616,7 @@
     #nav-mainmenu #menu-main-menu {
         position: absolute;
         width: 300px;
-        top: -100px;
+        top: -55px;
         background: #fff;
         z-index: 9999999999999999999999;
         box-shadow: 1px 1px 23px 1px #ccc;
@@ -576,12 +639,16 @@
     }
 }
 @media (max-width: 767px){
+    .nivo-controlNav {padding-bottom: 0;}
+    .header-wrap {margin-bottom: 90px;}
+    #search {    position: absolute;top: 65px;}
     #logo {
         right: 0 !important;
-        top: -25px;
+        top: 5px;
+        left: inherit;
     }
     .push-button {
-        top: 0;
+        top: 15px;
     }
     .push-button a {
         background: url(../images/joma-sprite.png) no-repeat -60px -180px;
@@ -596,7 +663,7 @@
         padding-top: 30px;
     }
     #nav-mainmenu #menu-main-menu {
-        top: -175px;
+        top: -100px;
     }
     #search {float: none !important; 
         width: 100%;

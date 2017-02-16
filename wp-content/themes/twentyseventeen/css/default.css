@@ -31,6 +31,22 @@ a:active {
     background: url(../images/line.png) center 15px repeat-x;
     background-position-y: 24px;
 }
+.support-top {float: none;}
+.support-top>div {
+    padding-left: 0;
+    width: 33%;
+    display: inline-block;
+}
+#logo {top: 25px;}
+#header-main {
+    margin-top: 0;
+}
+.support-top .advisory {text-align: center;}
+.support-top .complain {text-align: right;}
+.header-top {
+    background: #eee;
+    padding-bottom: 8px;
+}
 button:hover, button:active, button:focus, .dropdown-toggle:focus {outline: none !important;}
 .danh-muc ul {list-style: none;padding-left: 0; }
 .danh-muc ul li {
@@ -56,6 +72,7 @@ button:hover, button:active, button:focus, .dropdown-toggle:focus {outline: none
 .wpcf7 form{
     padding-left: 30px;
 }
+.complain, .support, .advisory {background: transparent;}
 iframe{width: 100% !important;}
 .wpcf7 iframe, .wpcf7 input, .wpcf7 label, .wpcf7 textarea {width: 100%; display: block;}
 .wpcf7 input {height: 36px; padding: 0 8px;}
@@ -294,6 +311,9 @@ a:hover {
     text-align: center;
 }
 @media screen and (max-width:997px) {
+    .support-top {
+        display: none;
+    }
     .relate_products .frame_price .discount,
     .relate_products .frame_price  .price    {
         float: none;
