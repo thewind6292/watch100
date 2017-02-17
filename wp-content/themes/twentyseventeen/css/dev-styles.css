@@ -195,7 +195,7 @@
         font-size: 12px;
         top: 2px;
     }
-    .widget-filter-product-by-price{ clear: left;}
+    .widget-filter-product-by-price{ /*clear: left;*/ }
     .widget-filter-product{ margin-bottom: 6px;}
 }
 @media screen and (max-width: 1366px) and (min-width: 992px) {

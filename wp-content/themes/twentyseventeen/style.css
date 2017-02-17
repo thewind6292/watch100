@@ -51,6 +51,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 Styles based on Normalize v5.0.0 @link https://github.com/necolas/normalize.css
 --------------------------------------------------------------*/
 body{ background: #fff; padding-bottom: 0px; }
+.widget-filter-product-by-wire, .widget-filter-product-by-price{ margin-left: 40px; }
+
 @media (max-width: 767px) {
     #bottom-nav .menu-item {
         width: 100% !important;
@@ -111,4 +113,11 @@ body{ background: #fff; padding-bottom: 0px; }
 	    display: block;
 	}
 	.checkout-button {width: 100%;}
+	
+}
+@media (max-width: 480px) {
+	.widget-filter-product-by-wire, .widget-filter-product-by-price{ margin-left: 0px; }
+}
+@media (max-width: 680px) and  (min-width: 480px){
+	.widget-filter-product-by-price{ margin-left: 0px; }
 }
