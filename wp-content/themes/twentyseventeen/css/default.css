@@ -87,6 +87,9 @@ iframe{width: 100% !important;}
     width: auto;
     display: block;
 }*/
+#logo img {
+    height: 100px;
+}
 .danh-muc ul li:hover {
     background: url(../images/tick.png) 15px 9px no-repeat;
     color: #9FD511;
@@ -267,6 +270,9 @@ a:hover {
     }
 }
 @media (max-width: 767px) {
+    #logo img {
+        height: 75px;
+    }
     #bottom-nav .menu-item {
         width: 100% !important;
     }
