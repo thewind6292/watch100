@@ -12,9 +12,9 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> class="row">
 		<?php echo '<h2 class="title-page">'.get_the_title().'</h2>'; ?>
-		<div class="main-content">
+		<div class="main-content col-sm-10 col-sm-offset-1">
 			<?php
 				the_content();
 			?>
