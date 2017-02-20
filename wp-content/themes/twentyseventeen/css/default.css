@@ -10,6 +10,9 @@
 .main_info .media{
 	padding-left: 30px;
 }
+#menu-main-menu li.menu-item-has-children {
+    position: relative !important;
+}
 .search-form .search-submit .icon {
     color: gray;
     height: 20px;
