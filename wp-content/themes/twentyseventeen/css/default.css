@@ -10,6 +10,10 @@
 .main_info .media{
 	padding-left: 30px;
 }
+.main-content p {
+    line-height: 20px;
+    text-align: justify;
+}
 #menu-main-menu li.menu-item-has-children {
     position: relative !important;
 }

@@ -130,6 +130,7 @@
                                     <?php } ?>
                                     <li><strong><a href="<?php echo get_page_link(PAGE_PRODUCT_FEATURE); ?>">SẢN PHẨM NỔI BẬT</a></strong></li>
                                     <li><strong><a href="<?php echo get_page_link(PAGE_BEST_SELLER); ?>">SẢN PHẨM BÁN CHẠY</a></strong></li>
+                                    <li><strong><a href="<?php echo get_category_link(31); ?>">ĐỒNG HỒ KHÁC</a></strong></li>
                             </ul>
                         </div>
                         <div class="col-sm-4">
