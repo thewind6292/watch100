@@ -162,4 +162,3 @@
         <?php 
             $options = array('hide_empty' => false);
         ?>
-

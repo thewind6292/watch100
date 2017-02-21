@@ -154,6 +154,169 @@
                             	?>
                             </div>
                         </div>
+                        <div class="wrapper-news-home">
+						    <div class="row">
+						    	<?php
+							    	$args_feature_post = array(
+										'post_type'           => 'post',
+										'post_status'         => 'publish',
+										'cat'      			  => 27,
+										'posts_per_page'      => 1,
+										'featured'            =>'yes'
+									);
+
+									$post_featured = new WP_Query($args_feature_post);
+									if ($post_featured->have_posts()) : 
+										while ($post_featured->have_posts()) : $post_featured->the_post();
+										?>
+										<div class="col-lg-3 col-md-6 col-xs-6 col-sm-6 item-nh">
+								            <div class="title-cat-nh">
+								                <a href="<?php echo get_category_link(27); ?>"><?php echo get_cat_name(27); ?></a>
+								                <div class="border-nh"></div>
+								            </div>
+								            <ul class="list-nh">
+								                <li>
+									                <div class="first-item-nh">
+									                    <a href="<?php echo get_permalink(get_the_id()); ?>"><?php the_title( ); ?></a>
+									                    <a href="<?php echo get_permalink(get_the_id()); ?>">
+									                        <?php the_post_thumbnail( $size, $attr ); ?>
+									                    </a>
+									                    <div class="date-nh">
+									                       <?php echo get_the_date('d/m/y',get_the_id()); ?> </div>
+									                    <div class="summary-nh">
+									                        <span><?php the_excerpt(); ?></span>
+									                    </div>
+									                </div>
+								            	</li>
+								         	</ul>
+								        </div>
+										<?php 
+										endwhile;
+									endif;
+									wp_reset_query(); 	
+								?>
+
+								<?php
+							    	$args_feature_post = array(
+										'post_type'           => 'post',
+										'post_status'         => 'publish',
+										'cat'      			  => 28,
+										'posts_per_page'      => 1,
+										'featured'            =>'yes'
+									);
+
+									$post_featured = new WP_Query($args_feature_post);
+									if ($post_featured->have_posts()) : 
+										while ($post_featured->have_posts()) : $post_featured->the_post();
+										?>
+										<div class="col-lg-3 col-md-6 col-xs-6 col-sm-6 item-nh">
+								            <div class="title-cat-nh">
+								                <a href="<?php echo get_category_link(28); ?>"><?php echo get_cat_name(28); ?></a>
+								                <div class="border-nh"></div>
+								            </div>
+								            <ul class="list-nh">
+								                <li>
+									                <div class="first-item-nh">
+									                    <a href="<?php echo get_permalink(get_the_id()); ?>"><?php the_title( ); ?></a>
+									                    <a href="<?php echo get_permalink(get_the_id()); ?>">
+									                        <?php the_post_thumbnail( $size, $attr ); ?>
+									                    </a>
+									                    <div class="date-nh">
+									                       <?php echo get_the_date('d/m/y',get_the_id()); ?> </div>
+									                    <div class="summary-nh">
+									                        <span><?php the_excerpt(); ?></span>
+									                    </div>
+									                </div>
+								            	</li>
+								         	</ul>
+								        </div>
+										<?php 
+										endwhile;
+									endif;
+									wp_reset_query(); 	
+								?>
+
+								<?php
+							    	$args_feature_post = array(
+										'post_type'           => 'post',
+										'post_status'         => 'publish',
+										'cat'      			  => 24,
+										'posts_per_page'      => 1,
+										'featured'            =>'yes'
+									);
+
+									$post_featured = new WP_Query($args_feature_post);
+									if ($post_featured->have_posts()) : 
+										while ($post_featured->have_posts()) : $post_featured->the_post();
+										?>
+										<div class="col-lg-3 col-md-6 col-xs-6 col-sm-6 item-nh">
+								            <div class="title-cat-nh">
+								                <a href="<?php echo get_category_link(24); ?>"><?php echo get_cat_name(24); ?></a>
+								                <div class="border-nh"></div>
+								            </div>
+								            <ul class="list-nh">
+								                <li>
+									                <div class="first-item-nh">
+									                    <a href="<?php echo get_permalink(get_the_id()); ?>"><?php the_title( ); ?></a>
+									                    <a href="<?php echo get_permalink(get_the_id()); ?>">
+									                        <?php the_post_thumbnail( $size, $attr ); ?>
+									                    </a>
+									                    <div class="date-nh">
+									                       <?php echo get_the_date('d/m/y',get_the_id()); ?> </div>
+									                    <div class="summary-nh">
+									                        <span><?php the_excerpt(); ?></span>
+									                    </div>
+									                </div>
+								            	</li>
+								         	</ul>
+								        </div>
+										<?php 
+										endwhile;
+									endif;
+									wp_reset_query(); 	
+								?>
+
+								<?php
+							    	$args_feature_post = array(
+										'post_type'           => 'post',
+										'post_status'         => 'publish',
+										'cat'      			  => 25,
+										'posts_per_page'      => 1,
+										'featured'            =>'yes'
+									);
+
+									$post_featured = new WP_Query($args_feature_post);
+									if ($post_featured->have_posts()) : 
+										while ($post_featured->have_posts()) : $post_featured->the_post();
+										?>
+										<div class="col-lg-3 col-md-6 col-xs-6 col-sm-6 item-nh">
+								            <div class="title-cat-nh">
+								                <a href="<?php echo get_category_link(25); ?>"><?php echo get_cat_name(25); ?></a>
+								                <div class="border-nh"></div>
+								            </div>
+								            <ul class="list-nh">
+								                <li>
+									                <div class="first-item-nh">
+									                    <a href="<?php echo get_permalink(get_the_id()); ?>"><?php the_title( ); ?></a>
+									                    <a href="<?php echo get_permalink(get_the_id()); ?>">
+									                        <?php the_post_thumbnail( $size, $attr ); ?>
+									                    </a>
+									                    <div class="date-nh">
+									                       <?php echo get_the_date('d/m/y',get_the_id()); ?> </div>
+									                    <div class="summary-nh">
+									                        <span><?php the_excerpt(); ?></span>
+									                    </div>
+									                </div>
+								            	</li>
+								         	</ul>
+								        </div>
+										<?php 
+										endwhile;
+									endif;
+									wp_reset_query(); 	
+								?>
+							</div>
+					    </div>
                     </div>                    
                 </div>
             </div><!-- end.row -->

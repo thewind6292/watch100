@@ -47,7 +47,7 @@
 .widget-filter-product-by-color:hover .orderby_widget{display: block;cursor: pointer;z-index: 99999;}
 .widget-filter-product-by-price{ position: relative; width: 100px; }
 .widget-filter-product-by-price:hover{ cursor: pointer; }
-.widget-filter-product-by-price:hover .meta_slider.meta_slider__price{ display: block; cursor: pointer; }
+.widget-filter-product-by-price  .meta_slider.meta_slider__price.active{ display: block; cursor: pointer; }
 .widget-filter-product-by-price .meta_slider.meta_slider__price{
     width: 230px;
     position: absolute;

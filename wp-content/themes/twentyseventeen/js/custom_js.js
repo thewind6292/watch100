@@ -29,7 +29,6 @@ jQuery( document ).ready(function() {
      jQuery(".push-button").click(function() {
 	  	jQuery('#nav-mainmenu').toggleClass('active');
 	});
-console.log(jQuery('#slider div').height());
      jQuery('#slider').height(jQuery('#slider>img').height());
 
      codenegar_format_range = function(template, min, max){
@@ -40,4 +39,8 @@ console.log(jQuery('#slider div').height());
         ret = ret.replace("%e", max);
         return ret;
     }
+
+    jQuery(".widget-filter-product-by-price").click(function() {
+      jQuery('.widget_price_filter').toggleClass('active');
+  });
 });
