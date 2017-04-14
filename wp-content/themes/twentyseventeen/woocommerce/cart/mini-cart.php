@@ -50,8 +50,8 @@ if (!defined('ABSPATH')) {
                     <?php if (!$_product->is_visible()) : ?>
                         <?php echo  $product_name;?>
                     <?php else : ?>
-                        <a href="<?php echo esc_url($product_permalink); ?>">
-                            <?php echo  $product_name; ?>
+                        <a title="<?php echo $product_name; ?>" href="<?php echo esc_url($product_permalink); ?>">
+                            <?php echo  wp_trim_words($product_name, 3, '...'); ?>
                         </a>
                     <?php endif; ?>
                     <?php echo WC()->cart->get_item_data($cart_item); ?>

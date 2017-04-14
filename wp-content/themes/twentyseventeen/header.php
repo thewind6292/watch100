@@ -128,9 +128,9 @@
                                     foreach ($terms_thuonghieu as $term_th) { ?>
                                         <li><a href="<?php echo get_term_link($term_th->term_id) ?>"><?php echo $term_th->name; ?></a></li>
                                     <?php } ?>
-                                    <li><strong><a href="<?php echo get_page_link(PAGE_PRODUCT_FEATURE); ?>">SẢN PHẨM NỔI BẬT</a></strong></li>
-                                    <li><strong><a href="<?php echo get_page_link(PAGE_BEST_SELLER); ?>">SẢN PHẨM BÁN CHẠY</a></strong></li>
-                                    <li><strong><a href="<?php echo get_category_link(31); ?>">ĐỒNG HỒ KHÁC</a></strong></li>
+                                    <li><strong><a href="<?php echo get_page_link(396); ?>">SẢN PHẨM NỔI BẬT</a></strong></li>
+                                    <li><strong><a href="<?php echo get_page_link(398); ?>">SẢN PHẨM BÁN CHẠY</a></strong></li>
+                                    <li><strong><a href="<?php echo get_term_link(31,'product_cat'); ?>">ĐỒNG HỒ KHÁC</a></strong></li>
                             </ul>
                         </div>
                         <div class="col-sm-4">

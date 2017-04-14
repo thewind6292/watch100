@@ -7,6 +7,17 @@
 .main_info .logo_content{
 	margin-top: 10px;
 }
+.first-item-nh > a.title-first-nh {
+    font-size: 14px;
+    font-family: "open sans semibold";
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    height: 40px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
 .main_info .media{
 	padding-left: 30px;
 }

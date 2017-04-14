@@ -52,6 +52,9 @@
                                         echo of_get_option('phone_number_2');} ?><br />
                                 Email: <?php if(of_get_option('email')) {
                                         echo of_get_option('email');} ?><br />
+                                <div class="registed">
+                                <a href="http://online.gov.vn/HomePage/CustomWebsiteDisplay.aspx?DocId=8590" target="_bank"><img src="https://gallewatch.com/images/dathongbao.png"></a>
+                            </div>
                             </div>
                             <br>
                             <div class="visible-sm visible-xs ">

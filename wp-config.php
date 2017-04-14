@@ -29,7 +29,7 @@ define('DB_USER', 'root');
 define('DB_PASSWORD', '123456');
 // define('DB_PASSWORD', '');
 /** MySQL hostname */
-define('DB_HOST', '192.168.2.29');
+define('DB_HOST', '192.168.2.19');
 // define('DB_HOST', 'localhost');
 
 /** Database Charset to use in creating database tables. */
@@ -80,10 +80,10 @@ $table_prefix  = 'wp_';
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
 
-define('WP_DEBUG', false);
-define('WP_DEBUG_LOG', false);
-define('WP_DEBUG_DISPLAY', false);
-@ini_set('display_errors', 0);
+define('WP_DEBUG', true);
+define('WP_DEBUG_LOG', true);
+define('WP_DEBUG_DISPLAY', true);
+@ini_set('display_errors', -1);
 
 /* That's all, stop editing! Happy blogging. */
 

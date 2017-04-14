@@ -581,6 +581,13 @@
     text-align: right;
     color: #B80405;
 }
+.product-name {line-height: 20px;}
+.cart_item .size-18 {
+        width: 60%;
+        display: block;
+        float: right;
+        line-height: 20px;
+    }
 @media screen and (max-width:997px){
     
 }
@@ -594,6 +601,12 @@
     }
 }
 @media (max-width: 991px){
+    .cart_item .size-18 {
+        width: 100%;
+        display: block;
+        float: none;
+        line-height: 20px;
+    }
     #menu-product {
         display: none !important;
     }

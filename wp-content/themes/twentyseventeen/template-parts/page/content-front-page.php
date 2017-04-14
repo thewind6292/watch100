@@ -177,9 +177,9 @@
 								            <ul class="list-nh">
 								                <li>
 									                <div class="first-item-nh">
-									                    <a href="<?php echo get_permalink(get_the_id()); ?>"><?php the_title( ); ?></a>
+									                    <a  class="title-first-nh" href="<?php echo get_permalink(get_the_id()); ?>"><?php the_title( ); ?></a>
 									                    <a href="<?php echo get_permalink(get_the_id()); ?>">
-									                        <?php the_post_thumbnail( $size, $attr ); ?>
+									                        <?php the_post_thumbnail('post-thumbnail',  array( 'class' => "img-responsive")); ?>
 									                    </a>
 									                    <div class="date-nh">
 									                       <?php echo get_the_date('d/m/y',get_the_id()); ?> </div>
@@ -217,9 +217,9 @@
 								            <ul class="list-nh">
 								                <li>
 									                <div class="first-item-nh">
-									                    <a href="<?php echo get_permalink(get_the_id()); ?>"><?php the_title( ); ?></a>
-									                    <a href="<?php echo get_permalink(get_the_id()); ?>">
-									                        <?php the_post_thumbnail( $size, $attr ); ?>
+									                    <a class="title-first-nh" href="<?php echo get_permalink(get_the_id()); ?>"><?php the_title( ); ?></a>
+									                    <a href="<?php echo get_permalink(get_the_id()); ?>" >
+									                        <?php the_post_thumbnail('post-thumbnail',  array( 'class' => "img-responsive")); ?>
 									                    </a>
 									                    <div class="date-nh">
 									                       <?php echo get_the_date('d/m/y',get_the_id()); ?> </div>
@@ -257,9 +257,9 @@
 								            <ul class="list-nh">
 								                <li>
 									                <div class="first-item-nh">
-									                    <a href="<?php echo get_permalink(get_the_id()); ?>"><?php the_title( ); ?></a>
-									                    <a href="<?php echo get_permalink(get_the_id()); ?>">
-									                        <?php the_post_thumbnail( $size, $attr ); ?>
+									                    <a class="title-first-nh" href="<?php echo get_permalink(get_the_id()); ?>"><?php the_title( ); ?></a>
+									                    <a href="<?php echo get_permalink(get_the_id()); ?>" >
+									                        <?php the_post_thumbnail('post-thumbnail',  array( 'class' => "img-responsive")); ?>
 									                    </a>
 									                    <div class="date-nh">
 									                       <?php echo get_the_date('d/m/y',get_the_id()); ?> </div>
@@ -297,9 +297,9 @@
 								            <ul class="list-nh">
 								                <li>
 									                <div class="first-item-nh">
-									                    <a href="<?php echo get_permalink(get_the_id()); ?>"><?php the_title( ); ?></a>
+									                    <a class="title-first-nh" href="<?php echo get_permalink(get_the_id()); ?>"><?php the_title( ); ?></a>
 									                    <a href="<?php echo get_permalink(get_the_id()); ?>">
-									                        <?php the_post_thumbnail( $size, $attr ); ?>
+									                        <?php the_post_thumbnail('post-thumbnail',  array( 'class' => "img-responsive")); ?>
 									                    </a>
 									                    <div class="date-nh">
 									                       <?php echo get_the_date('d/m/y',get_the_id()); ?> </div>
