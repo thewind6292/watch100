@@ -15,8 +15,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="508">
-              <caret line="295" column="67" lean-forward="true" selection-start-line="295" selection-start-column="67" selection-end-line="295" selection-end-column="81" />
+            <state relative-caret-position="527">
+              <caret line="34" column="35" lean-forward="false" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -25,8 +25,8 @@
       <file leaf-file-name="cyber-resposive.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/cyber-resposive.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="12" column="37" lean-forward="true" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+            <state relative-caret-position="161">
+              <caret line="7" column="5" lean-forward="true" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -37,7 +37,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-5182">
               <caret line="34" column="16" lean-forward="false" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
-              <folding />
+              <folding>
+                <marker date="1492153183650" expanded="true" signature="5048:5051" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -71,10 +73,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/theme.js" />
-        <option value="$PROJECT_DIR$/css/cyber-resposive.css" />
         <option value="$PROJECT_DIR$/style.css" />
+        <option value="$PROJECT_DIR$/css/cyber-resposive.css" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -242,12 +244,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1492139291098</updated>
-      <workItem from="1492139292757" duration="5110000" />
+      <workItem from="1492139292757" duration="6121000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5110000" />
+    <option name="totallyTimeSpent" value="6121000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -287,7 +289,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-5182">
           <caret line="34" column="16" lean-forward="false" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
-          <folding />
+          <folding>
+            <marker date="1492153183650" expanded="true" signature="5048:5051" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -301,16 +305,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/cyber-resposive.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" column="37" lean-forward="true" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+        <state relative-caret-position="161">
+          <caret line="7" column="5" lean-forward="true" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="508">
-          <caret line="295" column="67" lean-forward="true" selection-start-line="295" selection-start-column="67" selection-end-line="295" selection-end-column="81" />
+        <state relative-caret-position="527">
+          <caret line="34" column="35" lean-forward="false" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
           <folding />
         </state>
       </provider>

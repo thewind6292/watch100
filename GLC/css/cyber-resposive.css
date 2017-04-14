@@ -21,6 +21,9 @@
     .text-copyright{
         text-align: center;
     }
+
+}
+@media screen and (max-width: 992px){
     .testimonials-section{
         background: #fff;
         background-image: url(../images/testimonial1.png);
@@ -28,7 +31,4 @@
         background-repeat: no-repeat;
         height: auto;
     }
-}
-@media screen and (max-width: 1280px){
-
 }
