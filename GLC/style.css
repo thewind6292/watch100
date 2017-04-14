@@ -274,4 +274,17 @@
 .contact-input-form .half-input{
 	width: 50%;
 	float: left;
+
+}
+.half-input-left{
+	border: none;
+	border-left: 1px solid #b6b6b6;
+}
+.half-input-right{
+	border: none;
+	border-left: 1px solid #b6b6b6;
+	border-right: 1px solid #b6b6b6;
+}
+.contact-input-form textarea{
+	padding-top: 10px;
 }
