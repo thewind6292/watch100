@@ -1,0 +1,277 @@
+@font-face {
+	font-family: 'La-Carte';
+	src: url('fonts/La-Carte.eot');
+	src: local('☺'), url('fonts/La-Carte.woff') format('woff'), url('fonts/La-Carte.ttf') format('truetype'), url('fonts/La-Carte.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Lato-Regular';
+	src: url('fonts/Lato-Regular.eot');
+	src: local('☺'), url('fonts/Lato-Regular.woff') format('woff'), url('fonts/Lato-Regular.ttf') format('truetype'), url('fonts/Lato-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Lato-Thin';
+	src: url('fonts/Lato-Thin.eot');
+	src: local('☺'), url('fonts/Lato-Thin.woff') format('woff'), url('fonts/Lato-Thin.ttf') format('truetype'), url('fonts/Lato-Thin.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Move-Bold';
+	src: url('fonts/Move-Bold.eot');
+	src: local('☺'), url('fonts/Move-Bold.woff') format('woff'), url('fonts/Move-Bold.ttf') format('truetype'), url('fonts/Move-Bold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@media screen and (min-width: 1600px){
+	.container{ width: 1560px; }
+}
+.navbar{ padding: 0px; border: none; }
+.cbf-navbar{ background: #393748; min-height: 76px; }
+.testimonials-section{
+	height: 100%;
+	min-height: 780px;
+	padding-top: 120px;
+	text-align: center;
+	background: #eee;
+}
+.cbf-navbar .cbf-mainmenu{
+	font-family: "Move-Bold";
+	text-transform: uppercase;
+}
+.cbf-navbar .cbf-mainmenu li{
+	margin-right: 30px;
+}
+.cbf-navbar .cbf-mainmenu li a{
+	color: #fff;
+	font-size: 16px;
+	line-height: 40px;
+}
+.cbf-navbar .cbf-mainmenu li a:hover{
+	color: #b28e46;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
+	background: transparent;
+	border-bottom: 6px solid #b28e46;
+	color: #b28e46;
+}
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover{
+	color: #fff;
+	outline: none;
+}
+.cbf-mainmenu .fa-facebook{
+	background: #fff;
+	color: #000;
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+}
+.intro-section{
+	padding-top: 76px;
+	height:auto;
+}
+.title-block{
+	font-family: "Move-Bold";
+	font-size: 60px;
+	text-transform: uppercase;
+	color: #b28e46;
+	margin-bottom: 10px;
+}
+.hr-line img{
+	margin: 0 auto;
+}
+.hr-line .line-cut{
+	width: 75%;
+	height: 1px;
+	background: #b28e46;
+	display: block;
+	margin: 0 auto;
+}
+.cbf-title{ margin-bottom: 60px; }
+.content-block{
+	font-family: "Lato";
+	font-size: 16px;
+	text-align: center;
+	color: #666565;
+	line-height: 27px;
+}
+.about-section{
+	min-height: 650px;
+	padding-top: 120px;
+	background: #fff;
+	background-image: url(images/about3.png);
+	background-position: left top;
+	background-repeat: no-repeat;
+}
+.services-section{
+	background: #ececec;
+}
+.services-section .hr-line img{
+	background: #ececec;
+}
+.carry-section{
+	background: url("images/bg_carry.jpg");
+	min-height: 665px;
+}
+.testimonials-section{
+	background: #fff;
+	background-image: url(images/testimonial1.png), url(images/testimonial2.png);
+	background-position: left top, right bottom;
+	background-repeat: no-repeat, no-repeat;
+}
+.owl-theme .owl-controls .owl-buttons div{
+	background: none;
+	font-size: 40px;
+}
+.owl-theme .owl-controls .owl-buttons .owl-prev{
+	left: -65px;
+	top: calc(50% - 23px);
+	position: absolute;
+}
+.owl-theme .owl-controls .owl-buttons .owl-next{
+	right: -30px;
+	top: calc(50% - 23px);
+	position: absolute;
+}
+.testimonials img{
+	margin: 0 auto;
+	border-radius: 50%;
+	width: 141px;
+	height: auto;
+	margin-bottom: 50px;
+}
+.testimonials .text{
+	font-family: "Lato";
+	color: #666565;
+	font-size:16px;
+	line-height: 28px;
+	color: #666565;
+	margin-bottom: 50px;
+}
+.testimonials .author{
+	font-family: "La-Carte";
+	font-size: 48px;
+	color: #b28e46;
+	margin-bottom: 50px;
+}
+.testimonials.owl-theme .owl-controls{
+	margin-top: 50px;
+}
+.testimonials.owl-theme .owl-controls .owl-page span{
+	background: #fff;
+	border: 1px solid #8c8c8c;
+}
+.owl-theme .owl-controls .owl-page.active span{
+	background: #8c8c8c;
+}
+.contact-section{
+	background: url("images/maps.jpg");
+}
+.contact-form{
+	background: #fff;
+	border-top: 15px solid #2b2b38;
+	padding-top: 70px;
+	padding-bottom: 110px;
+}
+.contact-info{
+	font-family: "Lato";
+	color: #666565;
+	font-size:16px;
+	line-height: 28px;
+	text-align: left;
+	color: #666565;
+}
+.contact-info i{
+	font-size: 30px;
+	color: #666565;
+	margin-right: 20px;
+	min-width: 25px;
+}
+.footer-section{
+	background: #2b2b38;
+	border-top: 5px solid #b28e46;
+	color: #707070;
+	font-family: "Lato";
+	font-size: 14px;
+	padding: 45px 0px 20px 0px;
+}
+.footer-section ul li{
+	list-style: none;
+	float: none;
+	margin-right: 8px;
+	display: inline-block;
+}
+.footer-section ul li a{
+	color: #666565;
+}
+.footer-section .fa-facebook{
+	background: #95959c;
+	color: #000;
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	margin-left: 10px;
+}
+.hide-i{ opacity: 0; }
+.no-padding{
+	padding:0px;
+}
+.item-service{
+	position: relative;
+}
+.cate-introduct{
+	background: rgba(1, 0, 0, 0.5);
+	position: absolute;
+	width: 100%;
+	bottom: 0px;
+	border-bottom: 10px solid #2b2b38;
+}
+.cate-introduct:hover{
+	border-bottom: 10px solid #b28e46;
+}
+.cate-introduct:hover a{
+	color: #b28e46;
+}
+.cate-introduct p{
+	line-height: 120px;
+}
+.cate-introduct p a{
+	font-family: "Move-Bold";
+	font-size: 24px;
+	text-transform: uppercase;
+	color: #fff;
+}
+.cate-introduct p a:hover{
+	text-decoration: none;
+}
+.contact-input-form input, .contact-input-form textarea{
+	width: 100%;
+	height: 60px;
+	text-indent: 20px;
+	color: #b6b6b6;
+	font-family: "Lato";
+	font-size: 16px;
+}
+.contact-input-form textarea{
+	height: auto;
+}
+.contact-input-form input[type="submit"]{
+	background: #b28e46;
+	border: none;
+	font-family: "Move-Bold";
+	text-transform: uppercase;
+	color: #fff;
+	font-size: 16px;
+	margin-top: 60px;
+}
+.contact-input-form .half-input{
+	width: 50%;
+	float: left;
+}
