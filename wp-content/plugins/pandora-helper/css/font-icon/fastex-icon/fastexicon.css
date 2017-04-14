@@ -1,0 +1,469 @@
+@font-face {
+	font-family: "Fastexicon";
+	src: url("fastexicon.eot");
+	src: url("fastexicon.eot#iefix") format("embedded-opentype"),
+	url("fastexicon.woff") format("woff"),
+	url("fastexicon.ttf") format("truetype"),
+	url("fastexicon.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+[class^="fastexicon-"]:before, [class*=" fastexicon-"]:before,
+[class^="fastexicon-"]:after, [class*=" fastexicon-"]:after {   
+	font-family: fastexicon;
+        font-size: 20px;
+font-style: normal;
+margin-left: 0;
+}.fastexicon-2440:before {
+	content: "\e000";
+}
+.fastexicon-2441:before {
+	content: "\e001";
+}
+.fastexicon-2442:before {
+	content: "\e002";
+}
+.fastexicon-air6:before {
+	content: "\e003";
+}
+.fastexicon-airplane66:before {
+	content: "\e004";
+}
+.fastexicon-airplane67:before {
+	content: "\e005";
+}
+.fastexicon-airplane68:before {
+	content: "\e006";
+}
+.fastexicon-airplane7:before {
+	content: "\e007";
+}
+.fastexicon-barscode:before {
+	content: "\e008";
+}
+.fastexicon-baskets3:before {
+	content: "\e009";
+}
+.fastexicon-black330:before {
+	content: "\e00a";
+}
+.fastexicon-black331:before {
+	content: "\e00b";
+}
+.fastexicon-boat17:before {
+	content: "\e00c";
+}
+.fastexicon-box107:before {
+	content: "\e00d";
+}
+.fastexicon-box109:before {
+	content: "\e00e";
+}
+.fastexicon-box49:before {
+	content: "\e00f";
+}
+.fastexicon-boxes1:before {
+	content: "\e010";
+}
+.fastexicon-boxes16:before {
+	content: "\e011";
+}
+.fastexicon-boxes18:before {
+	content: "\e012";
+}
+.fastexicon-boxes2:before {
+	content: "\e013";
+}
+.fastexicon-calendar30:before {
+	content: "\e014";
+}
+.fastexicon-call36:before {
+	content: "\e015";
+}
+.fastexicon-call37:before {
+	content: "\e016";
+}
+.fastexicon-cargo6:before {
+	content: "\e017";
+}
+.fastexicon-check23:before {
+	content: "\e018";
+}
+.fastexicon-chronometer10:before {
+	content: "\e019";
+}
+.fastexicon-clipboard52:before {
+	content: "\e01a";
+}
+.fastexicon-clock214:before {
+	content: "\e01b";
+}
+.fastexicon-commercial15:before {
+	content: "\e01c";
+}
+.fastexicon-container5:before {
+	content: "\e01d";
+}
+.fastexicon-container6:before {
+	content: "\e01e";
+}
+.fastexicon-containers:before {
+	content: "\e01f";
+}
+.fastexicon-crane6:before {
+	content: "\e020";
+}
+.fastexicon-crane7:before {
+	content: "\e021";
+}
+.fastexicon-delivered:before {
+	content: "\e022";
+}
+.fastexicon-delivery:before {
+	content: "\e023";
+}
+.fastexicon-delivery16:before {
+	content: "\e024";
+}
+.fastexicon-delivery17:before {
+	content: "\e025";
+}
+.fastexicon-delivery18:before {
+	content: "\e026";
+}
+.fastexicon-delivery19:before {
+	content: "\e027";
+}
+.fastexicon-delivery20:before {
+	content: "\e028";
+}
+.fastexicon-delivery21:before {
+	content: "\e029";
+}
+.fastexicon-delivery22:before {
+	content: "\e02a";
+}
+.fastexicon-delivery23:before {
+	content: "\e02b";
+}
+.fastexicon-delivery24:before {
+	content: "\e02c";
+}
+.fastexicon-delivery25:before {
+	content: "\e02d";
+}
+.fastexicon-delivery26:before {
+	content: "\e02e";
+}
+.fastexicon-delivery27:before {
+	content: "\e02f";
+}
+.fastexicon-delivery28:before {
+	content: "\e030";
+}
+.fastexicon-delivery29:before {
+	content: "\e031";
+}
+.fastexicon-delivery30:before {
+	content: "\e032";
+}
+.fastexicon-delivery31:before {
+	content: "\e033";
+}
+.fastexicon-delivery32:before {
+	content: "\e034";
+}
+.fastexicon-delivery33:before {
+	content: "\e035";
+}
+.fastexicon-delivery34:before {
+	content: "\e036";
+}
+.fastexicon-delivery35:before {
+	content: "\e037";
+}
+.fastexicon-delivery36:before {
+	content: "\e038";
+}
+.fastexicon-delivery37:before {
+	content: "\e039";
+}
+.fastexicon-delivery38:before {
+	content: "\e03a";
+}
+.fastexicon-delivery39:before {
+	content: "\e03b";
+}
+.fastexicon-direction105:before {
+	content: "\e03c";
+}
+.fastexicon-factories1:before {
+	content: "\e03d";
+}
+.fastexicon-factory:before {
+	content: "\e03e";
+}
+.fastexicon-flying6:before {
+	content: "\e03f";
+}
+.fastexicon-fragile:before {
+	content: "\e040";
+}
+.fastexicon-free6:before {
+	content: "\e041";
+}
+.fastexicon-frontal19:before {
+	content: "\e042";
+}
+.fastexicon-glasses41:before {
+	content: "\e043";
+}
+.fastexicon-grid17:before {
+	content: "\e044";
+}
+.fastexicon-identification4:before {
+	content: "\e045";
+}
+.fastexicon-international11:before {
+	content: "\e046";
+}
+.fastexicon-international12:before {
+	content: "\e047";
+}
+.fastexicon-international13:before {
+	content: "\e048";
+}
+.fastexicon-international14:before {
+	content: "\e049";
+}
+.fastexicon-international15:before {
+	content: "\e04a";
+}
+.fastexicon-laptop28:before {
+	content: "\e04b";
+}
+.fastexicon-loaded-truck:before {
+	content: "\e04c";
+}
+.fastexicon-localization2:before {
+	content: "\e04d";
+}
+.fastexicon-lock18:before {
+	content: "\e04e";
+}
+.fastexicon-locked14:before {
+	content: "\e04f";
+}
+.fastexicon-logistics-delivery:before {
+	content: "\e050";
+}
+.fastexicon-logistics:before {
+	content: "\e051";
+}
+.fastexicon-logistics1:before {
+	content: "\e052";
+}
+.fastexicon-logistics2:before {
+	content: "\e053";
+}
+.fastexicon-logistics3:before {
+	content: "\e054";
+}
+.fastexicon-logistics4:before {
+	content: "\e055";
+}
+.fastexicon-logistics5:before {
+	content: "\e056";
+}
+.fastexicon-logistics53:before {
+	content: "\e057";
+}
+.fastexicon-logisticsdelivery:before {
+	content: "\e058";
+}
+.fastexicon-lorry:before {
+	content: "\e059";
+}
+.fastexicon-lorry1:before {
+	content: "\e05a";
+}
+.fastexicon-lorry3:before {
+	content: "\e05b";
+}
+.fastexicon-man236:before {
+	content: "\e05c";
+}
+.fastexicon-map19:before {
+	content: "\e05d";
+}
+.fastexicon-notepad2:before {
+	content: "\e05e";
+}
+.fastexicon-ocean3:before {
+	content: "\e05f";
+}
+.fastexicon-oil:before {
+	content: "\e060";
+}
+.fastexicon-package10:before {
+	content: "\e061";
+}
+.fastexicon-package11:before {
+	content: "\e062";
+}
+.fastexicon-package12:before {
+	content: "\e063";
+}
+.fastexicon-package13:before {
+	content: "\e064";
+}
+.fastexicon-package7:before {
+	content: "\e065";
+}
+.fastexicon-package8:before {
+	content: "\e066";
+}
+.fastexicon-package9:before {
+	content: "\e067";
+}
+.fastexicon-packages1:before {
+	content: "\e068";
+}
+.fastexicon-packages2:before {
+	content: "\e069";
+}
+.fastexicon-padlock94:before {
+	content: "\e06a";
+}
+.fastexicon-person279:before {
+	content: "\e06b";
+}
+.fastexicon-petrol3:before {
+	content: "\e06c";
+}
+.fastexicon-phone322:before {
+	content: "\e06d";
+}
+.fastexicon-phone323:before {
+	content: "\e06e";
+}
+.fastexicon-placeholder8:before {
+	content: "\e06f";
+}
+.fastexicon-protection3:before {
+	content: "\e070";
+}
+.fastexicon-sea35:before {
+	content: "\e071";
+}
+.fastexicon-sea8:before {
+	content: "\e072";
+}
+.fastexicon-sea9:before {
+	content: "\e073";
+}
+.fastexicon-search51:before {
+	content: "\e074";
+}
+.fastexicon-sign47:before {
+	content: "\e075";
+}
+.fastexicon-stopwatch12:before {
+	content: "\e076";
+}
+.fastexicon-storage17:before {
+	content: "\e077";
+}
+.fastexicon-talking2:before {
+	content: "\e078";
+}
+.fastexicon-telephone50:before {
+	content: "\e079";
+}
+.fastexicon-telephone90:before {
+	content: "\e07a";
+}
+.fastexicon-telephone91:before {
+	content: "\e07b";
+}
+.fastexicon-three110:before {
+	content: "\e07c";
+}
+.fastexicon-thumb5:before {
+	content: "\e07d";
+}
+.fastexicon-time74:before {
+	content: "\e07e";
+}
+.fastexicon-train20:before {
+	content: "\e07f";
+}
+.fastexicon-transport17:before {
+	content: "\e080";
+}
+.fastexicon-transport18:before {
+	content: "\e081";
+}
+.fastexicon-transport2:before {
+	content: "\e082";
+}
+.fastexicon-transport75:before {
+	content: "\e083";
+}
+.fastexicon-triangular42:before {
+	content: "\e084";
+}
+.fastexicon-truck6:before {
+	content: "\e085";
+}
+.fastexicon-umbrella4:before {
+	content: "\e086";
+}
+.fastexicon-up72:before {
+	content: "\e087";
+}
+.fastexicon-uparrow55:before {
+	content: "\e088";
+}
+.fastexicon-upload19:before {
+	content: "\e089";
+}
+.fastexicon-upload21:before {
+	content: "\e08a";
+}
+.fastexicon-vehicle43:before {
+	content: "\e08b";
+}
+.fastexicon-verification5:before {
+	content: "\e08c";
+}
+.fastexicon-view10:before {
+	content: "\e08d";
+}
+.fastexicon-weight10:before {
+	content: "\e08e";
+}
+.fastexicon-weight11:before {
+	content: "\e08f";
+}
+.fastexicon-weight3:before {
+	content: "\e090";
+}
+.fastexicon-weights8:before {
+	content: "\e091";
+}
+.fastexicon-woman16:before {
+	content: "\e092";
+}
+.fastexicon-woman93:before {
+	content: "\e093";
+}
+.fastexicon-wood5:before {
+	content: "\e094";
+}
+.fastexicon-world77:before {
+	content: "\e095";
+}
+.fastexicon-zoom9:before {
+	content: "\e096";
+}
